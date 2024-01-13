@@ -17,12 +17,12 @@ for(let i = 0; i < animation_sections.length; i++){
 }
 
 // handle burger menu display
-const burgerMenu = document.querySelector('.js-burger-menu')
-const x_mark = document.querySelector('.js-x-mark')
-let burgerToggle = false;
-burgerMenu.addEventListener('click', () => {
-    document.body.classList.toggle('show-nav')
-   
+
+const burgerMenu = document.querySelector('.js-burger-menu');
+const mobileMenu = document.querySelector('.js-links-container')
+burgerMenu.addEventListener('click', ()=> {
+    burgerMenu.classList.toggle('is-open')
+    mobileMenu.classList.toggle('is-open')
 })
 
 

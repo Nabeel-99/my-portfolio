@@ -63,13 +63,14 @@ nav{
 .links-container{
     border: 1px solid #161616;
     border-radius: 20px;
+    display: flex;
 }
 .nav-links{
     display: flex;
     text-align: center;
     list-style: none;
     padding-top: 1rem;
-
+    margin-right: 17rem;
 }
 
 .nav-links li a{
@@ -79,7 +80,7 @@ nav{
     font-size: 1.1rem;
 }
 .nav-social-links{
-    padding-top: 0;
+    padding-top: 0.5rem;
     padding-right: 5rem;
     
 }
@@ -102,13 +103,14 @@ nav{
     color: #fff;
 }
 
-.burger-menu, .x-mark{
+.burger-menu{
     display: none;
 }
 .burger-menu span{
     background: linear-gradient(to right, rgb(228, 228, 30), #bfbbb3 80%);
     width: 20px;
     height: 3px;
+    transition: 0.4s;
     display: block;
     margin-bottom: 5px;
 }
@@ -119,26 +121,22 @@ nav{
     width: 25px;
 }
 
-.x-mark span{
-    background: linear-gradient(to right, rgb(228, 228, 30), #bfbbb3 80%);
-    width: 25px;
-    height: 3px;
-    display: block;
-    rotate: 45deg;
+.burger-menu.is-open span:nth-child(1){
+    transform: rotate(-45deg) translate(-5px, 6px);
+    width: 30px;
 }
-.x-mark span:nth-child(2){
-    rotate: -45deg;
+.burger-menu.is-open span:nth-child(2){
+    opacity: 0;
 }
-.show-nav{
-    display: initial;
+.burger-menu.is-open span:nth-child(3){
+    transform: rotate(45deg) translate(-5px, -6px);
+    width: 30px;
 }
+
 
 /* media query for hamburger menu */
 @media screen and (max-width: 991px){
-    .nav-links, .nav-social-links{
-        display: none;
-    }
-    .burger-menu, .x-mark{
+    .burger-menu{
         display: initial;
         margin-right: 2.5rem;
     }
@@ -157,6 +155,53 @@ nav{
     }
     #home{
         margin-top: 10rem;
+    }
+    nav{
+        border: none;
+        box-shadow: none;
+        border-bottom: 1px solid #222121;
+        border-radius: none;
+    }
+    .links-container{
+        background-color: #161616;
+        width: 100%;
+        border: 1px solid #161616;
+        position: fixed;
+        opacity: 0;
+        top: -46%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0;
+        transition: 0.5s;
+    }
+    .links-container.is-open{
+        top: 70px;
+        opacity: 1;
+    }
+    .nav-links{
+        margin-right: 0;
+        flex-direction: column;
+        padding: 0;
+    }
+    .nav-links li{
+        margin: 1rem;
+    }
+    .nav-social-links{
+        padding-right: 0;
+        margin-bottom: 1rem;
+    }
+    .nav-social-links div{
+        background-color: transparent;
+        border: none;
+    }
+    .nav-social-links div a i{
+        font-size: 1.8rem;
+        color: #fff;
+        margin: 1rem;
+    
     }
 
 }
