@@ -33,9 +33,7 @@ burgerMenu.addEventListener('click', ()=> {
     }
  })
 
- // Smooth scroll functionality
- const sections = document.querySelectorAll('section');
- const navLinks = document.querySelectorAll('nav-links li a');
+ 
 
 
 

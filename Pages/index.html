@@ -9,44 +9,57 @@
 </head>
 <body>
     <!-- NavBar -->
-    <section id="navbar">
-        <nav class="nav-bar">
+    <header id="header-nav">
+        <nav class="navbar">
             <div class="navbar-logo">
                 <a href=""><img src="../Images/N-logo.png" alt="logo" class="logo"></a>
-                <p>Dev Bro</p>
+                <span class="dev-text">Dev Bro</span>
             </div>  
-            <div class="links-container js-links-container">   
+            <div class="links-container ">   
                 <ul class="nav-links"> 
-                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#welcome-section" class="active">Home</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#blog">Blog</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-                <div class="nav-social-links">
-                    <div>
-                        <a href=""><i class="fa fa-github"></i></a>
-                        <a href=""><i class="fa fa-twitter"></i></a>
-                        <a href=""><i class="fa fa-instagram"></i></a>
-                    </div>
+            </div>
+            <div class="nav-social-links">
+                <a href=""><i class="fa fa-github" title="github"></i></a>
+                <a href=""><i class="fa fa-twitter" title="github"></i></a>
+                <a href=""><i class="fa fa-instagram" title="github"></i></a>
+            </div>
+            <div class="burger-menu  js-burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!-- burger-menu container -->
+            <div class="burger-menu-container  js-links-container">   
+                <ul class="burger-nav-links"> 
+                    <li><a href="#welcome-section" class="active">Home</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="burger-nav-social-links">
+                    <a href=""><i class="fa fa-github" title="github"></i></a>
+                    <a href=""><i class="fa fa-twitter" title="github"></i></a>
+                    <a href=""><i class="fa fa-instagram" title="github"></i></a>
                 </div>
             </div>
-            <div class="burger-menu js-burger-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
         </nav>
-    </section>
+    </header>
     <!-- Home Section -->
-    <section id="home" class="reveal-animation">
+    <section id="welcome-section" class="reveal-animation">
         <div class="home-content">
            <div class="home-title ">
-                <h3 class="custom-header">Welcome to my website
+                <h1 class="custom-header">Welcome to my website
                     <span class="second-line">I am a
                         <span class="developer-text"> web developer</span>
                     </span>
-                </h3>
+                </h1>
                 <p class="custom-text">Dedicated to creating clean, user-friendly and interactive websites.</p>
            </div>
            <div class="home-display-grid">
@@ -54,7 +67,7 @@
                     <img src="../Images/1.jpeg" class="my-img" alt="my image">
                 </div>
                 <div class="home-display-container">
-                    <h3 class="home-display-header">ABOUT ME</h3>
+                    <h3 class="header-text-design">ABOUT ME</h3>
                     <p class="home-display-subheader">Hi, I am <span class="my-name">Nabeel</span></p>
                     <p class="home-display-text">a passionate developer with a clear goal: <span class="to-become-text">to become a <span class="full-stack-text">Full-stack developer</span>.</span>
                         Self-taught and passionate about this field because it empowers me to be resourceful and creative,
@@ -65,7 +78,7 @@
     </section>
 <!-- Skills Section -->
     <section id="skills" class="reveal-animation">
-        <div class="skills-text-design">
+        <div class="header-text-design">
             <h2>MY SKILLS</h2>
         </div>
         <div class="coding-grid-container">
@@ -85,7 +98,24 @@
         </div>
     </section>
     <section id="projects" class="reveal-animation">
-        <h2>PROJECTS TO BE ADDED</h2>
+        <div class="header-text-design">
+            <h2>MY PROJECTS</h2>
+        </div>
+        <div class="project-tile">
+            <div class="project">
+                <a href="https://www.youtube.com">
+                    <img src="../Images/stopwatch.png" alt="Stopwatch">
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JAVASCRIPT</li>
+                    </ul>
+                    <p class="project-title">Stopwatch</p>
+                </a>
+            </div>
+            <div class="project"> 2</div>
+            <div class="project"> 3</div>
+        </div>
     </section>
     <!-- Blog section -->
     <section id="blog" class="reveal-animation">
@@ -96,13 +126,16 @@
     </section>
     <!-- Contact section -->
    <section id="contact" class="reveal-animation">
+        <div class="header-text-design">
+            <h2 class="get-in-touch">GET IN TOUCH</h2>
+        </div>
         <div class="contact-container">
             <div class="contact-text-container">
                 <h2 class="contact-header-text">Let's talk!</h2>
                 <p class="contact-paragraph">I'm open to collaborations and ready to bring my skills to your project. Connect with me on the platforms provided and <span>let's make it happen.</span></p>
                 <div class="social-links">
-                    <a href="#" title="GitHub"><i class="fa fa-github"></i></a>
-                    <a href="#" title="Twitter"><i class="fa fa-twitter"></i></a>
+                    <a href="https://github.com/Nabeel-99" title="GitHub"><i class="fa fa-github"></i></a>
+                    <a href="https://github.com/Nabeel-99" title="Twitter" id="profile-link" target="_blank" rel="noopener"><i class="fa fa-twitter"></i></a>
                     <a href="#" title="Instagram"><i class="fa fa-instagram"></i></a>    
                 </div>
             </div>
@@ -117,3 +150,5 @@
     <script src="../Scripts/index.js"></script>
 </body>
 </html>
+
+
