@@ -33,8 +33,49 @@ burgerMenu.addEventListener('click', ()=> {
     }
  })
 
+//  store projects
+const projects = [
+    {
+        image: 'stopwatch.png',
+        description: 'Created with Html, CSS, Javascript',
+        title: 'StopWatch app',
+        codeLink: '',
+        websiteLink: ''
+    },
+    {
+        image: 'palindrome.png',
+        description: 'Created with Html, CSS, Javascript',
+        title: 'Palindrome checker',
+        codeLink: '',
+        websiteLink: ''
+    }
+   
+]
  
+// project items
+const projectTile = document.querySelector('.js-project-tile')
 
+const setProjectCards = (arr = projects) => {
+    projectTile.innerHTML += arr.map(({link,image,description, title, codeLink, websiteLink}) => {
+       return `
+            <div class="project-card">
+                <img src="../Images/${image}" alt="Stopwatch" class="project-img">
+                <div class="project-title">
+                    <h3>${title}</h3>
+                </div>
+                   
+                <div class="project-link">
+                    <h2>${title}</h2>
+                    <p>${description}</p>
+                    <a href="${codeLink}" target="_blank">Code</a>
+                    <a href="${websiteLink}" target="_blank">Live Demo</a>   
+                </div>
+            </div> 
+        `
+    }).join('')
+}
+
+setProjectCards()
 
 
 
