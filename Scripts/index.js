@@ -48,7 +48,14 @@ const projects = [
         title: 'Palindrome checker',
         codeLink: '',
         websiteLink: ''
-    }
+    },
+    {
+        image: 'roman.png',
+        description: 'Created with Html, CSS, Javascript',
+        title: 'Roman Numeral App',
+        codeLink: '',
+        websiteLink: ''
+    },
    
 ]
  

@@ -161,14 +161,14 @@ nav{
     }
     .burger-menu{
         display: initial;
-        margin-right: 2.5rem;
+        margin-right: 1.5rem;
     }
     .navbar-logo{
         padding-left: 0;
-        margin-left: 2rem;
+        margin-left: 1rem;
     }
     .navbar-logo p{
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -393,7 +393,8 @@ nav{
     }
     .header-text-design{
         font-size: 2.2rem;
-        letter-spacing: normal; 
+        letter-spacing: normal;
+        padding-top: 5%; 
     }
     .home-display-subheader, .home-display-text{
         text-align: left;
@@ -433,7 +434,8 @@ nav{
     }
     .header-text-design{
         font-size: 2.2rem;
-        letter-spacing: normal; 
+        letter-spacing: normal;
+        padding-top: 5%; 
     }
     .home-display-subheader, .home-display-text{
         text-align: left;
@@ -709,7 +711,7 @@ nav{
     .project-tile{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-        padding: 0;
+        padding: 20px;
        
     }
    .project-card{
