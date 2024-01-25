@@ -56,7 +56,13 @@ const projects = [
         codeLink: '',
         websiteLink: ''
     },
-   
+    {
+        image: 'telephone.png',
+        description: 'Created with Html, CSS, Javascript',
+        title: 'Roman Numeral App',
+        codeLink: '',
+        websiteLink: ''
+    },
 ]
  
 // project items
