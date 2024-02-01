@@ -261,9 +261,11 @@ nav{
     width: 30%;
 }
 .my-img{
-    width: 50%;
-    border-radius: 50%;
-
+    object-fit: cover;
+    width: 350px;
+    height: 330px;
+    border-radius: 4rem;
+    border: 3px solid;
 }
 .home-display-grid{
     color: white;

@@ -59,7 +59,7 @@ const projects = [
     {
         image: 'telephone.png',
         description: 'Created with Html, CSS, Javascript',
-        title: 'Roman Numeral App',
+        title: 'Phone number Validation',
         codeLink: '',
         websiteLink: ''
     },
