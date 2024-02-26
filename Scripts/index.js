@@ -25,6 +25,17 @@ burgerMenu.addEventListener('click', ()=> {
     mobileMenu.classList.toggle('is-open')
 })
 
+// Close burger menu when clicking on a link in the menu
+const burgerMenuLinks = document.querySelectorAll('.burger-nav-links a');
+
+burgerMenuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        burgerMenu.classList.remove('is-open');
+        mobileMenu.classList.remove('is-open');
+    });
+});
+
+
 // listen to event listener when body is tappend and burger menu open, closes
  document.addEventListener('click', (e) => {
     if(!burgerMenu.contains(e.target) && !mobileMenu.contains(e.target)){
