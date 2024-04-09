@@ -47,54 +47,56 @@ burgerMenuLinks.forEach(link => {
 //  store projects
 const projects = [
     {
-        image: 'stopwatch.png',
-        description: 'Created with Html, CSS, Javascript',
-        title: 'StopWatch app',
-        codeLink: '',
-        websiteLink: ''
-    },
-    {
-        image: 'palindrome.png',
-        description: 'Created with Html, CSS, Javascript',
-        title: 'Palindrome checker',
-        codeLink: '',
-        websiteLink: ''
-    },
-    {
-        image: 'roman.png',
-        description: 'Created with Html, CSS, Javascript',
-        title: 'Roman Numeral App',
-        codeLink: '',
-        websiteLink: ''
-    },
-    {
-        image: 'telephone.png',
-        description: 'Created with Html, CSS, Javascript',
-        title: 'Phone number Validation',
-        codeLink: '',
-        websiteLink: ''
-    },
+    image: 'mealmate.png',
+    title: 'Recipe App',
+    description: `Food Recipe App
+     Developed using the MERN stack (MongoDB, Express.js, React.js, Node.js)
+    Utilizes external APIs to fetch recipes dynamically
+    Users can search for recipes based on various criteria (ingredients, cuisine, dietary preferences)
+    Allows users to save their favorite recipes for future reference
+    Implements user authentication and authorization for secure access to saved recipes
+    Includes a feature for users to post their own recipes for others to discover and try
+    Provides a user-friendly interface for browsing and managing saved and posted recipes`,  
+    githublink: 'https://github.com/Nabeel-99/FoodRecipe.git'
+   
+},
+{
+    image: 'dictionary.png',
+    title: 'Dictionary App',
+    description: `Developed using the MERN stack (MongoDB, Express.js, React.js, Node.js)
+    Utilizes external APIs to fetch recipes dynamically
+    Users can search for recipes based on various criteria (ingredients, cuisine, dietary preferences)
+    Allows users to save their favorite recipes for future reference
+    Implements user authentication and authorization for secure access to saved recipes
+    Includes a feature for users to post their own recipes for others to discover and try
+    Provides a user-friendly interface for browsing and managing saved and posted recipes`,  
+    githublink: 'https://github.com/Nabeel-99/DictionaryApp.git'
+   
+},
+ 
 ]
  
 // project items
 const projectTile = document.querySelector('.js-project-tile')
 
 const setProjectCards = (arr = projects) => {
-    projectTile.innerHTML += arr.map(({link,image,description, title, codeLink, websiteLink}) => {
+    projectTile.innerHTML += arr.map(({image,description, title, githublink}) => {
        return `
-            <div class="project-card">
-                <img src="../Images/${image}" alt="Stopwatch" class="project-img">
+       <div class="project-layout">
+           <div class="project-card">
+                <img src="../Images/${image}" alt="${title}" class="project-img">
                 <div class="project-title">
                     <h3>${title}</h3>
                 </div>
-                   
-                <div class="project-link">
-                    <h2>${title}</h2>
-                    <p>${description}</p>
-                    <a href="${codeLink}" target="_blank">Code</a>
-                    <a href="${websiteLink}" target="_blank">Live Demo</a>   
-                </div>
-            </div> 
+            </div>
+            <div class="project-description">
+                <h4>Description:</h4>
+                <ul>
+                    ${description.split('\n').map(line => `<li>${line.trim()}</li>`).join('')}
+                </ul>
+                <p>Project Link: <a href="${githublink}">GitHub project link</a></p>
+            </div>
+        </div>
         `
     }).join('')
 }

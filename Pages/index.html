@@ -13,21 +13,20 @@
         <nav class="navbar">
             <div class="navbar-logo">
                 <a href=""><img src="../Images/N-logo.png" alt="logo" class="logo"></a>
-                <span class="dev-text">Dev Bro</span>
+                <a href="" class="dev-text">Dev Bro</a>
             </div>  
             <div class="links-container ">   
                 <ul class="nav-links"> 
                     <li><a href="#welcome-section" class="active">Home</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
-                    <li><a href="#blog">Blog</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
             <div class="nav-social-links">
                 <a href="https://github.com/Nabeel-99" target="_blank" rel="noopener"><i class="fa fa-github" title="github"></i></a>
-                <a href="https://twitter.com/dev_bro99" target="_blank" rel="noopener"><i class="fa fa-twitter" title="github"></i></a>
-                <a href=""><i class="fa fa-instagram" title="github"></i></a>
+                <a href="https://twitter.com/Nabeel_umarr" target="_blank" rel="noopener"><i class="fa fa-twitter" title="twitter"></i></a>
+                <a href="mailto:farouknabil810@gmail.com"><i class="fa fa-envelope" title="Send me a message"></i></a>
             </div>
             <div class="burger-menu  js-burger-menu">
                 <span></span>
@@ -40,13 +39,14 @@
                     <li><a href="#welcome-section" class="active">Home</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
-                    <li><a href="#blog">Blog</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li><a href="/My_CV.pdf" download="">Download CV</a></li>
                 </ul>
+                
                 <div class="burger-nav-social-links">
-                    <a href="https://github.com/Nabeel-99" target="_blank" rel="noopener" title="github"><i class="fa fa-github" title="github"></i></a>
-                    <a href="https://twitter.com/dev_bro99" target="_blank" rel="noopener" title="twiiter"><i class="fa fa-twitter" title="twitter"></i></a>
-                    <a href=""><i class="fa fa-instagram" title="github"></i></a>
+                    <a href="https://github.com/Nabeel-99" title="GitHub" target="_blank" rel="noopener"><i class="fa fa-github"></i></a>
+                    <a href="https://twitter.com/Nabeel_umarr"  title="Twitter" target="_blank" rel="noopener"><i class="fa fa-twitter"></i></a>
+                    <a href="mailto:farouknabil810@gmail.com" title="Send me a message via email"><i class="fa fa-envelope"></i></a>  
                 </div>
             </div>
         </nav>
@@ -68,10 +68,10 @@
                 </div>
                 <div class="home-display-container">
                     <h3 class="header-text-design">ABOUT ME</h3>
-                    <p class="home-display-subheader">Hi, I am <span class="my-name">Nabeel</span></p>
-                    <p class="home-display-text">a passionate developer with a clear goal: <span class="to-become-text">to become a <span class="full-stack-text">Full-stack developer</span>.</span>
-                        Self-taught and passionate about this field because it empowers me to be resourceful and creative,
-                        transforming my visions into reality.</p>
+                    <p class="home-display-subheader">Hey there, I am <span class="full-stack-text">Nabeel</span></p>
+                    <p class="home-display-text">I'm a JavaScript developer with a focus on the MERN (MongoDB, Express.js, React.js, Node.js) stack. With expertise in React.js for dynamic interfaces and Node.js/Express.js for efficient backend solutions, I'm committed to using technology to solve real-world problems.
+
+                        Seeking opportunities to contribute to innovative projects.<br> Thanks for considering my profile!</p>
                 </div>
            </div>
           </div>
@@ -87,13 +87,15 @@
                     <h3>Frontend Stack</h3>
                     <p>React js</p>
                     <p>Responsive web design</p>
+                    <p>Tailwind CSS</p>
                     <p>UI/UX Design</p>
+                    
                 </div>
                 <div class="back-end">
                     <h3>Backend Stack</h3>
+                    <p>RESTful APIs</p>
                     <p>Node js</p>
                     <p>Express js</p>
-                    <p>Python</p>
                 </div>
                 <div class="database">
                     <h3>Database</h3>
@@ -101,7 +103,7 @@
                     <p>MySQL</p>
                 </div>
                 <div class="tools">
-                    <h3>Extended ToolKit</h3>
+                    <h3>Version Control</h3>
                     <p>Git</p>
                     <p>GitHub</p>
                 </div>
@@ -113,15 +115,13 @@
         <div class="header-text-design">
             <h2>MY PROJECTS</h2>
         </div>
-        <div class="project-tile js-project-tile"></div>
-    </section>
-    <!-- Blog section -->
-    <section id="blog" class="reveal-animation">
-        <div class="blog-container">
-            <h2>Want to know more <span class="about-me-text">about me</span>?</h2>
-            <a href="#" class="blog-link"><i class="fa fa-hand-o-right px-4 text-secondary"></i>Visit my blog</a>
+        <div class="project-content">
+            <div class="project-tile js-project-tile"></div>
+        
+        </div>
         </div>
     </section>
+
     <!-- Contact section -->
    <section id="contact" class="reveal-animation">
         <div class="header-text-design">
@@ -129,16 +129,20 @@
         </div>
         <div class="contact-container">
             <div class="contact-text-container">
-                <h2 class="contact-header-text">Let's talk!</h2>
-                <p class="contact-paragraph">I'm open to collaborations and ready to bring my skills to your project. Connect with me on the platforms provided and <span>let's make it happen.</span></p>
-                <div class="social-links">
-                    <a href="https://github.com/Nabeel-99" title="GitHub" target="_blank" rel="noopener"><i class="fa fa-github"></i></a>
-                    <a href="https://twitter.com/dev_bro99"  title="Twitter" id="profile-link" target="_blank" rel="noopener"><i class="fa fa-twitter"></i></a>
-                    <a href="#" title="Instagram"><i class="fa fa-instagram"></i></a>    
+                <div class="contact-text">
+                    <h2 class="contact-header-text">Let's talk!</h2>
+                    <p class="contact-paragraph">I'm open to collaborations and ready to bring my skills to your project. Connect with me on the platforms below and <span>let's make it happen.</span></p>
                 </div>
-            </div>
-            <div class="contact-image-container">
-                <img src="../Images//Frame.png" class="frame-laptop" alt="Mockup">
+                <div class="social-links">
+                    <div class="icons">
+                        <a href="https://github.com/Nabeel-99" title="GitHub" target="_blank" rel="noopener"><i class="fa fa-github"></i></a>
+                        <a href="https://twitter.com/Nabeel_umarr"  title="Twitter" id="profile-link" target="_blank" rel="noopener"><i class="fa fa-twitter"></i></a>
+                        <a href="mailto:farouknabil810@gmail.com" title="Send me a message via email"><i class="fa fa-envelope"></i></a>   
+                    </div>
+                    <div class="cv-link">
+                        <a href="/My_CV.pdf" download class="cv-btn">Download CV</a>
+                    </div>
+                </div>
             </div>
         </div>
    </section>
