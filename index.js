@@ -49,27 +49,23 @@ const projects = [
     {
     image: 'mealmate.png',
     title: 'Recipe App',
-    description: `Food Recipe App
-     Developed using the MERN stack (MongoDB, Express.js, React.js, Node.js)
-    Utilizes external APIs to fetch recipes dynamically
-    Users can search for recipes based on various criteria (ingredients, cuisine, dietary preferences)
-    Allows users to save their favorite recipes for future reference
-    Implements user authentication and authorization for secure access to saved recipes
-    Includes a feature for users to post their own recipes for others to discover and try
-    Provides a user-friendly interface for browsing and managing saved and posted recipes`,  
+    description: `Developed with the MERN stack (MongoDB, Express.js, React.js, Node.js)
+    Fetches recipes dynamically using external APIs
+    Search functionality based on ingredients, cuisine, and dietary preferences
+    Allows users to save favorite recipes and post their own
+    User authentication and authorization for secure access
+    User-friendly interface for easy browsing and managing recipes`,  
     githublink: 'https://github.com/Nabeel-99/FoodRecipe.git'
    
 },
 {
     image: 'dictionary.png',
     title: 'Dictionary App',
-    description: `Developed using the MERN stack (MongoDB, Express.js, React.js, Node.js)
-    Utilizes external APIs to fetch recipes dynamically
-    Users can search for recipes based on various criteria (ingredients, cuisine, dietary preferences)
-    Allows users to save their favorite recipes for future reference
-    Implements user authentication and authorization for secure access to saved recipes
-    Includes a feature for users to post their own recipes for others to discover and try
-    Provides a user-friendly interface for browsing and managing saved and posted recipes`,  
+    description: `Developed a Dictionary Application using React.js and Node.js.
+    Features dynamic search functionality for word definitions and synonyms.
+    Includes custom words with definitions, real-life scenarios, and optional code snippets.
+    Provides a user-friendly interface with intuitive navigation.
+    Stack Used: React.js, Node.js, MongoDB, RESTful APIs`,  
     githublink: 'https://github.com/Nabeel-99/DictionaryApp.git'
    
 },
