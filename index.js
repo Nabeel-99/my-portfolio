@@ -94,7 +94,7 @@ const setProjectCards = (arr = projects) => {
                 <ul>
                     ${description.split('\n').map(line => `<li>${line.trim()}</li>`).join('')}
                 </ul>
-                <p>Project Link: <a href="${githublink}">GitHub project link</a></p>
+                <p>Project Link: <a href="${githublink}">${githublink}</a></p>
             </div>
         </div>
         `
