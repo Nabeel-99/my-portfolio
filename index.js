@@ -99,7 +99,77 @@ const setProjectCards = (arr = projects) => {
 
 setProjectCards()
 
+const skills = [
+    {
+        image: "Images/html-icon-original.svg",
+        title: "HTML"
+    },
+    {
+        image: "Images/css-icon-original.svg",
+        title: "CSS"
+    },
+    {
+        image: "Images/java-icon-original.svg",
+        title: "Java"
+    },
+    {
+        image: "Images/javascript-icon-original.svg",
+        title: "JavaScript"
+    },
+    {
+        image: "Images/Typescript_logo_2020-1960x1960.png",
+        title: "TypeScript"
+    },
+      
+    {
+        image: "Images/file-type-tailwind-icon-original.svg",
+        title: "Tailwind CSS"
+    },
+ 
+    {
+        image: "Images/logo-mongodb-png-standard-logo-4167.jpg",
+        title: "Mongo DB"
+    },
+  
+    {
+        image: "Images/react-logo-png-js-logo-react-react-js-icon-512x512.png",
+        title: "React JS"
+    },
+    {
+        image: "Images/spring-boot-logo.png",
+        title: "Spring Boot"
+    },
+    {
+        image: "Images/svelte-icon-icon-original.svg",
+        title: "Svelte"
+    },
+    {
+        image: "Images/aws-icon-original.svg",
+        title: "AWS"
+    },
+    {
+        image: "Images/1764866.jpg",
+        title: "Node Js"
+    },
+   
+]
 
+const skillsHTML = document.querySelector('.skills-stack-js')
+
+const  setSkills = (arr = skills) => {
+    skillsHTML.innerHTML +=  arr.map(({image, title}) => {
+        return `
+        <div class="skill-div">
+            <div class="skill-img">
+             <img src="../${image}" alt="${title}" class="skill-img-design">
+             </div>
+            <p class="skill-name">${title}</p>
+         </div>
+        `
+    }).join(" ")
+}
+
+setSkills()
 
 
 

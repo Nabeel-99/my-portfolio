@@ -334,7 +334,7 @@ body{
 
 .header-text-design{
     font-size: 4rem;
-    letter-spacing: -.5rem;
+    letter-spacing: -.2rem;
 
     font-weight: bold;
     opacity: 0.8;
@@ -349,6 +349,7 @@ body{
     margin-top: 2rem;
     line-height: 2.4rem;
     padding-right: 4rem;
+    text-align: left;
 }
 .to-become-text{
     font-style: italic;
@@ -514,6 +515,33 @@ body{
     opacity: 0.8;
 
 }
+.skill-div{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #6e6759;
+    width: 15rem;
+    border-radius: 2rem;
+    padding: 2rem;
+    background-color: #3d3b37;
+    box-shadow: 0px 8px 4px #322916bb;
+    transition: transform 0.5s ease-in-out;
+
+}
+.skill-name{
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.skill-img-design{
+    object-fit: contain;
+    width: 80px;
+    height: 80px;
+}
+.skill-div:hover{
+    transform: scale(1.1);
+}
 
 .skills-text-design{
     margin-bottom: 5%;
@@ -598,10 +626,13 @@ body{
     .coding-skills-text{
         padding: 0%;
         margin-top: 5%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr) ;
         align-items: center;
+        
+    }
+    .skill-div{
+        width: 10rem;
     }
     .fa-ul{
         font-size: 1.3rem;
@@ -633,11 +664,13 @@ body{
     .coding-skills-text{
         padding: 0%;
         margin-top: 5%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr) ;
         align-items: center;
        
+    }
+    .skill-div{
+        width: 15rem;
     }
     .fa-ul{
         font-size: 1.5rem;
@@ -672,7 +705,7 @@ body{
         padding: 0%;
         margin-top: 5%;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
        
     }
     .fa-ul{
@@ -706,7 +739,7 @@ body{
         padding: 0%;
         margin-top: 5%;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 5rem;
        
     }
