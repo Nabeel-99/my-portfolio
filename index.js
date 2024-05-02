@@ -49,23 +49,21 @@ const projects = [
     {
     image: 'mealmate.png',
     title: 'Recipe App',
-    description: `Developed with the MERN stack (MongoDB, Express.js, React.js, Node.js)
-    Fetches recipes dynamically using external APIs
-    Search functionality based on ingredients, cuisine, and dietary preferences
-    Allows users to save favorite recipes and post their own
-    User authentication and authorization for secure access
-    User-friendly interface for easy browsing and managing recipes`,  
+    description: `Created with the MERN stack, this app lets users search for recipes based on preferences, save favorites, and post their own recipes securely.`,  
     githublink: 'https://github.com/Nabeel-99/FoodRecipe.git'
    
 },
 {
     image: 'dictionary.png',
     title: 'Dictionary App',
-    description: `Developed a Dictionary Application using React.js and Node.js.
-    Features dynamic search functionality for word definitions and synonyms.
-    Includes custom words with definitions, real-life scenarios, and optional code snippets.
-    Provides a user-friendly interface with intuitive navigation.
-    Stack Used: React.js, Node.js, MongoDB, RESTful APIs`,  
+    description: ` Developed using React.js and Node.js, this app offers dynamic word searches with custom definitions and synonyms in a user-friendly interface.`,  
+    githublink: 'https://github.com/Nabeel-99/DictionaryApp.git'
+   
+},
+{
+    image: 'taskmanager.png',
+    title: 'Task Manager App',
+    description: ` Built task manager app using svelte kit, this app organizes tasks efficiently with features like task creation, progress tracking, and priority management in a user-friendly interface.`,  
     githublink: 'https://github.com/Nabeel-99/DictionaryApp.git'
    
 },
@@ -86,11 +84,19 @@ const setProjectCards = (arr = projects) => {
                 </div>
             </div>
             <div class="project-description">
-                <h4>Description:</h4>
-                <ul>
-                    ${description.split('\n').map(line => `<li>${line.trim()}</li>`).join('')}
-                </ul>
-                <p>Project Link: <a href="${githublink}">${githublink}</a></p>
+                <h5>${title}</h5>
+                <h4>Description: ${description}</h4>
+                <div class="links">
+                   <div class="link">
+                      <a href="${githublink}" class="github-link"><i class="fa fa-github" title="github"></i></a>
+                      <p>Code</p>
+                   </div>
+                   <div class="link">
+                      <a href="${githublink}" class="live-preview"><i class="fa-regular fa-eye" title="live preview"></i></a>
+                      <p>Live Demo</p>
+                   </div>
+                   
+                </div>
             </div>
         </div>
         `

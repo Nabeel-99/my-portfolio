@@ -756,8 +756,8 @@ body{
 }
 
 .project-content{
-   display: flex;
-   flex-direction: column;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
    gap: 5rem;
    padding: 4rem;
    border-radius: 8px;
@@ -765,36 +765,33 @@ body{
 }
 
 .project-layout{
-    display: flex;
-    width: 100%;
-    gap: 5rem;
-    margin-bottom: 3rem;
+   border: 1px solid #61615d;
+   border-radius: 1rem;
+   display: flex;
+   flex-direction: column;
+   box-shadow: 0 4px 8px rgba(8, 7, 7, 0.886);
+   position: relative;
 }
 .project-layout:nth-last-child(){
     margin-bottom: 2rem;
 }
 .project-card{
-    border: 2px solid #272626;
-    width: 100%;
-    max-width: 350px;
-    max-height: 430px;
-    border-radius: 5px;
-    background-color: #201f1ea2;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 4px 8px rgba(20, 20, 20, 0.493);
+   
 
 }
 
 .project-img{
+    max-width: 100%;
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
+    height: 300px;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+
 }   
 
 .project-title{
-    padding: 15px;
-    font-weight: bold;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 0.4rem;
 }
 
 .project-title h3{
@@ -802,12 +799,6 @@ body{
 }
 
 
-
-.project-card:hover .project-link{
-    display: initial;
-    top: 0;
-    transform: translateY(0); 
-}
 .project-link a{
     text-decoration: none;
     color: yellow;
@@ -846,52 +837,101 @@ body{
 }
 .project-description{
     text-align: left;
+
+    display: none;
+
+}
+.project-layout:hover .project-description{
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #4a4848;
+    border-radius: 1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    transition: background-color 0.3s ease; 
+    background-color: rgba(0, 0, 0, 0.877); 
+}
+.links{
+    display: flex;
+    gap: 2rem;
+}
+.link{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.links a{
+    padding: 1rem;
+    border: 1px solid transparent;
+    border-radius: 200px;
+    color: white;
+    font-size: 1.5rem;
+    background-color: #161313;
+    animation: border-blink 2s infinite;
+    transition: transform .3s ease-in-out;
+}
+
+
+@keyframes border-blink {
+    0% { border-color: white; } 
+    50% { border-color: rgb(7, 32, 5); } 
+    100% { border-color: blue; }
+}
+.links a:hover{
+    background-color:  #413f3f;
+    transform: scale(1.1)
 }
 
 .project-description h4 {
     margin-bottom: 10px;
+    font-size: medium;
+    font-weight: bold;
+    font-style: italic;
 }
 
-.project-description ul {
-    text-align: left;
-    list-style-type: disc; /* Use disc bullets */
-    padding-left: 20px; /* Add left padding for bullet points */
+
+
+.project-tile{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    /* padding: 4rem; */
+    border-radius: 8px;
 }
 
-.project-description li {
-    margin-bottom: 5px; /* Add spacing between bullet points */
-    font-size: 1.1rem;
+.project-description h5{
+    color: #ececec;
+    font-weight: bold;
 }
-
-.project-description a {
-    margin-top: 10px; /* Add spacing above the GitHub link */
-}
-
 
 @media screen and (max-width: 480px) {
     .project-tile{
-       
-       
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 3rem;
+        border-radius: 8px;
     }
     .project-card{
-        border: 2px solid #272626;
-        width: 100%;
-        max-height: 430px;
-        border-radius: 5px;
-        background-color: #201f1ea2;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        box-shadow: 0 4px 8px rgba(20, 20, 20, 0.493);
+       
     
     }
-   .project-layout{
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-   }
+    .project-layout{
+        border: 1px solid #61615d;
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 4px 8px rgba(8, 7, 7, 0.886);
+        position: relative;
+        width: 100%;
+     }
 
    .project-content{
     padding: 2rem;
@@ -905,6 +945,12 @@ body{
     .project-tile{
        
        
+    }
+    .project-tile{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 3rem;
+        border-radius: 8px;
     }
     .project-card{
         border: 2px solid #272626;
