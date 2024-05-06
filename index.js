@@ -50,21 +50,24 @@ const projects = [
     image: 'mealmate.png',
     title: 'Recipe App',
     description: `Created with the MERN stack, this app lets users search for recipes based on preferences, save favorites, and post their own recipes securely.`,  
-    githublink: 'https://github.com/Nabeel-99/FoodRecipe.git'
+    githublink: 'https://github.com/Nabeel-99/FoodRecipe.git',
+    weblink:''
    
 },
 {
     image: 'dictionary.png',
     title: 'Dictionary App',
     description: ` Developed using React.js and Node.js, this app offers dynamic word searches with custom definitions and synonyms in a user-friendly interface.`,  
-    githublink: 'https://github.com/Nabeel-99/DictionaryApp.git'
+    githublink: 'https://github.com/Nabeel-99/DictionaryApp.git',
+    weblink: ''
    
 },
 {
     image: 'taskmanager.png',
     title: 'Task Manager App',
     description: ` Built task manager app using svelte kit, this app organizes tasks efficiently with features like task creation, progress tracking, and priority management in a user-friendly interface.`,  
-    githublink: 'https://github.com/Nabeel-99/DictionaryApp.git'
+    githublink: 'https://github.com/Nabeel-99/DictionaryApp.git',
+    weblink:'https://svelte-kit-task-manager-app.vercel.app/dashboard'
    
 },
  
@@ -74,7 +77,7 @@ const projects = [
 const projectTile = document.querySelector('.js-project-tile')
 
 const setProjectCards = (arr = projects) => {
-    projectTile.innerHTML += arr.map(({image,description, title, githublink}) => {
+    projectTile.innerHTML += arr.map(({image,description, title, githublink, weblink}) => {
        return `
        <div class="project-layout">
            <div class="project-card">
@@ -88,11 +91,11 @@ const setProjectCards = (arr = projects) => {
                 <h4>Description: ${description}</h4>
                 <div class="links">
                    <div class="link">
-                      <a href="${githublink}" class="github-link"><i class="fa fa-github" title="github"></i></a>
+                      <a href="${githublink}" class="github-link" target="_blank"><i class="fa fa-github" title="github"></i></a>
                       <p>Code</p>
                    </div>
                    <div class="link">
-                      <a href="${githublink}" class="live-preview"><i class="fa-regular fa-eye" title="live preview"></i></a>
+                      <a href="${weblink}" class="live-preview" target="_blank"><i class="fa-regular fa-eye" title="live preview"></i></a>
                       <p>Live Demo</p>
                    </div>
                    
