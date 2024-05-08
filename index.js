@@ -156,6 +156,15 @@ document.querySelectorAll('.preview').forEach((button, index) => {
         // Reassign event listeners for next, prev, and close buttons
         assignButtonEventListeners(clonedSlider);
         handleSwipeGesture(clonedSlider);
+
+        overlay.addEventListener('click', (event) => {
+            if (event.target === overlay) {
+                slider.style.display = 'none';
+                overlay.remove();
+                document.body.style.overflow = 'auto'; // Restore scrolling
+            }
+        });
+
         // Disable scrolling
         document.body.style.overflow = 'hidden';
     });
