@@ -62,12 +62,20 @@ const projects = [
         githublink: 'https://github.com/Nabeel-99/DictionaryApp.git',
         images: ['dictionary8.png', 'dictionary.png', 'dictionary7.png', 'dictionary5.png']
     },
+    
     {
         image: 'taskmanager.png',
         title: 'Task Manager App',
         description: ` Built task manager app using svelte kit, this app organizes tasks efficiently with features like task creation, progress tracking, and priority management in a user-friendly interface.`,
         githublink: 'https://github.com/Nabeel-99/DictionaryApp.git',
         images: ['task12.png', 'task1.png', 'task4.png', 'task7.png', 'task5.png', 'task9.png']
+    },
+    {
+        image: 'springboot2.png',
+        title: 'Football Manager App',
+        description: `My first Spring Boot project, the Football Manager app features a dynamic JPA database, user-friendly Thymeleaf interface, CRUD operations, and Swagger-powered REST API documentation.`,
+        githublink: 'https://github.com/Nabeel-99/Springboot_football_manager_CRUD.git',
+        images: ['springboot2.png', 'springboot.png']
     }
 ];
 
