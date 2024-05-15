@@ -75,7 +75,7 @@ const projects = [
         title: 'Football Manager App',
         description: `My first Spring Boot project, the Football Manager app features a dynamic JPA database, user-friendly Thymeleaf interface, CRUD operations, and Swagger-powered REST API documentation.`,
         githublink: 'https://github.com/Nabeel-99/Springboot_football_manager_CRUD.git',
-        images: ['springboot.png', 'springboot2.png']
+        images: ['springboot.png', 'springboot2- .png']
     }
 ];
 
