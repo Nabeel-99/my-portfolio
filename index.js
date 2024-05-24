@@ -56,15 +56,7 @@ const projects = [
         images: ['recipe9.png', 'recipe4.png', 'recipe5.png', 'recipe8.png',]
     },
     {
-        image: 'dictionary.png',
-        title: 'Dictionary App',
-        description: ` Developed using React.js and Node.js, this app offers dynamic word searches with custom definitions and synonyms in a user-friendly interface.`,
-        githublink: 'https://github.com/Nabeel-99/DictionaryApp.git',
-        images: ['dictionary8.png', 'dictionary.png', 'dictionary7.png', 'dictionary5.png']
-    },
-    
-    {
-        image: 'taskmanager.png',
+        image: 'task12.png',
         title: 'Task Manager App',
         description: ` Built task manager app using svelte kit, this app organizes tasks efficiently with features like task creation, progress tracking, and priority management in a user-friendly interface.`,
         githublink: 'https://github.com/Nabeel-99/DictionaryApp.git',
@@ -76,7 +68,15 @@ const projects = [
         description: `My first Spring Boot project, the Football Manager app features a dynamic JPA database, user-friendly Thymeleaf interface, CRUD operations, and Swagger-powered REST API documentation.`,
         githublink: 'https://github.com/Nabeel-99/Springboot_football_manager_CRUD.git',
         images: ['springboot.png', 'springboot2.png']
-    }
+    },
+    {
+        image: 'dictionary.png',
+        title: 'Dictionary App',
+        description: ` Developed using React.js and Node.js, this app offers dynamic word searches with custom definitions and synonyms in a user-friendly interface.`,
+        githublink: 'https://github.com/Nabeel-99/DictionaryApp.git',
+        images: ['dictionary8.png', 'dictionary.png', 'dictionary7.png', 'dictionary5.png']
+    },
+   
 ];
 
 const projectTile = document.querySelector('.js-project-tile');
