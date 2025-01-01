@@ -1,0 +1,459 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Satoshi-Regular";
+  src: url("./assets/fonts/Satoshi-Regular.woff2") format("woff2"),
+    url("./assets/fonts/Satoshi-Regular.woff") format("woff"),
+    url("./assets/fonts/Satoshi-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Satoshi-Bold";
+  src: url("./assets/fonts/Satoshi-Bold.woff2") format("woff2"),
+    url("./assets/fonts/Satoshi-Bold.woff") format("woff"),
+    url("./assets/fonts/Satoshi-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+:root {
+  font-family: sans-serif, system-ui, Avenir, Helvetica, Arial, serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87); */
+  /* background-color: #242424; */
+  background-color: #0a0a0aff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  text-decoration: inherit;
+}
+a:hover {
+}
+
+.spin {
+  animation: spinMe 3s linear infinite;
+}
+
+@keyframes spinMe {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.mask-marquee {
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    /* Fully transparent */ rgba(0, 0, 0, 1) 20%,
+    /* Fully opaque red */ rgba(0, 0, 0, 1) 80%,
+    /* Fully opaque darker red */ rgba(0, 0, 0, 0) /* Fully transparent */
+  );
+  /* Add background color to visualize the effect */
+}
+
+body {
+  margin: 0;
+  display: flex;
+  color: #ffffffde;
+  justify-content: center;
+  background-color: #0a0a0aff;
+  /* place-items: center; */
+  /* min-width: 320px; */
+  min-height: 120vh;
+}
+/*  */
+/* media for screena bove */
+@media (min-width: 2900px) {
+}
+.fancy {
+  --offset: 3px;
+  background: rgb(55, 21, 90);
+  border-radius: 50px;
+  position: relative;
+  height: 75px;
+  width: 75px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Conic gradient */
+.fancy::before {
+  content: "";
+  background: conic-gradient(transparent 270deg, white, transparent);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  aspect-ratio: 1;
+  width: 100%;
+  animation: rotate 2s linear infinite;
+}
+
+/* Overlay */
+.fancy::after {
+  content: "";
+  background: inherit;
+  border-radius: inherit;
+  position: absolute;
+  inset: var(--offset);
+  height: calc(100% - 2 * var(--offset));
+  width: calc(100% - 2 * var(--offset));
+}
+
+.fancy a {
+  background: transparent;
+  color: white;
+  font-size: 1.5rem;
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes rotate {
+  from {
+    transform: translate(-50%, -50%) scale(1.4) rotate(0turn);
+  }
+
+  to {
+    transform: translate(-50%, -50%) scale(1.4) rotate(1turn);
+  }
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+.star-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0a0a0aff;
+  animation: animateBg 50s linear infinite;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(8, 8, 8, 0.6) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+.click {
+  background: #003366;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 10px;
+  position: relative;
+  width: 300px;
+}
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+.click::after,
+.click::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(from var(--angle), transparent 70%, #046a06);
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 2rem;
+  border-radius: 10px;
+  animation: 6s spin linear infinite;
+}
+
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+
+  to {
+    --angle: -360deg;
+  }
+}
+
+.click::before {
+  filter: blur(1rem);
+  opacity: 0.6;
+}
+
+.active-link {
+  font-weight: bold;
+  border: 1px solid rgb(30, 29, 29);
+  border-radius: 20px;
+  padding: 2px 10px 2px 10px;
+}
+
+@keyframes animateBg {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+.moving-border-btn {
+  position: relative;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: transparent;
+  border: 2px solid transparent;
+  border-radius: 50px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: color 0.4s ease;
+}
+
+.moving-border-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #020211, #061b30, #064dd1);
+  background-size: 400% 400%;
+  border-radius: 50px;
+  animation: gradientMove 4s linear infinite;
+  z-index: -1;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.static-star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: #5a5959;
+  border-radius: 50%;
+  animation: twinkle 3s infinite ease-in-out, fadeInOut 5s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.static-star:nth-child(odd) {
+  animation-delay: 0.2s;
+}
+
+.static-star:nth-child(even) {
+  animation-delay: 0.5s;
+}
+
+.star {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  width: 1px;
+  height: 1px;
+  border-radius: 50%;
+  animation: animate 12s linear infinite;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.star::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 300px;
+  height: 1px;
+  background: linear-gradient(90deg, #5a5959, transparent);
+}
+
+.star:nth-child(1) {
+  top: 10%;
+  left: 10%;
+  animation-delay: 2s;
+  animation-duration: 2s;
+}
+
+.star:nth-child(2) {
+  top: 0%;
+  left: 20%;
+  animation-delay: 3s;
+  animation-duration: 3s;
+}
+
+.star:nth-child(3) {
+  top: 80%;
+  left: 50%;
+  animation-delay: 4s;
+  animation-duration: 2.5s;
+}
+
+.star:nth-child(4) {
+  top: 0%;
+  left: 30%;
+  animation-delay: 5s;
+  animation-duration: 3s;
+}
+
+.star:nth-child(5) {
+  top: 0%;
+  left: 60%;
+  animation-delay: 6s;
+  animation-duration: 2.8s;
+}
+
+.star:nth-child(6) {
+  top: 0%;
+  left: 80%;
+  animation-delay: 7s;
+  animation-duration: 3.2s;
+}
+
+.star:nth-child(7) {
+  top: 30%;
+  left: 90%;
+  animation-delay: 8s;
+  animation-duration: 3.5s;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(210deg) translateX(0);
+    opacity: 0;
+    visibility: visible;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(210deg) translateX(-600px);
+    opacity: 0;
+  }
+}
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+.animated-border-button {
+  position: relative;
+  padding: 10px 20px;
+  background-color: #064dd1; /* animated-border-button background color */
+  color: white;
+  font-size: 16px;
+  border: 2px solid transparent; /* Transparent border to make space for the moving border effect */
+  border-radius: 5px;
+  overflow: hidden;
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.animated-border-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background: linear-gradient(
+    90deg,
+    #ff0066,
+    #ff9900,
+    #33cc33,
+    #0066ff
+  ); /* Gradient moving on border */
+  background-size: 400% 400%; /* Stretch the gradient for smooth movement */
+  animation: moveBorder 3s linear infinite; /* Animation to move the gradient */
+  z-index: -1; /* Behind the animated-border-button text */
+}
+
+.animated-border-button:hover {
+  background-color: #003366; /* Change button background color on hover */
+}
+
+@keyframes moveBorder {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 100%;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
