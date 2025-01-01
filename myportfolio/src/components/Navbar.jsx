@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { HiMiniBars2 } from "react-icons/hi2";
-import Typewriter from "typewriter-effect";
 import { HiXMark } from "react-icons/hi2";
 import BurgerMenu from "./BurgerMenu";
 const Navbar = () => {

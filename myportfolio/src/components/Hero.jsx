@@ -1,12 +1,6 @@
 import React from "react";
-import {
-  FaEnvelope,
-  FaEnvelopeOpen,
-  FaGithub,
-  FaTwitter,
-} from "react-icons/fa";
+import { FaEnvelope, FaGithub, FaTwitter } from "react-icons/fa";
 import Typewriter from "typewriter-effect";
-import { Element } from "react-scroll";
 const Hero = () => {
   return (
     <div className="flex flex-col xl:flex-row w-full gap-6 pb-44">

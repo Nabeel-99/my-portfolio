@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import ProjectCard from "./ProjectCard";
 import { useMotionValueEvent, useScroll, useTransform } from "framer-motion";
 import { projects } from "../projects";

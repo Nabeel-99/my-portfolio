@@ -1,6 +1,5 @@
-import React, { useRef } from "react";
-import SmartMeal from "../assets/images/smartmeal.png";
-import { motion, useScroll, useTransform } from "motion/react";
+import React from "react";
+import { motion, useTransform } from "motion/react";
 import { FiArrowUpRight } from "react-icons/fi";
 
 const ProjectCard = ({ i, range, targetScale, progress, project }) => {

@@ -1,20 +1,17 @@
-import { useEffect, useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import SideBar from "./components/SideBar";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 import Stack from "./components/Stack";
-import Lenis from "lenis";
+
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import StarsBackground from "./components/StarsBackground";
 import Navbar from "./components/Navbar";
-import { useInView } from "react-intersection-observer";
 
 function App() {
+  // import Lenis from "lenis";
   // const lenis = new Lenis();
   // function raf(time) {
   //   lenis.raf(time);
