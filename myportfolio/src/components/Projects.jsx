@@ -58,22 +58,22 @@ const Projects = () => {
       <div className="lg:sticky top-[150px] hidden lg:flex flex-col gap-2 items-center h-[500px]">
         <motion.span
           style={{ opacity: barOpacity }}
-          className="border border-[#262626] bg-[#064dd1] px-2 rounded-lg "
+          className="border border-[#262626] text-black bg-[#ffc107] px-2 rounded-lg "
         >
           {currentIndex + 1}
         </motion.span>
         <motion.div
           style={{ opacity: barOpacity }}
-          className=" border border-[#262626]  rounded-full h-[302px] w-2 flex  justify-center"
+          className=" border border-[#262626] text-black  rounded-full h-[302px] w-2 flex  justify-center"
         >
           <motion.div
             style={{ height: progressHeight }}
             transition={{ duration: 20 }}
-            className="w-1 rounded-full bg-[#064dd1]"
+            className="w-1 rounded-full bg-[#ffc107]"
           ></motion.div>
         </motion.div>
         <motion.span
-          className="border border-[#262626] bg-[#064dd1] px-2 rounded-lg "
+          className="border border-[#262626] text-black bg-[#ffc107] px-2 rounded-lg "
           style={{ opacity: barOpacity }}
         >
           {projects.length}

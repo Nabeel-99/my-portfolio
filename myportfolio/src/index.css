@@ -82,62 +82,6 @@ body {
 /* media for screena bove */
 @media (min-width: 2900px) {
 }
-.fancy {
-  --offset: 3px;
-  background: rgb(55, 21, 90);
-  border-radius: 50px;
-  position: relative;
-  height: 75px;
-  width: 75px;
-  max-width: 100%;
-  overflow: hidden;
-}
-
-/* Conic gradient */
-.fancy::before {
-  content: "";
-  background: conic-gradient(transparent 270deg, white, transparent);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  aspect-ratio: 1;
-  width: 100%;
-  animation: rotate 2s linear infinite;
-}
-
-/* Overlay */
-.fancy::after {
-  content: "";
-  background: inherit;
-  border-radius: inherit;
-  position: absolute;
-  inset: var(--offset);
-  height: calc(100% - 2 * var(--offset));
-  width: calc(100% - 2 * var(--offset));
-}
-
-.fancy a {
-  background: transparent;
-  color: white;
-  font-size: 1.5rem;
-  position: absolute;
-  inset: 0;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-@keyframes rotate {
-  from {
-    transform: translate(-50%, -50%) scale(1.4) rotate(0turn);
-  }
-
-  to {
-    transform: translate(-50%, -50%) scale(1.4) rotate(1turn);
-  }
-}
 
 h1 {
   font-size: 3.2em;
@@ -158,56 +102,94 @@ h1 {
     rgba(0, 0, 0, 1) 100%
   );
 }
-.click {
-  background: #003366;
-  text-align: center;
-  padding: 1rem;
-  border-radius: 10px;
-  position: relative;
-  width: 300px;
-}
+
 @property --angle {
   syntax: "<angle>";
   initial-value: 0deg;
   inherits: false;
 }
-.click::after,
-.click::before {
+.active-link {
+  position: relative;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  display: inline-block;
+  background-color: #191a1b;
+  transition: background-color 0.1s ease, padding 0.5s ease;
+}
+.active-link::before,
+.active-link::after {
   content: "";
   position: absolute;
-  height: 100%;
-  width: 100%;
+  z-index: -1;
+  border-radius: 0.8rem;
+  top: -0.2rem;
+  left: -0.2rem;
+  right: -0.2rem;
+  bottom: -0.2rem;
+  border: 1px solid rgb(24, 24, 24);
+
+  background-image: conic-gradient(
+    from var(--angle),
+    #404040,
+    #ffc107,
+    transparent 40%,
+    #3f3f3f,
+    #040407
+  );
+  animation: 6s spin linear infinite;
+  transition: background-image 3s ease, opacity 0.2s ease;
+}
+.active-link::before {
+  filter: blur(0.5rem);
+  opacity: 0.6;
+}
+.link-hover:hover {
+  position: relative;
+  padding: 0.6rem;
+  border-radius: 0.5rem;
+  display: inline-block;
+  background-color: #191a1b;
+  transition: background-color 0.1s ease, padding 0.5s ease;
+}
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+
+/* .active-link {
+  font-weight: bold;
+  border: 1px solid rgb(30, 29, 29);
+  border-radius: 20px;
+  padding: 10px;
+  height: 100px;
+  position: relative;
+  background: g;
+}
+
+.active-link::after,
+.active-link::before {
+  content: "";
+  position: absolute;
   background-image: conic-gradient(from var(--angle), transparent 70%, #046a06);
   top: 50%;
   left: 50%;
   translate: -50% -50%;
   z-index: -1;
+  height: 10px;
   padding: 2rem;
   border-radius: 10px;
+  border: 1px solid white;
   animation: 6s spin linear infinite;
 }
 
-@keyframes spin {
-  from {
-    --angle: 0deg;
-  }
-
-  to {
-    --angle: -360deg;
-  }
-}
-
-.click::before {
+.active-link::before {
   filter: blur(1rem);
   opacity: 0.6;
-}
-
-.active-link {
-  font-weight: bold;
-  border: 1px solid rgb(30, 29, 29);
-  border-radius: 20px;
-  padding: 2px 10px 2px 10px;
-}
+} */
 
 @keyframes animateBg {
   0%,
@@ -218,6 +200,7 @@ h1 {
     transform: scale(1.2);
   }
 }
+
 .moving-border-btn {
   position: relative;
   padding: 10px 20px;

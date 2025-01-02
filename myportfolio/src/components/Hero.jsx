@@ -1,11 +1,13 @@
 import React from "react";
 import { FaEnvelope, FaGithub, FaTwitter } from "react-icons/fa";
 import Typewriter from "typewriter-effect";
+import { motion } from "motion/react";
+
 const Hero = () => {
   return (
     <div className="flex flex-col xl:flex-row w-full gap-6 pb-44">
-      <div className="border rounded-[40px] flex flex-col gap-4 bg-[#121212] border-[#1f1f1f] p-10 w-full xl:w-[700px] ">
-        <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
+      <div className="border overflow-hidden rounded-[40px] flex flex-col gap-4 bg-[#121212] border-[#1f1f1f] p-10 w-full xl:w-[700px] ">
+        <motion.div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
           <div className="flex items-center gap-2">
             <div className="w-16 h-16 -translate-x-2 lg:translate-x-0 border border-[#1f1f1f] flex items-center justify-center font-satoshi-bold text-2xl rounded-full">
               N
@@ -52,7 +54,7 @@ const Hero = () => {
               <FaEnvelope />
             </a>
           </div>
-        </div>
+        </motion.div>
         <div>
           <h1 className="text-3xl lg:text-5xl tracking-tight font-satoshi-bold">
             I turn <span>ideas</span> into <span>reality</span>
