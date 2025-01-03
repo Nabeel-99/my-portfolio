@@ -28,6 +28,10 @@ app.use(
     allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
+
+app.get("/", () => {
+  return "Hello, World!";
+});
 app.post("/send-email", async (req, res) => {
   try {
     const { name, email, message, budget } = req.body;
