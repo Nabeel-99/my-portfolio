@@ -30,8 +30,9 @@ app.use(
 );
 
 app.get("/", (req, res) => {
-  res.json("hello");
+  return res.json("hello");
 });
+
 app.post("/send-email", async (req, res) => {
   try {
     const { name, email, message, budget } = req.body;
