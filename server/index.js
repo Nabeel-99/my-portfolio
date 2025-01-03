@@ -29,8 +29,8 @@ app.use(
   })
 );
 
-app.get("/", () => {
-  return "Hello, World!";
+app.get("/", (req, res) => {
+  res.json("hello");
 });
 app.post("/send-email", async (req, res) => {
   try {
