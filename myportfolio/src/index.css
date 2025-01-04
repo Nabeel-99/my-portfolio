@@ -115,6 +115,7 @@ h1 {
   display: inline-block;
   background-color: #191a1b;
   transition: background-color 0.1s ease, padding 0.5s ease;
+  will-change: background-image;
 }
 .active-link::before,
 .active-link::after {
@@ -132,7 +133,7 @@ h1 {
     from var(--angle),
     #404040,
     #ffc107,
-    transparent 40%,
+    40%,
     #3f3f3f,
     #040407
   );
@@ -142,7 +143,9 @@ h1 {
 .active-link::before {
   filter: blur(0.5rem);
   opacity: 0.6;
+  clip-path: inset(0 round 0.5rem);
 }
+
 .link-hover:hover {
   position: relative;
   padding: 0.6rem;
@@ -151,6 +154,7 @@ h1 {
   background-color: #191a1b;
   transition: background-color 0.1s ease, padding 0.5s ease;
 }
+
 @keyframes spin {
   from {
     --angle: 0deg;

@@ -26,7 +26,7 @@ function App() {
       <div className="flex z-20 flex-col xl:flex-row w-full">
         <Navbar />
         <SideBar />
-        <div className="flex z-20 xl:pl-64  pt-16 pb-44 flex-col w-full h-full">
+        <div className="flex z-20 xl:pl-64  pt-16 pb-10 flex-col w-full h-full">
           <div id="home" className="pb-44">
             <Hero />
           </div>

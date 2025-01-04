@@ -10,6 +10,12 @@ const ContactForm = () => {
   const [budget, setBudget] = useState("");
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
+
+  const BASE_URL =
+    window.location.hostname === "localhost"
+      ? "http://localhost:5173"
+      : "https://my-portfolio-api-theta.vercel.app";
+
   const sendMessage = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -19,7 +25,7 @@ const ContactForm = () => {
       return;
     }
     try {
-      const response = await axios.post("http://localhost:8000/send-email", {
+      const response = await axios.post(BASE_URL, {
         name,
         email,
         message,
