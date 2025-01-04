@@ -29,7 +29,7 @@ app.use(
   })
 );
 
-app.post("/send-email", async (req, res) => {
+app.post("/api/send-email", async (req, res) => {
   try {
     const { name, email, message, budget } = req.body;
 

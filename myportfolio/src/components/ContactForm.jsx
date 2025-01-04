@@ -13,7 +13,7 @@ const ContactForm = () => {
 
   const BASE_URL =
     window.location.hostname === "localhost"
-      ? "http://localhost:5173"
+      ? "http://localhost:8000"
       : "https://my-portfolio-api-theta.vercel.app";
 
   const sendMessage = async (e) => {
@@ -25,7 +25,7 @@ const ContactForm = () => {
       return;
     }
     try {
-      const response = await axios.post(BASE_URL, {
+      const response = await axios.post(`${BASE_URL}/api/send-email`, {
         name,
         email,
         message,
