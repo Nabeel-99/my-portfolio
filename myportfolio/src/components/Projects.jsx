@@ -3,19 +3,15 @@ import ProjectCard from "./ProjectCard";
 import { useMotionValueEvent, useScroll, useTransform } from "framer-motion";
 import { projects } from "../projects";
 import { motion } from "motion/react";
-import { useInView } from "react-intersection-observer";
 
 const Projects = () => {
   const container = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const { ref: projectsRef, inView: projectsInView } = useInView({
-    threshold: 0.5,
-  });
+
   const { scrollYProgress } = useScroll({
     target: container,
     offset: ["start start", "end end"],
   });
-  const progressWidth = useTransform(scrollYProgress, [0, 1], [1, 250]);
   const progressHeight = useTransform(scrollYProgress, [0, 1], [1, 300]);
   const barOpacity = useTransform(scrollYProgress, [0.5, 1], [0.5, 1]);
   const activeIndex = useTransform(
@@ -29,9 +25,11 @@ const Projects = () => {
   });
 
   return (
-    <div
+    <motion.div
+      initial={{ y: 20, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.8, delay: 0.4 }}
       id="project"
-      ref={projectsRef}
       className="flex flex-col  lg:flex-row 2xl:justify-between gap-10"
     >
       {/* project cards */}
@@ -79,7 +77,7 @@ const Projects = () => {
           {projects.length}
         </motion.span>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

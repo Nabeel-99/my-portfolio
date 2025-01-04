@@ -61,11 +61,10 @@ a:hover {
   mask-image: linear-gradient(
     to right,
     rgba(0, 0, 0, 0),
-    /* Fully transparent */ rgba(0, 0, 0, 1) 20%,
-    /* Fully opaque red */ rgba(0, 0, 0, 1) 80%,
-    /* Fully opaque darker red */ rgba(0, 0, 0, 0) /* Fully transparent */
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
   );
-  /* Add background color to visualize the effect */
 }
 
 body {
@@ -77,10 +76,6 @@ body {
   /* place-items: center; */
   /* min-width: 320px; */
   min-height: 120vh;
-}
-/*  */
-/* media for screena bove */
-@media (min-width: 2900px) {
 }
 
 h1 {
@@ -163,37 +158,6 @@ h1 {
     --angle: 360deg;
   }
 }
-
-/* .active-link {
-  font-weight: bold;
-  border: 1px solid rgb(30, 29, 29);
-  border-radius: 20px;
-  padding: 10px;
-  height: 100px;
-  position: relative;
-  background: g;
-}
-
-.active-link::after,
-.active-link::before {
-  content: "";
-  position: absolute;
-  background-image: conic-gradient(from var(--angle), transparent 70%, #046a06);
-  top: 50%;
-  left: 50%;
-  translate: -50% -50%;
-  z-index: -1;
-  height: 10px;
-  padding: 2rem;
-  border-radius: 10px;
-  border: 1px solid white;
-  animation: 6s spin linear infinite;
-}
-
-.active-link::before {
-  filter: blur(1rem);
-  opacity: 0.6;
-} */
 
 @keyframes animateBg {
   0%,

@@ -5,12 +5,15 @@ import BurgerMenu from "./BurgerMenu";
 const Navbar = () => {
   const [burgerMenu, setBurgerMenu] = useState(false);
   const openMenu = () => setBurgerMenu(!burgerMenu);
+  const closeMenu = () => setBurgerMenu(false);
 
   useEffect(() => {
     if (burgerMenu) {
       document.body.style.overflow = "hidden";
+      document.documentElement.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
     }
   }, [burgerMenu]);
 
@@ -20,7 +23,7 @@ const Navbar = () => {
         burgerMenu ? "bg-[#0d0d0d]" : ""
       }`}
     >
-      <div className="flex flex-col ml-4 text-sm ">
+      <div className="flex flex-col ml-6 text-sm ">
         <div className="font-satoshi-bold"> Nabeel Dev</div>{" "}
         {/* <Typewriter
           options={{
@@ -48,7 +51,7 @@ const Navbar = () => {
           <HiMiniBars2 style={{ fontSize: "1.5rem" }} className="" />
         )}
       </button>
-      {burgerMenu && <BurgerMenu />}
+      {burgerMenu && <BurgerMenu closeMenu={closeMenu} />}
     </div>
   );
 };

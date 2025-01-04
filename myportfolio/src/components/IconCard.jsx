@@ -1,8 +1,27 @@
 import React from "react";
+import { motion } from "motion/react";
 
-const IconCard = ({ header, description, image, bgColor, borderColor }) => {
+const IconCard = ({
+  header,
+  description,
+  image,
+  bgColor,
+  borderColor,
+  delay,
+}) => {
   return (
-    <div className="flex items-center gap-10">
+    <motion.div
+      initial={{ y: 10, opacity: 0 }}
+      whileInView={{
+        y: 0,
+        opacity: 1,
+      }}
+      viewport={{
+        once: true,
+      }}
+      transition={{ duration: 0.8, delay: delay }}
+      className="flex items-center gap-10"
+    >
       <div className="flex flex-col gap-2">
         <div className="flex items-center gap-2">
           <div
@@ -16,7 +35,7 @@ const IconCard = ({ header, description, image, bgColor, borderColor }) => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
