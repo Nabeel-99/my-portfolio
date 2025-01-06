@@ -1,14 +1,15 @@
 import React from "react";
 import { motion, useTransform } from "motion/react";
 import { FiArrowUpRight } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const ProjectCard = ({ i, range, targetScale, progress, project }) => {
   const scale = useTransform(progress, range, [1, targetScale]);
   return (
     <>
-      <div className="sticky top-32 ">
+      <div className="sticky top-12 ">
         <motion.div
-          style={{ top: `calc(-10% + ${i * 25}px)`, scale }}
+          style={{ marginTop: `${i * 25}px`, scale }}
           className="border cursor pointer relative border-[#121313] bg-gradient-to-r p-1 from-[#020211] from-40% via-[#061b30] to-[#ffc107] rounded-3xl w-full xl:h-[600px] xl:max-h-[600px] 2xl:h-[700px] 2xl:max-h-[700px] overflow-hidden group"
         >
           <img
@@ -21,13 +22,12 @@ const ProjectCard = ({ i, range, targetScale, progress, project }) => {
             <div className="px-4 py-2">
               <div className="font-satoshi-bold flex items-center gap-2">
                 {project.title}{" "}
-                <a
-                  href={project.link}
-                  target="_blank"
+                <Link
+                  to={`/project-details/${project.id}`}
                   className="border text-white rounded-2xl transition-transform group-hover:rotate-0 rotate-45 duration-700 group-hover:opacity-100 opacity-0 border-[#232323] bg-[#303030] p-2 cursor-pointer hover:bg-[#222222]"
                 >
                   <FiArrowUpRight className="" />
-                </a>
+                </Link>
               </div>
 
               <div className="text-gray-400 text-">{project.description}</div>

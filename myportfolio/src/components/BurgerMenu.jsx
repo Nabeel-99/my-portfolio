@@ -1,7 +1,13 @@
 import React from "react";
 import { Link } from "react-scroll";
 import { motion } from "motion/react";
+import { useNavigate } from "react-router-dom";
 const BurgerMenu = ({ closeMenu }) => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    closeMenu();
+    navigate("/");
+  };
   return (
     <div className="flex fixed top-16 h-screen z-50 pt-4 px-6 w-full flex-col bg-[#0d0d0d]">
       <ul className="text-lg">
@@ -13,7 +19,7 @@ const BurgerMenu = ({ closeMenu }) => {
         >
           <Link
             to="home"
-            onClick={closeMenu}
+            onClick={handleClick}
             smooth={true}
             duration={500}
             offset={-120}
@@ -30,7 +36,7 @@ const BurgerMenu = ({ closeMenu }) => {
         >
           <Link
             to="project"
-            onClick={closeMenu}
+            onClick={handleClick}
             smooth={true}
             duration={500}
             offset={-120}
@@ -47,7 +53,7 @@ const BurgerMenu = ({ closeMenu }) => {
         >
           <Link
             to="stack"
-            onClick={closeMenu}
+            onClick={handleClick}
             smooth={true}
             duration={500}
             offset={-120}
@@ -64,7 +70,7 @@ const BurgerMenu = ({ closeMenu }) => {
         >
           <Link
             to="experience"
-            onClick={closeMenu}
+            onClick={handleClick}
             smooth={true}
             duration={500}
             offset={-120}
@@ -81,7 +87,7 @@ const BurgerMenu = ({ closeMenu }) => {
         >
           <Link
             to="contact"
-            onClick={closeMenu}
+            onClick={handleClick}
             smooth={true}
             duration={500}
             offset={-120}

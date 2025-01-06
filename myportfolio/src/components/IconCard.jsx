@@ -8,6 +8,10 @@ const IconCard = ({
   bgColor,
   borderColor,
   delay,
+  descriptionStyle,
+  titleStyle,
+  className,
+  rounded = "rounded-full",
 }) => {
   return (
     <motion.div
@@ -20,18 +24,18 @@ const IconCard = ({
         once: true,
       }}
       transition={{ duration: 0.8, delay: delay }}
-      className="flex items-center gap-10"
+      className="flex items-center  gap-10"
     >
       <div className="flex flex-col gap-2">
         <div className="flex items-center gap-2">
           <div
-            className={`h-16 w-16 lg:h-20 lg:w-20 text-[#aabac7] overflow-hidden shadow-md border  rounded-full flex items-center justify-center ${bgColor} ${borderColor}`}
+            className={`h-16 w-16 lg:h-20 lg:w-20 ${className} text-[#aabac7] overflow-hidden shadow-md border  ${rounded} flex items-center justify-center ${bgColor} ${borderColor}`}
           >
             <img className="" alt="" src={image} />
           </div>
           <div className="flex flex-col gap-2">
-            <p>{header}</p>
-            <p>{description}</p>
+            <p className={`${titleStyle}`}>{header}</p>
+            <p className={`${descriptionStyle}`}>{description}</p>
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { FaEnvelope, FaGithub, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import resume from "../assets/resume.pdf";
 import { motion } from "motion/react";
 
@@ -30,7 +30,7 @@ const Socials = () => {
         className="flex items-center gap-4"
       >
         <motion.a
-          href=""
+          href="https://github.com/Nabeel-99"
           target="_blank"
           className="border border-[#262626] bg-[#191919] cursor-pointer  hover:bg-purple-700 rounded-lg p-2"
           initial={{ rotate: 0 }}
@@ -48,7 +48,7 @@ const Socials = () => {
           <FaGithub className="text-3xl" />
         </motion.a>
         <motion.a
-          href=""
+          href="https://twitter.com/Nabeel_umarr"
           target="_blank"
           className="border border-[#262626] bg-[#191919] hover:bg-blue-700 cursor-pointer  rounded-lg p-2"
           initial={{ rotate: 0 }}
@@ -66,7 +66,25 @@ const Socials = () => {
           <FaTwitter className="text-3xl" />
         </motion.a>
         <motion.a
-          href=""
+          href="https://www.linkedin.com/in/farouk-nabil-8883b5302/"
+          target="_blank"
+          className="border border-[#262626] bg-[#191919] hover:bg-orange-700  cursor-pointer  rounded-lg p-2"
+          initial={{ rotate: 0 }}
+          animate={{ rotate: 0 }}
+          whileHover={{
+            scale: 1.15,
+            rotate: [0, -12, 12, -12, 12, -12, 12, 0],
+            transition: {
+              duration: 2,
+              ease: "easeInOut",
+              repeat: 0,
+            },
+          }}
+        >
+          <FaLinkedin className="text-3xl" />
+        </motion.a>
+        {/* <motion.a
+          href="mailto:farouknabil810@gmail.com"
           target="_blank"
           className="border border-[#262626] bg-[#191919] hover:bg-orange-700  cursor-pointer  rounded-lg p-2"
           initial={{ rotate: 0 }}
@@ -82,7 +100,7 @@ const Socials = () => {
           }}
         >
           <FaEnvelope className="text-3xl" />
-        </motion.a>
+        </motion.a> */}
       </motion.div>
 
       <motion.a
