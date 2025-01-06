@@ -53,21 +53,21 @@ const ProjectDetails = () => {
           </Link>
         </div>
 
-        <div className="w-full h-[300px] lg:h-[800px]  rounded-xl">
+        <div className="w-full h-[300px] md:h-[500px] xl:h-[800px]  rounded-xl">
           <img
             src={details.image}
             alt=""
             className="h-full w-full object-cover border border-[#222222]  rounded-xl"
           />
         </div>
-        <div className="flex flex-col lg:flex-row gap-6">
+        <div className="flex flex-col xl:flex-row gap-6">
           <div className="w-full h-full border card-bg backdrop-blur-md border-[#2929295e] p-6 lg:p-8 rounded-2xl flex flex-col gap-4">
             <div className="pb-3 border-b border-b-[#3e3e3e] text-2xl lg:text-5xl font-satoshi-bold">
               Overview
             </div>
             <div className="text-xl lg:text-2xl">{details?.overview}</div>
           </div>
-          <div className="lg:w-2/3 h-full border card-bg backdrop-blur-md border-[#2929295e] p-6 lg:p-8 rounded-2xl flex flex-col gap-4">
+          <div className="lg:w-full xl:w-2/3 h-full border card-bg backdrop-blur-md border-[#2929295e] p-6 lg:p-8 rounded-2xl flex flex-col gap-4">
             <div className="pb-3 border-b border-b-[#3e3e3e] text-2xl lg:text-5xl font-satoshi-bold">
               Stack Used
             </div>
