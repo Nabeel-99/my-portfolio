@@ -45,7 +45,7 @@ function App() {
       <StarsBackground />
 
       <div className="flex z-20 flex-col xl:flex-row w-full">
-        <Navbar />
+        <Navbar showComponent={showComponent} />
         {showComponent && <SideBar />}
         <ScrollToTop />
         <div

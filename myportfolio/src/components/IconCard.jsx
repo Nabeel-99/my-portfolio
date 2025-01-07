@@ -27,11 +27,11 @@ const IconCard = ({
       className="flex items-center  gap-10"
     >
       <div className="flex flex-col gap-2">
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-4">
           <div
-            className={`h-16 w-16 lg:h-20 lg:w-20 ${className} text-[#aabac7] overflow-hidden shadow-md border  ${rounded} flex items-center justify-center ${bgColor} ${borderColor}`}
+            className={`h-16 w-16 lg:h-20 lg:w-20  text-[#aabac7] overflow-hidden shadow-md border  ${rounded} flex items-center justify-center ${bgColor} ${borderColor}`}
           >
-            <img className="" alt="" src={image} />
+            <img className={className} alt="" src={image} />
           </div>
           <div className="flex flex-col gap-2">
             <p className={`${titleStyle}`}>{header}</p>

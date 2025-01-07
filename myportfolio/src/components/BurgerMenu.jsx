@@ -1,101 +1,47 @@
 import React from "react";
-import { Link } from "react-scroll";
 import { motion } from "motion/react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
+
 const BurgerMenu = ({ closeMenu }) => {
   const navigate = useNavigate();
-  const handleClick = () => {
+  const location = useLocation();
+
+  const handleClick = (section) => {
     closeMenu();
-    navigate("/");
+    if (location.pathname === "/") {
+      document.getElementById(section)?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      navigate("/");
+      setTimeout(() => {
+        document
+          .getElementById(section)
+          ?.scrollIntoView({ behavior: "smooth" });
+      }, 500);
+    }
   };
+
   return (
     <div className="flex fixed top-16 h-screen z-50 pt-4 px-6 w-full flex-col bg-[#0d0d0d]">
       <ul className="text-lg">
-        <motion.li
-          initial={{ x: 10, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-          className="pb-8"
-        >
-          <Link
-            to="home"
-            onClick={handleClick}
-            smooth={true}
-            duration={500}
-            offset={-120}
-            spy={true}
-          >
-            Home
-          </Link>
-        </motion.li>
-        <motion.li
-          initial={{ x: -10, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
-          className="pb-8"
-        >
-          <Link
-            to="project"
-            onClick={handleClick}
-            smooth={true}
-            duration={500}
-            offset={-120}
-            spy={true}
-          >
-            Projects
-          </Link>
-        </motion.li>
-        <motion.li
-          initial={{ x: -10, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 }}
-          className="pb-8"
-        >
-          <Link
-            to="stack"
-            onClick={handleClick}
-            smooth={true}
-            duration={500}
-            offset={-120}
-            spy={true}
-          >
-            Stack
-          </Link>
-        </motion.li>
-        <motion.li
-          initial={{ x: -10, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }}
-          className="pb-8"
-        >
-          <Link
-            to="experience"
-            onClick={handleClick}
-            smooth={true}
-            duration={500}
-            offset={-120}
-            spy={true}
-          >
-            Experience
-          </Link>
-        </motion.li>
-        <motion.li
-          initial={{ x: -10, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.5, ease: "easeOut", delay: 0.8 }}
-          className="pb-8"
-        >
-          <Link
-            to="contact"
-            onClick={handleClick}
-            smooth={true}
-            duration={500}
-            offset={-120}
-            spy={true}
-          >
-            Contact
-          </Link>
-        </motion.li>
+        {["home", "project", "stack", "experience", "contact"].map(
+          (section, index) => (
+            <motion.li
+              key={section}
+              initial={{ x: index % 2 === 0 ? 10 : -10, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{
+                duration: 0.5,
+                ease: "easeOut",
+                delay: index * 0.2,
+              }}
+              className="pb-8"
+            >
+              <span onClick={() => handleClick(section)}>
+                {section.charAt(0).toUpperCase() + section.slice(1)}
+              </span>
+            </motion.li>
+          )
+        )}
       </ul>
     </div>
   );
