@@ -46,13 +46,15 @@ const ProjectDetails = () => {
             bgColor={details.appBg}
             className={"xl:h-full"}
           />
-          <Link
-            to={details?.link}
-            target="_blank"
-            className={` p-3 font-satoshi-bold font-semibold lg:p-4 text-2xl lg:text-3xl ${details.bgLink} ${details.bgHover}  transition  duration-300 px-10 text-center rounded-2xl`}
-          >
-            View Website
-          </Link>
+          {details.link && (
+            <Link
+              to={details?.link}
+              target="_blank"
+              className={` p-3 font-satoshi-bold font-semibold lg:p-4 text-2xl lg:text-3xl ${details.bgLink} ${details.bgHover}  transition  duration-300 px-10 text-center rounded-2xl`}
+            >
+              View Website
+            </Link>
+          )}
         </div>
 
         <div className="w-full h-[300px] md:h-[500px] xl:h-[800px]  rounded-xl">
