@@ -29,7 +29,7 @@ const ProjectDetails = () => {
       <ScrollToTop />
       <Link
         to={"/"}
-        className="absolute hidden lg: xl:flex top-0 left-44  text-[#a4a4a4] hover:text-white transition duration-200 px-6 py-3 rounded-xl font-satoshi-bold text-5xl"
+        className="absolute hidden lg: xl:flex top-0 left-40  text-[#a4a4a4] hover:text-white transition duration-200 px-6 py-3 rounded-xl font-satoshi-bold text-5xl"
       >
         Return to Home
       </Link>

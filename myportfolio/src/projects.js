@@ -50,11 +50,11 @@ export const projects = [
         icon: TailwindIcon,
         bg: "bg-[#06171e]",
       },
-      {
-        name: "Framer Motion",
-        icon: FramerIcon,
-        bg: "bg-[#FFF312]",
-      },
+      // {
+      //   name: "Framer Motion",
+      //   icon: FramerIcon,
+      //   bg: "bg-[#FFF312]",
+      // },
     ],
     overview:
       " Smart Meal Connect helps users reduce food decision fatigue by allowing them to input ingredients they have on hand and get recipe suggestions based on those ingredients. It also takes into account factors like age, dietary preferences, and more. Users can post recipes to a feed, similar to a social media experience, allowing others to discover and share meal ideas.",
