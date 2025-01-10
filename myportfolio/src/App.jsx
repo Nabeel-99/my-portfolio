@@ -74,7 +74,16 @@ function App() {
                 </>
               }
             />
-            <Route path="/project-details/:id" element={<ProjectDetails />} />
+
+            <Route
+              path="/project-details/:id"
+              element={
+                <>
+                  <ScrollToTop />
+                  <ProjectDetails />
+                </>
+              }
+            />
           </Routes>
 
           <div className="pt-44">

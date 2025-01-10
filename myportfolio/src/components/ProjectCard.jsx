@@ -24,7 +24,7 @@ const ProjectCard = ({ i, range, targetScale, progress, project }) => {
                 {project.title}{" "}
                 <Link
                   to={`/project-details/${project.id}`}
-                  className="border text-white rounded-2xl transition-transform group-hover:rotate-0 rotate-45 duration-700 group-hover:opacity-100 opacity-0 border-[#232323] bg-[#303030] p-2 cursor-pointer hover:bg-[#222222]"
+                  className="border rounded-2xl transition-transform group-hover:rotate-0 text-black rotate-45 duration-700 group-hover:opacity-100 opacity-0 border-[#232323] bg-[#ffffff] p-2 cursor-pointer hover:bg-[#cbcaca]"
                 >
                   <FiArrowUpRight className="" />
                 </Link>

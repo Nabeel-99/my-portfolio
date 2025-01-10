@@ -14,6 +14,16 @@ import CapacitorIcon from "./assets/images/capacitor.svg";
 import SmartMealLogo from "./assets/images/smartmeallogo.png";
 import ChronicleLogo from "./assets/images/chroniclelogo.png";
 import TaskProLogo from "./assets/images/taskprologo.png";
+import SmartMeal1 from "./assets/images/smartmeal1.png";
+import SmartMeal2 from "./assets/images/smartmeal2.png";
+import SmartMeal3 from "./assets/images/smartmeal3.png";
+import LandingPage1 from "./assets/images/chronicle1.png";
+import LandingPage2 from "./assets/images/chronicle2.png";
+import LandingPage3 from "./assets/images/chronicle3.png";
+import LandingPage4 from "./assets/images/chronicle4.png";
+import TaskPro1 from "./assets/images/taskpro1.png";
+import TaskPro2 from "./assets/images/taskpro2.png";
+import TaskPro3 from "./assets/images/taskpro3.png";
 
 export const projects = [
   {
@@ -63,6 +73,13 @@ export const projects = [
       "radial-gradient(ellipse at top right, rgba(208, 129, 23, 0.15) 20%, rgba(8, 8, 8, 0.6) 50%, rgba(0, 0, 0, 1) 100%)",
     bgLink: "bg-[#D08117]",
     bgHover: "hover:bg-[#A56F14]",
+    images: {
+      image1: SmartMeal1,
+      image2: SmartMeal2,
+      image3: SmartMeal3,
+    },
+    imageGradient:
+      "radial-gradient(at 100% 10%, rgba(208, 129, 23, 0.2) 20%, rgba(80, 60, 20, 0.6) 50%, rgba(41, 41, 41, 0.7) 80%, rgba(21, 21, 21, 0.9) 100%)",
   },
   {
     id: "LandingPage",
@@ -96,12 +113,20 @@ export const projects = [
       },
     ],
     overview:
-      "A clean, responsive landing page designed with smooth transitions and animations for an engaging user experience. Perfect for showcasing a brand, product, or service in a visually appealing way, with a focus on simplicity and ease of use.",
+      "This is a modern, responsive landing page designed to provide an engaging user experience with smooth transitions and animations. It showcases a brand, product, or service in a visually appealing way, with a clean and minimalist layout. The smooth animations and interactive elements create a dynamic experience for visitors, making a strong first impression. Fully responsive, it adapts seamlessly to any device, ensuring it looks great on both desktop and mobile. Perfect for businesses or portfolios looking to capture attention and offer an intuitive interface.",
     app: "Website",
     radialGradient:
       "radial-gradient(ellipse at top right, rgba(28, 21, 79, 0.8) 0%, rgba(8, 8, 8, 0.6) 50%, rgba(0, 0, 0, 1) 100%)",
     bgLink: "bg-[#1C154F]",
     bgHover: "hover:bg-[#140F3E]",
+    images: {
+      image1: LandingPage1,
+      image2: LandingPage2,
+      image3: LandingPage3,
+      image4: LandingPage4,
+    },
+    imageGradient:
+      "radial-gradient(at 0% 30%, rgba(28, 21, 79, 0.8) 0%, rgba(0, 0, 8, 0) 90%, rgba(0, 0, 60, 0.4) 80%, rgba(211, 94, 163, 0.2) 100%)",
   },
   {
     id: "TaskPro",
@@ -139,12 +164,19 @@ export const projects = [
       },
     ],
     overview:
-      "TaskPro is a cross-platform task management app that helps users stay organized with features like task creation, notifications, and seamless access across devices. It also supports taking and attaching images to tasks, providing a more comprehensive way to track and manage projects.",
+      "TaskPro is a cross-platform task management app that helps users stay organized by allowing them to create, edit, and assign tasks. Users can upload images to tasks for better tracking and manage their work visually. Tasks can be marked as complete once finished, and users can set priorities to focus on what’s most important. The app also sends notifications to keep users updated on task status and changes. With a clear view of pending tasks, TaskPro ensures users stay on top of their to-do lists across all devices. Its seamless synchronization keeps tasks accessible and up to date, whether on the web or mobile.",
     app: "Cross Platform App",
     radialGradient:
-      "radial-gradient(ellipse at top right, rgba(116,12, 97, 0.05) 20%, rgba(8, 8, 8, 0.6) 50%, rgba(0, 0, 0, 1) 100%)",
+      "radial-gradient(ellipse at top right,  rgba(116,12, 97, 0.05) 20%, rgba(8, 8, 8, 0.6) 50%, rgba(0, 0, 0, 1) 100%)",
     bgLink: "bg-[#740C61]",
     bgHover: "hover:bg-[#5F094B]",
+    images: {
+      image1: TaskPro1,
+      image2: TaskPro2,
+      image3: TaskPro3,
+    },
+    imageGradient:
+      "radial-gradient(at top right, rgba(116, 12, 97, 0.1) 20%, rgba(32, 25, 48, 0.6) 50%, rgba(0, 0, 0, 0.9) 100%)",
   },
 
   // {
