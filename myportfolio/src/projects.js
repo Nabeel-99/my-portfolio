@@ -24,6 +24,11 @@ import LandingPage4 from "./assets/images/chronicle4.png";
 import TaskPro1 from "./assets/images/taskpro1.png";
 import TaskPro2 from "./assets/images/taskpro2.png";
 import TaskPro3 from "./assets/images/taskpro3.png";
+import FusionEnergy from "./assets/images/fusionenergy.png";
+import FusionEnergyLogo from "./assets/images/fusionLogo.png";
+import Fusion1 from "./assets/images/fusion1.png";
+import Fusion2 from "./assets/images/fusion2.png";
+import Fusion3 from "./assets/images/fusion3.png";
 
 export const projects = [
   {
@@ -179,16 +184,44 @@ export const projects = [
       "radial-gradient(at top right, rgba(116, 12, 97, 0.1) 20%, rgba(32, 25, 48, 0.6) 50%, rgba(0, 0, 0, 0.9) 100%)",
   },
 
-  // {
-  //   image: "",
-  //   title: "project 4",
-  //   description: "",
-  //   link: "",
-  // },
-  // {
-  //   image: "",
-  //   title: "project 5",
-  //   description: "",
-  //   link: "",
-  // },
+  {
+    id: "FusionEnergy",
+    appIcon: FusionEnergyLogo,
+    appBg: "bg-[#D06D11]",
+    image: FusionEnergy,
+    title: "Fusion Energy Solutions",
+    description:
+      "Modern, responsive portfolio website for showcasing solar energy solutions and services",
+    link: "https://ufi-portfolio.vercel.app/",
+    stack: [
+      {
+        name: "React JS",
+        icon: ReactIcon,
+        bg: "bg-[#08090a]",
+      },
+      {
+        name: "Framer Motion",
+        icon: FramerIcon,
+        bg: "bg-[#FFF312]",
+      },
+      {
+        name: "Tailwind CSS",
+        icon: TailwindIcon,
+        bg: "bg-[#06171e]",
+      },
+    ],
+    overview:
+      "This is a modern, responsive landing page designed to provide an engaging user experience with smooth transitions and animations. It showcases the brand, services, and expertise of Fusion Energy Solutions in a visually appealing way, with a clean and minimalist layout. Smooth animations and interactive elements create a dynamic experience for visitors, making a strong first impression. Fully responsive, it adapts seamlessly to any device, ensuring it looks great on both desktop and mobile. Perfect for highlighting solar energy solutions and establishing a professional online presence.",
+    radialGradient:
+      "radial-gradient(ellipse at top right, rgba(208, 109, 17, 0.15) 20%, rgba(8, 8, 8, 0.6) 50%, rgba(0, 0, 0, 1) 100%)",
+    bgLink: "bg-[#D06D11]",
+    bgHover: "hover:bg-[#E0883C]",
+    images: {
+      image1: Fusion1,
+      image2: Fusion2,
+      image3: Fusion3,
+    },
+    imageGradient:
+      "radial-gradient(at 100% 10%, rgba(208, 109, 17, 0.12) 20%, rgba(80, 60, 20, 0.6) 50%, rgba(41, 41, 41, 0.7) 80%, rgba(21, 21, 21, 0.9) 100%)",
+  },
 ];

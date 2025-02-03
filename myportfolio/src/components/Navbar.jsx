@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { HiMiniBars2 } from "react-icons/hi2";
 import { HiXMark } from "react-icons/hi2";
 import BurgerMenu from "./BurgerMenu";
+import { Link } from "react-router-dom";
 const Navbar = () => {
   const [burgerMenu, setBurgerMenu] = useState(false);
   const openMenu = () => setBurgerMenu(!burgerMenu);
@@ -24,7 +25,10 @@ const Navbar = () => {
       }`}
     >
       <div className="flex flex-col ml-6 text-sm ">
-        <div className="font-satoshi-bold"> Nabeel Dev</div>{" "}
+        <Link to={"/"} className="font-satoshi-bold">
+          {" "}
+          Nabeel Dev
+        </Link>{" "}
         {/* <Typewriter
           options={{
             strings: [
