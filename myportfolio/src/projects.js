@@ -29,6 +29,11 @@ import FusionEnergyLogo from "./assets/images/fusionLogo.png";
 import Fusion1 from "./assets/images/fusion1.png";
 import Fusion2 from "./assets/images/fusion2.png";
 import Fusion3 from "./assets/images/fusion3.png";
+import LoveandLightLogo from "./assets/images/lovelightlogo.jpeg";
+import LoveandLight1 from "./assets/images/donate.png";
+import LoveandLight2 from "./assets/images/donate1.png";
+import LoveandLight3 from "./assets/images/donate2.png";
+import LoveandLight4 from "./assets/images/donate3.png";
 
 export const projects = [
   {
@@ -87,51 +92,54 @@ export const projects = [
       "radial-gradient(at 100% 10%, rgba(208, 129, 23, 0.2) 20%, rgba(80, 60, 20, 0.6) 50%, rgba(41, 41, 41, 0.7) 80%, rgba(21, 21, 21, 0.9) 100%)",
   },
   {
-    id: "LandingPage",
-    appIcon: ChronicleLogo,
-    appBg: "bg-[#1C154F]",
-    image: LandingPage,
-    title: "Landing Page",
+    id: "LoveandLight",
+    appIcon: LoveandLightLogo,
+    appBg: "bg-[#0D47A1]",
+    image: LoveandLight1,
+    title: "LoveandLight Foundation",
     description:
-      "Responsive landing page with smooth transitions and animations",
-    link: "https://landing-page-framer.vercel.app",
+      "A modern full-stack donation platform enabling users to donate for charity, track progress, and receive updates in real-time.",
+    link: "https://loveandlight-foundation.vercel.app/",
     stack: [
+      {
+        name: "Mongo DB",
+        icon: MongoIcon,
+        bg: "bg-[#11300a]",
+      },
+      {
+        name: "Express JS",
+        icon: ExpressIcon,
+        bg: "bg-[#5e5e5e]",
+      },
       {
         name: "React JS",
         icon: ReactIcon,
         bg: "bg-[#08090a]",
       },
       {
-        name: "TypeScript",
-        icon: TypeScriptIcon,
-        bg: "default",
+        name: "Node JS",
+        icon: NodeIcon,
+        bg: "bg-white",
       },
       {
         name: "Tailwind CSS",
         icon: TailwindIcon,
         bg: "bg-[#06171e]",
       },
-      {
-        name: "Framer Motion",
-        icon: FramerIcon,
-        bg: "bg-[#FFF312]",
-      },
     ],
     overview:
-      "This is a modern, responsive landing page designed to provide an engaging user experience with smooth transitions and animations. It showcases a brand, product, or service in a visually appealing way, with a clean and minimalist layout. The smooth animations and interactive elements create a dynamic experience for visitors, making a strong first impression. Fully responsive, it adapts seamlessly to any device, ensuring it looks great on both desktop and mobile. Perfect for businesses or portfolios looking to capture attention and offer an intuitive interface.",
-    app: "Website",
+      "LoveandLight Foundation is a full-stack donation platform designed to connect donors with impactful causes. With a seamless and user-friendly interface, users can explore donation opportunities, track the progress of projects, and receive timely updates. Built with smooth animations and interactive elements, the platform ensures an engaging user experience. Fully responsive, it adapts seamlessly to different devices, offering a professional and intuitive way to support meaningful initiatives.",
     radialGradient:
-      "radial-gradient(ellipse at top right, rgba(28, 21, 79, 0.8) 0%, rgba(8, 8, 8, 0.6) 50%, rgba(0, 0, 0, 1) 100%)",
-    bgLink: "bg-[#1C154F]",
-    bgHover: "hover:bg-[#140F3E]",
+      "radial-gradient(ellipse at top right, rgba(13, 71, 161, 0.15) 20%, rgba(10, 25, 47, 0.6) 50%, rgba(0, 0, 0, 1) 100%)",
+    bgLink: "bg-[#1565C0]",
+    bgHover: "hover:bg-[#1E88E5]",
     images: {
-      image1: LandingPage1,
-      image2: LandingPage2,
-      image3: LandingPage3,
-      image4: LandingPage4,
+      image1: LoveandLight2,
+      image2: LoveandLight3,
+      image3: LoveandLight4,
     },
     imageGradient:
-      "radial-gradient(at 0% 30%, rgba(28, 21, 79, 0.8) 0%, rgba(0, 0, 8, 0) 90%, rgba(0, 0, 60, 0.4) 80%, rgba(211, 94, 163, 0.2) 100%)",
+      "radial-gradient(at 100% 10%, rgba(13, 71, 161, 0.12) 20%, rgba(25, 50, 80, 0.6) 50%, rgba(41, 41, 41, 0.7) 80%, rgba(21, 21, 21, 0.9) 100%)",
   },
   {
     id: "TaskPro",
@@ -183,7 +191,53 @@ export const projects = [
     imageGradient:
       "radial-gradient(at top right, rgba(116, 12, 97, 0.1) 20%, rgba(32, 25, 48, 0.6) 50%, rgba(0, 0, 0, 0.9) 100%)",
   },
-
+  {
+    id: "LandingPage",
+    appIcon: ChronicleLogo,
+    appBg: "bg-[#1C154F]",
+    image: LandingPage,
+    title: "Landing Page",
+    description:
+      "Responsive landing page with smooth transitions and animations",
+    link: "https://landing-page-framer.vercel.app",
+    stack: [
+      {
+        name: "React JS",
+        icon: ReactIcon,
+        bg: "bg-[#08090a]",
+      },
+      {
+        name: "TypeScript",
+        icon: TypeScriptIcon,
+        bg: "default",
+      },
+      {
+        name: "Tailwind CSS",
+        icon: TailwindIcon,
+        bg: "bg-[#06171e]",
+      },
+      {
+        name: "Framer Motion",
+        icon: FramerIcon,
+        bg: "bg-[#FFF312]",
+      },
+    ],
+    overview:
+      "This is a modern, responsive landing page designed to provide an engaging user experience with smooth transitions and animations. It showcases a brand, product, or service in a visually appealing way, with a clean and minimalist layout. The smooth animations and interactive elements create a dynamic experience for visitors, making a strong first impression. Fully responsive, it adapts seamlessly to any device, ensuring it looks great on both desktop and mobile. Perfect for businesses or portfolios looking to capture attention and offer an intuitive interface.",
+    app: "Website",
+    radialGradient:
+      "radial-gradient(ellipse at top right, rgba(28, 21, 79, 0.8) 0%, rgba(8, 8, 8, 0.6) 50%, rgba(0, 0, 0, 1) 100%)",
+    bgLink: "bg-[#1C154F]",
+    bgHover: "hover:bg-[#140F3E]",
+    images: {
+      image1: LandingPage1,
+      image2: LandingPage2,
+      image3: LandingPage3,
+      image4: LandingPage4,
+    },
+    imageGradient:
+      "radial-gradient(at 0% 30%, rgba(28, 21, 79, 0.8) 0%, rgba(0, 0, 8, 0) 90%, rgba(0, 0, 60, 0.4) 80%, rgba(211, 94, 163, 0.2) 100%)",
+  },
   {
     id: "FusionEnergy",
     appIcon: FusionEnergyLogo,

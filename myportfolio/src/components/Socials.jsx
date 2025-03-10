@@ -1,6 +1,5 @@
 import React from "react";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-import resume from "../assets/resume.pdf";
 import { motion } from "motion/react";
 
 const Socials = () => {
@@ -107,8 +106,8 @@ const Socials = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
-        href={resume}
-        download
+        href="https://flowcv.com/resume/k77pbn4j6t"
+        target="_blank"
         className="border w-full p-2 cursor-pointer hover:bg-[#57d039] flex items-center transition-all duration-300 justify-center hover:text-black rounded-lg bg-[#1f1f1f] border-[#262626]"
       >
         Download CV
