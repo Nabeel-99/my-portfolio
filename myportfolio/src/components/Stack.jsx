@@ -4,8 +4,10 @@ import ReactIcon from "../assets/images/react.svg";
 import FramerIcon from "../assets/images/framer.png";
 import TailwindIcon from "../assets/images/tailwind.svg";
 import MongoIcon from "../assets/images/mongodb.png";
+import NextIcon from "../assets/images/nextjs.png";
 import NodeIcon from "../assets/images/nodejs.png";
 import GithubIcon from "../assets/images/github.png";
+import PrismaIcon from "../assets/images/prisma.png";
 import FadeInEffect from "./FadeInEffect";
 import { motion } from "motion/react";
 
@@ -22,8 +24,16 @@ const Stack = () => {
             opacity: 1,
           }}
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center gap-10"
+          className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 items-center gap-10"
         >
+          <IconCard
+            header={"Next JS"}
+            description={"Frontend / Fullstack Development"}
+            image={NextIcon}
+            bgColor={"bg-[#1e1e1e]"}
+            borderColor={"border-[#1e1e1e]"}
+            delay={0.4}
+          />
           <IconCard
             header={"React JS"}
             description={"Frontend Development"}
@@ -63,7 +73,14 @@ const Stack = () => {
             borderColor={"border-[#19490e]"}
             delay={1.2}
           />
-
+          <IconCard
+            header={"Prisma"}
+            description={"Database"}
+            image={PrismaIcon}
+            bgColor={"bg-white"}
+            borderColor={"border-[#0d2d4a]"}
+            delay={1.2}
+          />
           <IconCard
             header={"Github"}
             description={"Collaboration"}
