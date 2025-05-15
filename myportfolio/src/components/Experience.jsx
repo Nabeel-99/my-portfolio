@@ -45,20 +45,17 @@ const Experience = () => {
               <div className="flex flex-col ">
                 <ul className="list-disc">
                   <li>
-                    {" "}
-                    Developed a task management app with scheduling and group
-                    Q&A features.
+                    Built a full-featured task management app with real-time
+                    updates and scheduling features using React.js, Laravel, and
+                    MySQL.
                   </li>
                   <li>
-                    {" "}
-                    Worked on all aspects of the project using{" "}
-                    <span>PHP Laravel,</span> <span>MySQL,</span> and{" "}
-                    <span>React JS.</span>
+                    Managed both admin and user portals with role-based logic
+                    and scheduling.
                   </li>
                   <li>
-                    {" "}
-                    Delivered the solution effectively using Scrum
-                    methodologies.
+                    Collaborated in Agile teams, contributing to code reviews,
+                    sprint planning, and product testing cycles.
                   </li>
                 </ul>
               </div>
@@ -100,24 +97,24 @@ const Experience = () => {
               className="flex flex-col gap-4"
             >
               <div className="flex flex-col ">
-                <p className="font-satoshi-bold text-xl">Side Projects</p>
-                <p className="text-sm">October 2022 - June 2023</p>
+                <p className="font-satoshi-bold text-xl">
+                  Freelance Developer & Personal Projects
+                </p>
+                <p className="text-sm">October 2022 - Present</p>
               </div>
               <div className="flex flex-col ">
                 <ul className="list-disc">
                   <li>
-                    {" "}
-                    Designed a website for a family business using React.js and
-                    Tailwind CSS.
+                    Designed and deployed a responsive website for a local
+                    family business using React.js and Tailwind CSS.
                   </li>
                   <li>
-                    {" "}
-                    Collaborated to fix bugs in a Music Playlist app using
-                    SvelteKit.
+                    Refactored and improved the UI/UX of a community-driven
+                    music playlist app built with SvelteKit.
                   </li>
                   <li>
-                    Developed key features for a Rental Agency app using Java
-                    Spring Boot.
+                    Developed a rental agency web app with Spring Boot and
+                    MySQL, improving listing management workflows.
                   </li>
                 </ul>
                 <p></p>
