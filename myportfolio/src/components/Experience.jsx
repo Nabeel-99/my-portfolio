@@ -109,15 +109,16 @@ const Experience = () => {
                     family business using React.js and Tailwind CSS.
                   </li>
                   <li>
-                    Refactored and improved the UI/UX of a community-driven
-                    music playlist app built with SvelteKit.
+                    Built the frontend of a donation platform using React and
+                    Tailwind CSS, with features for campaign browsing and
+                    contribution.
                   </li>
                   <li>
-                    Developed a rental agency web app with Spring Boot and
-                    MySQL, improving listing management workflows.
+                    Developed a full-featured blog app using Next.js with
+                    authentication, Markdown editor, and PostgreSQL integration
+                    via Prisma.
                   </li>
                 </ul>
-                <p></p>
               </div>
             </motion.div>
           </div>
