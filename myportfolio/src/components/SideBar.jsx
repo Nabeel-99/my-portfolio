@@ -14,6 +14,7 @@ const SideBar = () => {
         >
           <Link
             to="home"
+            aria-label="home"
             className="cursor-pointer  hover:bg-[#191a1b] rounded-xl transition-all duration-300 hover:px-4 hover:py-[0.6rem]"
             smooth={true}
             duration={500}
@@ -32,6 +33,7 @@ const SideBar = () => {
         >
           <Link
             to="project"
+            aria-label="project"
             className="cursor-pointer  hover:bg-[#191a1b] rounded-xl transition-all duration-300 hover:px-4 hover:py-[0.6rem]"
             smooth={true}
             duration={500}
@@ -51,6 +53,7 @@ const SideBar = () => {
           {" "}
           <Link
             to="stack"
+            aria-label="stack"
             className="cursor-pointer  hover:bg-[#191a1b] rounded-xl transition-all duration-300 hover:px-4 hover:py-[0.6rem]"
             smooth={true}
             duration={500}
@@ -70,6 +73,7 @@ const SideBar = () => {
           {" "}
           <Link
             to="experience"
+            aria-label="experience"
             className="cursor-pointer  hover:bg-[#191a1b] rounded-xl transition-all duration-300 hover:px-4 hover:py-[0.6rem]"
             smooth={true}
             duration={500}
@@ -89,6 +93,7 @@ const SideBar = () => {
           {" "}
           <Link
             to="contact"
+            aria-label="contact"
             className="cursor-pointer  hover:bg-[#191a1b] rounded-xl transition-all duration-300 hover:px-4 hover:py-[0.6rem] "
             smooth={true}
             duration={500}

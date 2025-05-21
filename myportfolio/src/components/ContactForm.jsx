@@ -83,7 +83,7 @@ const ContactForm = () => {
           </div>
         </div>
         <div className="flex flex-col gap-2">
-          <label id="budget" className="font-satoshi-bold">
+          <label htmlFor="budget" className="font-satoshi-bold">
             What's your budget?
           </label>
           <select

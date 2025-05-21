@@ -46,6 +46,7 @@ const Navbar = () => {
         /> */}
       </div>
       <button
+        aria-label="menu"
         onClick={openMenu}
         className="border px-2 py-2 mr-4  border-[#202020] rounded-xl bg-[#121212]"
       >

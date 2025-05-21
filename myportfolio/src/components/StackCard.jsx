@@ -28,6 +28,7 @@ const StackCard = ({ details }) => {
           src={details?.images?.image1}
           className="object-cover w-full h-full "
           alt=""
+          loading="lazy"
         />
       </div>
     </div>

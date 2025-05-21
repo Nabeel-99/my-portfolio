@@ -77,6 +77,7 @@ const ProjectDetails = () => {
             <img
               src={details.image}
               alt=""
+              loading="lazy"
               className="h-full w-full object-cover border border-[#222222]  rounded-xl"
             />
           </div>
@@ -92,6 +93,7 @@ const ProjectDetails = () => {
             {" "}
             <img
               src={details?.images?.image3}
+              loading="lazy"
               className="object-cover w-full h-full "
               alt=""
             />

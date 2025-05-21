@@ -15,6 +15,7 @@ const ProjectCard = ({ i, range, targetScale, progress, project }) => {
           <img
             src={project.image}
             alt="project picture"
+            loading="lazy"
             className="xl:h-[600px] 2xl:h-[700px] w-full  shadow-xl drop-shadow-lg object-cover  rounded-3xl  transition-transform duration-700 group-hover:scale-125 "
           />
 
@@ -24,6 +25,7 @@ const ProjectCard = ({ i, range, targetScale, progress, project }) => {
                 {project.title}{" "}
                 <Link
                   to={`/project-details/${project.id}`}
+                  aria-label={`View details for ${project.title}`}
                   className="border rounded-2xl transition-transform group-hover:rotate-0 text-black rotate-45 duration-700 group-hover:opacity-100 opacity-0 border-[#232323] bg-[#ffffff] p-2 cursor-pointer hover:bg-[#cbcaca]"
                 >
                   <FiArrowUpRight className="" />

@@ -31,7 +31,14 @@ const IconCard = ({
           <div
             className={`h-16 w-16 lg:h-20 lg:w-20  text-[#aabac7] overflow-hidden shadow-md border  ${rounded} flex items-center justify-center ${bgColor} ${borderColor}`}
           >
-            <img className={className} alt="" src={image} />
+            <img
+              className={className}
+              alt=""
+              width={"100%"}
+              height={"100%"}
+              src={image}
+              loading="lazy"
+            />
           </div>
           <div className="flex flex-col gap-2">
             <p className={`${titleStyle}`}>{header}</p>

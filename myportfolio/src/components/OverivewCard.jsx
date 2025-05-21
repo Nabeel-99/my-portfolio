@@ -14,6 +14,7 @@ const OverviewCard = ({ details }) => {
         <img
           src={details?.images?.image2}
           className="object-contain w-full h-full "
+          loading="lazy"
           alt=""
         />
       </div>

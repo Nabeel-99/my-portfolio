@@ -31,6 +31,7 @@ const Socials = () => {
         <motion.a
           href="https://github.com/Nabeel-99"
           target="_blank"
+          aria-label="github"
           className="border border-[#262626] bg-[#191919] cursor-pointer  hover:bg-purple-700 rounded-lg p-2"
           initial={{ rotate: 0 }}
           animate={{ rotate: 0 }}
@@ -49,6 +50,7 @@ const Socials = () => {
         <motion.a
           href="https://twitter.com/Nabeel_umarr"
           target="_blank"
+          aria-label="twitter"
           className="border border-[#262626] bg-[#191919] hover:bg-blue-700 cursor-pointer  rounded-lg p-2"
           initial={{ rotate: 0 }}
           animate={{ rotate: 0 }}
@@ -67,6 +69,7 @@ const Socials = () => {
         <motion.a
           href="https://www.linkedin.com/in/farouk-nabil-8883b5302/"
           target="_blank"
+          aria-label="linkedin"
           className="border border-[#262626] bg-[#191919] hover:bg-orange-700  cursor-pointer  rounded-lg p-2"
           initial={{ rotate: 0 }}
           animate={{ rotate: 0 }}
@@ -108,6 +111,7 @@ const Socials = () => {
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
         href="https://flowcv.com/resume/k77pbn4j6t"
         target="_blank"
+        aria-label="download cv"
         className="border w-full p-2 cursor-pointer hover:bg-[#57d039] flex items-center transition-all duration-300 justify-center hover:text-black rounded-lg bg-[#1f1f1f] border-[#262626]"
       >
         Download CV
