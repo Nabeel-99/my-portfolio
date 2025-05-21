@@ -16,6 +16,8 @@ const ProjectCard = ({ i, range, targetScale, progress, project }) => {
             src={project.image}
             alt="project picture"
             loading="lazy"
+            width={1200}
+            height={900}
             className="xl:h-[600px] 2xl:h-[700px] w-full  shadow-xl drop-shadow-lg object-cover  rounded-3xl  transition-transform duration-700 group-hover:scale-125 "
           />
 
