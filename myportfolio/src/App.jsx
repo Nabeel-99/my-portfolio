@@ -19,6 +19,8 @@ import {
 import ProjectDetails from "./components/ProjectDetails";
 import { useEffect, useState } from "react";
 import ScrollToTop from "./components/ScrollToTop";
+import { initTheme } from "./theme";
+import ThemeButtons from "./components/ThemeButtons";
 
 function App() {
   const lenis = new Lenis();
@@ -40,8 +42,13 @@ function App() {
     }
   }, [location]);
 
+  useEffect(() => {
+    initTheme();
+  }, []);
+
+  // bg-[#0A0A0AFF]
   return (
-    <div className="flex font-satoshi p-8 w-screen flex-col bg-[#0A0A0AFF] h-full items-center  2xl:container 2xl:mx-auto ">
+    <div className="flex font-satoshi p-8 w-screen flex-col dark:bg-[#0A0A0AFF] h-full items-center  2xl:container 2xl:mx-auto ">
       <StarsBackground />
 
       <div className="flex z-20 flex-col xl:flex-row w-full">
@@ -90,6 +97,7 @@ function App() {
             <Footer showComponent={showComponent} />
           </div>
         </div>
+        <ThemeButtons />
       </div>
     </div>
   );

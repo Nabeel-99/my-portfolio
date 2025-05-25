@@ -20,7 +20,7 @@ const ContactForm = () => {
     e.preventDefault();
     setLoading(true);
     if (!name || !email || !message || !budget) {
-      alert("Please fill in all fields");
+      // alert("Please fill in all fields");
       setLoading(false);
       return;
     }
@@ -31,7 +31,7 @@ const ContactForm = () => {
         message,
         budget,
       });
-      console.log(response.data);
+
       if (response.status === 200) {
         setSuccess(true);
         setName("");
@@ -52,7 +52,7 @@ const ContactForm = () => {
     <div className="relative">
       <form
         onSubmit={sendMessage}
-        className="border  rounded-3xl flex flex-col gap-6  bg-[#121212] border-[#1f1f1f] p-6 lg:p-10 xl:w-[900px]"
+        className="border border-[#dadada]  rounded-3xl flex flex-col gap-6 bg-[#f9f9f9] dark:bg-[#121212] dark:border-[#1f1f1f] p-6 lg:p-10 xl:w-[900px]"
       >
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-10 ">
           <div className="flex flex-col gap-2 w-full">
@@ -65,7 +65,8 @@ const ContactForm = () => {
               placeholder="Enter your name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="bg-[#1f1f1f] w-full border border-[#252525] px-4 py-2 rounded-lg"
+              className="dark:bg-[#1f1f1f] w-full border dark:border-[#252525] px-4 py-2 rounded-lg"
+              required
             />
           </div>
           <div className="flex flex-col gap-2 w-full">
@@ -78,7 +79,8 @@ const ContactForm = () => {
               placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="bg-[#1f1f1f]  border border-[#252525] px-4 py-2 rounded-lg"
+              className="dark:bg-[#1f1f1f]  border dark:border-[#252525] px-4 py-2 rounded-lg"
+              required
             />
           </div>
         </div>
@@ -96,7 +98,8 @@ const ContactForm = () => {
             id="budget"
             value={budget}
             onChange={(e) => setBudget(e.target.value)}
-            className=" appearance-none bg-[#1f1f1f] border border-[#252525] px-4 py-2 rounded-lg"
+            className=" appearance-none dark:bg-[#1f1f1f] border dark:border-[#252525] px-4 py-2 rounded-lg"
+            required
           >
             <option value="">Select budget</option>
             <option value="1000">Up to $1,000</option>
@@ -114,7 +117,8 @@ const ContactForm = () => {
             placeholder="Enter your message here..."
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            className="bg-[#1f1f1f] min-h-44 max-h-44 w-full border border-[#252525] px-4 py-2 rounded-lg"
+            className="dark:bg-[#1f1f1f] min-h-44 max-h-44 w-full border dark:border-[#252525] px-4 py-2 rounded-lg"
+            required
           />
         </div>
         <div className="w-full">
@@ -122,8 +126,8 @@ const ContactForm = () => {
             type="submit"
             disabled={loading}
             className={`${
-              loading ? "bg-[#1f1f1f]" : "bg-[#65e844]"
-            } flex items-center justify-center text-black transition-all duration-300 hover:bg-[#1f1f1f] hover:text-white  w-full border border-[#252525]`}
+              loading ? "bg-[#1f1f1f] " : "bg-[#f0f0f0] dark:bg-[#65e844]"
+            } flex items-center justify-center text-black transition-all duration-300 hover:bg-[#1f1f1f] hover:text-white  w-full border border-[#dadada] dark:border-[#252525] py-4`}
           >
             {loading ? (
               <AiOutlineLoading3Quarters className="spin text-2xl text-white " />
@@ -134,7 +138,7 @@ const ContactForm = () => {
         </div>
       </form>
       {success && (
-        <div className="absolute w-1/2 shadow-lg left-52 top-52 right-52 rounded-xl border text-lg  border-[#141414] flex flex-col gap-2 items-center justify-center bg-[#161616] p-4">
+        <div className="absolute w-1/2 shadow-lg left-52 top-52 right-52 rounded-xl border text-lg  dark:border-[#141414] flex flex-col gap-2 items-center justify-center bg-white dark:bg-[#161616] p-4">
           <div>
             {" "}
             <IoIosCheckmarkCircle className="text-[3rem]" />

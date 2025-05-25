@@ -79,8 +79,10 @@ export const projects = [
     overview:
       " Smart Meal Connect helps users reduce food decision fatigue by allowing them to input ingredients they have on hand and get recipe suggestions based on those ingredients. It also takes into account factors like age, dietary preferences, and more. Users can post recipes to a feed, similar to a social media experience, allowing others to discover and share meal ideas.",
     app: "Cross Platform App",
-    radialGradient:
+    radialGradientDark:
       "radial-gradient(ellipse at top right, rgba(208, 129, 23, 0.15) 20%, rgba(8, 8, 8, 0.6) 50%, rgba(0, 0, 0, 1) 100%)",
+    radialGradientLight:
+      "radial-gradient(ellipse at top right, rgba(255, 223, 170, 0.6) 20%, rgba(255, 239, 219, 0.7) 50%, rgba(255, 255, 255, 1) 100%)",
     bgLink: "bg-[#D08117]",
     bgHover: "hover:bg-[#A56F14]",
     images: {
@@ -129,8 +131,10 @@ export const projects = [
     ],
     overview:
       "LoveandLight Foundation is a full-stack donation platform designed to connect donors with impactful causes. With a seamless and user-friendly interface, users can explore donation opportunities, track the progress of projects, and receive timely updates. Built with smooth animations and interactive elements, the platform ensures an engaging user experience. Fully responsive, it adapts seamlessly to different devices, offering a professional and intuitive way to support meaningful initiatives.",
-    radialGradient:
+    radialGradientDark:
       "radial-gradient(ellipse at top right, rgba(13, 71, 161, 0.15) 20%, rgba(10, 25, 47, 0.6) 50%, rgba(0, 0, 0, 1) 100%)",
+    radialGradientLight:
+      "radial-gradient(ellipse at top right, rgba(187, 222, 251, 0.6) 20%, rgba(227, 242, 253, 0.8) 50%, rgba(255, 255, 255, 1) 100%)",
     bgLink: "bg-[#1565C0]",
     bgHover: "hover:bg-[#1E88E5]",
     images: {
@@ -179,8 +183,10 @@ export const projects = [
     overview:
       "TaskPro is a cross-platform task management app that helps users stay organized by allowing them to create, edit, and assign tasks. Users can upload images to tasks for better tracking and manage their work visually. Tasks can be marked as complete once finished, and users can set priorities to focus on what’s most important. The app also sends notifications to keep users updated on task status and changes. With a clear view of pending tasks, TaskPro ensures users stay on top of their to-do lists across all devices. Its seamless synchronization keeps tasks accessible and up to date, whether on the web or mobile.",
     app: "Cross Platform App",
-    radialGradient:
+    radialGradientDark:
       "radial-gradient(ellipse at top right,  rgba(116,12, 97, 0.05) 20%, rgba(8, 8, 8, 0.6) 50%, rgba(0, 0, 0, 1) 100%)",
+    radialGradientLight:
+      "radial-gradient(ellipse at top right, rgba(236, 64, 192, 0.2) 20%, rgba(248, 209, 236, 0.6) 50%, rgba(255, 255, 255, 1) 100%)",
     bgLink: "bg-[#740C61]",
     bgHover: "hover:bg-[#5F094B]",
     images: {
@@ -225,8 +231,10 @@ export const projects = [
     overview:
       "This is a modern, responsive landing page designed to provide an engaging user experience with smooth transitions and animations. It showcases a brand, product, or service in a visually appealing way, with a clean and minimalist layout. The smooth animations and interactive elements create a dynamic experience for visitors, making a strong first impression. Fully responsive, it adapts seamlessly to any device, ensuring it looks great on both desktop and mobile. Perfect for businesses or portfolios looking to capture attention and offer an intuitive interface.",
     app: "Website",
-    radialGradient:
+    radialGradientDark:
       "radial-gradient(ellipse at top right, rgba(28, 21, 79, 0.8) 0%, rgba(8, 8, 8, 0.6) 50%, rgba(0, 0, 0, 1) 100%)",
+    radialGradientLight:
+      "radial-gradient(ellipse at top right, rgba(121, 107, 234, 0.25) 0%, rgba(230, 230, 250, 0.6) 50%, rgba(255, 255, 255, 1) 100%)",
     bgLink: "bg-[#1C154F]",
     bgHover: "hover:bg-[#140F3E]",
     images: {
@@ -266,8 +274,10 @@ export const projects = [
     ],
     overview:
       "This is a modern, responsive landing page designed to provide an engaging user experience with smooth transitions and animations. It showcases the brand, services, and expertise of Fusion Energy Solutions in a visually appealing way, with a clean and minimalist layout. Smooth animations and interactive elements create a dynamic experience for visitors, making a strong first impression. Fully responsive, it adapts seamlessly to any device, ensuring it looks great on both desktop and mobile. Perfect for highlighting solar energy solutions and establishing a professional online presence.",
-    radialGradient:
+    radialGradientDark:
       "radial-gradient(ellipse at top right, rgba(208, 109, 17, 0.15) 20%, rgba(8, 8, 8, 0.6) 50%, rgba(0, 0, 0, 1) 100%)",
+    radialGradientLight:
+      "radial-gradient(ellipse at top right, rgba(255, 183, 77, 0.25) 20%, rgba(255, 239, 213, 0.6) 50%, rgba(255, 255, 255, 1) 100%)",
     bgLink: "bg-[#D06D11]",
     bgHover: "hover:bg-[#E0883C]",
     images: {

@@ -8,7 +8,7 @@ const Socials = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8, delay: 0.2 }}
-      className="border relative rounded-[40px] flex flex-col items-center overflow-hidden gap-10 bg-[#121212] border-[#1f1f1f] p-10 w-full md:w-80 xl:w-64  "
+      className="border relative rounded-[40px] border-[#dadada] flex flex-col items-center overflow-hidden gap-10 backdrop-blur-md dark:bg-[#121212] dark:border-[#1f1f1f] p-10 w-full md:w-80 xl:w-64  "
     >
       <motion.div
         initial={{ y: -30, opacity: 0 }}
@@ -32,7 +32,7 @@ const Socials = () => {
           href="https://github.com/Nabeel-99"
           target="_blank"
           aria-label="github"
-          className="border border-[#262626] bg-[#191919] cursor-pointer  hover:bg-purple-700 rounded-lg p-2"
+          className="btn-social  hover:bg-purple-700 "
           initial={{ rotate: 0 }}
           animate={{ rotate: 0 }}
           whileHover={{
@@ -51,7 +51,7 @@ const Socials = () => {
           href="https://twitter.com/Nabeel_umarr"
           target="_blank"
           aria-label="twitter"
-          className="border border-[#262626] bg-[#191919] hover:bg-blue-700 cursor-pointer  rounded-lg p-2"
+          className="btn-social hover:bg-blue-700 "
           initial={{ rotate: 0 }}
           animate={{ rotate: 0 }}
           whileHover={{
@@ -70,7 +70,7 @@ const Socials = () => {
           href="https://www.linkedin.com/in/farouk-nabil-8883b5302/"
           target="_blank"
           aria-label="linkedin"
-          className="border border-[#262626] bg-[#191919] hover:bg-orange-700  cursor-pointer  rounded-lg p-2"
+          className=" hover:bg-orange-700  btn-social"
           initial={{ rotate: 0 }}
           animate={{ rotate: 0 }}
           whileHover={{
@@ -112,7 +112,7 @@ const Socials = () => {
         href="https://flowcv.com/resume/k77pbn4j6t"
         target="_blank"
         aria-label="download cv"
-        className="border w-full p-2 cursor-pointer hover:bg-[#57d039] flex items-center transition-all duration-300 justify-center hover:text-black rounded-lg bg-[#1f1f1f] border-[#262626]"
+        className="btn-download-cv "
       >
         Download CV
       </motion.a>

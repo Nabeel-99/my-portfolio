@@ -24,6 +24,13 @@ const ProfileCard = () => {
     setIsFocused(false);
     setOpacity(0);
   };
+  // to do:
+  // is Dark
+  // rgba(255,255,255,0.1)
+
+  // todo:
+  // AppWorkspace
+  // black
   return (
     <motion.div
       ref={divRef}
@@ -35,13 +42,13 @@ const ProfileCard = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8, delay: 0.2 }}
-      className="border relative overflow-hidden rounded-[40px] flex flex-col gap-4 bg-[#121212] border-[#1f1f1f] p-10 w-full xl:w-[700px] "
+      className="border relative overflow-hidden rounded-[40px] flex flex-col gap-4 backdrop-blur-md dark:bg-[#121212] border-[#dadada] dark:border-[#1f1f1f] p-10 w-full xl:w-[700px] "
     >
       <div
         className="pointer-events-none absolute -inset-px opacity-0 transition duration-300"
         style={{
           opacity,
-          background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, rgba(255,255,255,0.1), transparent 40%)`,
+          background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, rgba(0,0,0,0.07), transparent 40%)`,
         }}
       />
       <motion.div
@@ -56,10 +63,10 @@ const ProfileCard = () => {
               scale: 1.1,
               rotate: 360,
               transition: { duration: 0.5 },
-              backgroundColor: "AppWorkspace",
-              color: "black",
+              backgroundColor: "#222222",
+              color: "white",
             }}
-            className="w-16 h-16 -translate-x-2 lg:translate-x-0 border border-[#1f1f1f] flex items-center justify-center font-satoshi-bold text-2xl rounded-full"
+            className="w-16 h-16 -translate-x-2 lg:translate-x-0 border border-[#dadada] dark:border-[#1f1f1f] flex items-center justify-center font-satoshi-bold text-2xl rounded-full"
           >
             N
           </motion.div>

@@ -23,7 +23,7 @@ const ProjectCard = ({ i, range, targetScale, progress, project }) => {
 
           <div className="absolute bottom-0 left-0 bg-gradient-to-t from-black from-40% to-transparent opacity-80 p-3 right-0">
             <div className="px-4 py-2">
-              <div className="font-satoshi-bold flex items-center gap-2">
+              <div className="font-satoshi-bold text-white flex items-center gap-2">
                 {project.title}{" "}
                 <Link
                   to={`/project-details/${project.id}`}

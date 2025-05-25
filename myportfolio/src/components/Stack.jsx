@@ -31,7 +31,7 @@ const Stack = () => {
             description={"Frontend / Fullstack Development"}
             image={NextIcon}
             bgColor={"bg-[#1e1e1e]"}
-            borderColor={"border-[#1e1e1e]"}
+            borderColor={"dark:border-[#1e1e1e]"}
             delay={0.4}
           />
           <IconCard
@@ -39,14 +39,14 @@ const Stack = () => {
             description={"Frontend Development"}
             image={ReactIcon}
             bgColor={"bg-[#08090a]"}
-            borderColor={"border-[#0d2d4a]"}
+            borderColor={"dark:border-[#0d2d4a]"}
             delay={0.4}
           />
           <IconCard
             header={"Framer Motion"}
             description={"Smooth Animations"}
             image={FramerIcon}
-            borderColor={"border-[#f1ff2a]"}
+            borderColor={"dark:border-[#f1ff2a]"}
             delay={0.6}
           />
           <IconCard
@@ -54,7 +54,7 @@ const Stack = () => {
             description={"Styling"}
             image={TailwindIcon}
             bgColor={"bg-[#06171e]"}
-            borderColor={"border-[#143340]"}
+            borderColor={"dark:border-[#143340]"}
             delay={0.8}
           />
           <IconCard
@@ -62,7 +62,7 @@ const Stack = () => {
             description={"Backend Development"}
             image={NodeIcon}
             bgColor={"bg-white"}
-            borderColor={"border-[#0d2d4a]"}
+            borderColor={"dark:border-[#0d2d4a]"}
             delay={1}
           />
           <IconCard
@@ -70,7 +70,7 @@ const Stack = () => {
             description={"Database"}
             image={MongoIcon}
             bgColor={"bg-[#11300a]"}
-            borderColor={"border-[#19490e]"}
+            borderColor={"dark:border-[#19490e]"}
             delay={1.2}
           />
           <IconCard
@@ -78,7 +78,7 @@ const Stack = () => {
             description={"Database"}
             image={PrismaIcon}
             bgColor={"bg-white"}
-            borderColor={"border-[#0d2d4a]"}
+            borderColor={"dark:border-[#0d2d4a]"}
             delay={1.2}
           />
           <IconCard
@@ -86,7 +86,7 @@ const Stack = () => {
             description={"Collaboration"}
             image={GithubIcon}
             bgColor={"bg-[#d7d7d7]"}
-            borderColor={"border-[#0d2d4a]"}
+            borderColor={"dark:border-[#0d2d4a]"}
             delay={1.4}
           />
         </motion.div>
