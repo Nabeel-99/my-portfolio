@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Typewriter from "typewriter-effect";
 import { motion } from "motion/react";
 
@@ -7,7 +7,20 @@ const ProfileCard = () => {
   const [isFocused, setIsFocused] = useState(false);
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [opacity, setOpacity] = useState(0);
+  const [theme, setTheme] = useState(
+    document.documentElement.classList.contains("dark") ? "dark" : "light"
+  );
+  useEffect(() => {
+    const checkTheme = () => {
+      const current = document.documentElement.classList.contains("dark")
+        ? "dark"
+        : "light";
+      setTheme(current);
+    };
 
+    const interval = setInterval(checkTheme, 200);
+    return () => clearInterval(interval);
+  }, []);
   const handleMouseMove = (e) => {
     if (!divRef.current || isFocused) return;
     const div = divRef.current;
@@ -24,13 +37,11 @@ const ProfileCard = () => {
     setIsFocused(false);
     setOpacity(0);
   };
-  // to do:
-  // is Dark
-  // rgba(255,255,255,0.1)
 
-  // todo:
-  // AppWorkspace
-  // black
+  const isDark = theme === "dark";
+
+  const bg = isDark ? "rgba(255,255,255,0.1)" : "rgba(0,0,0,0.07)";
+
   return (
     <motion.div
       ref={divRef}
@@ -48,7 +59,7 @@ const ProfileCard = () => {
         className="pointer-events-none absolute -inset-px opacity-0 transition duration-300"
         style={{
           opacity,
-          background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, rgba(0,0,0,0.07), transparent 40%)`,
+          background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, ${bg}, transparent 40%)`,
         }}
       />
       <motion.div
@@ -59,12 +70,13 @@ const ProfileCard = () => {
       >
         <div className="flex items-center gap-2">
           <motion.div
+            key={theme}
             whileHover={{
               scale: 1.1,
               rotate: 360,
               transition: { duration: 0.5 },
-              backgroundColor: "#222222",
-              color: "white",
+              backgroundColor: isDark ? "white" : "black",
+              color: isDark ? "black" : "white",
             }}
             className="w-16 h-16 -translate-x-2 lg:translate-x-0 border border-[#dadada] dark:border-[#1f1f1f] flex items-center justify-center font-satoshi-bold text-2xl rounded-full"
           >

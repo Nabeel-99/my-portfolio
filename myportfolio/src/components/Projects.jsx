@@ -56,7 +56,7 @@ const Projects = () => {
       <div className="lg:sticky top-[150px] hidden lg:flex flex-col gap-2 items-center h-[500px]">
         <motion.span
           style={{ opacity: barOpacity }}
-          className="border dark:border-[#262626] text-black bg-[#ffc107] px-2 rounded-lg "
+          className="border dark:border-[#262626] text-black bg-[#57d039] px-2 rounded-lg "
         >
           {currentIndex + 1}
         </motion.span>
@@ -67,11 +67,11 @@ const Projects = () => {
           <motion.div
             style={{ height: progressHeight }}
             transition={{ duration: 20 }}
-            className="w-1 rounded-full bg-[#ffc107]"
+            className="w-1 rounded-full bg-[#57d039]"
           ></motion.div>
         </motion.div>
         <motion.span
-          className="border dark:border-[#262626] text-black bg-[#ffc107] px-2 rounded-lg "
+          className="border dark:border-[#262626] text-black bg-[#57d039] px-2 rounded-lg "
           style={{ opacity: barOpacity }}
         >
           {projects.length}

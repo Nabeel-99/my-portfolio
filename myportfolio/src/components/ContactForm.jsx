@@ -126,8 +126,8 @@ const ContactForm = () => {
             type="submit"
             disabled={loading}
             className={`${
-              loading ? "bg-[#1f1f1f] " : "bg-[#f0f0f0] dark:bg-[#65e844]"
-            } flex items-center justify-center text-black transition-all duration-300 hover:bg-[#1f1f1f] hover:text-white  w-full border border-[#dadada] dark:border-[#252525] py-4`}
+              loading ? "bg-[#1f1f1f] " : "bg-[#f0f0f0] "
+            } flex items-center justify-center text-black dark:bg-[#65e844] transition-all duration-300 hover:bg-[#1f1f1f] dark:hover:bg-[#1f1f1f] hover:text-white  w-full border border-[#dadada] dark:border-[#252525] py-4`}
           >
             {loading ? (
               <AiOutlineLoading3Quarters className="spin text-2xl text-white " />

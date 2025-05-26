@@ -10,7 +10,7 @@ const ProjectCard = ({ i, range, targetScale, progress, project }) => {
       <div className="sticky top-20 lg:top-12 ">
         <motion.div
           style={{ marginTop: `${i * 25}px`, scale }}
-          className="border cursor pointer relative border-[#121313] bg-gradient-to-r p-1 from-[#020211] from-40% via-[#061b30] to-[#ffc107] rounded-3xl w-full xl:h-[600px] xl:max-h-[600px] 2xl:h-[700px] 2xl:max-h-[700px] overflow-hidden group"
+          className=" cursor pointer relative    rounded-3xl w-full xl:h-[600px] xl:max-h-[600px] 2xl:h-[700px] 2xl:max-h-[700px] overflow-hidden group"
         >
           <img
             src={project.image}
