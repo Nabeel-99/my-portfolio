@@ -11,6 +11,10 @@ import FramerIcon from "./assets/images/framer.png";
 import TypeScriptIcon from "./assets/images/ts.png";
 import FirebaseIcon from "./assets/images/firebase.png";
 import CapacitorIcon from "./assets/images/capacitor.svg";
+import ShadcnIcon from "./assets/images/shadcn.png";
+import PrismaIcon from "./assets/images/prisma.png";
+import NextAuthIcon from "./assets/images/nextauth.webp";
+import NextjsIcon from "./assets/images/nextjs.png";
 import SmartMealLogo from "./assets/images/smartmeallogo.png";
 import ChronicleLogo from "./assets/images/chroniclelogo.png";
 import TaskProLogo from "./assets/images/taskprologo.png";
@@ -34,8 +38,72 @@ import LoveandLight1 from "./assets/images/donate.png";
 import LoveandLight2 from "./assets/images/donate1.png";
 import LoveandLight3 from "./assets/images/donate2.png";
 import LoveandLight4 from "./assets/images/donate3.png";
+import BlogLogo from "./assets/images/blogLogo.png";
+import Blog1 from "./assets/images/blog1.png";
+import Blog2 from "./assets/images/blog2.png";
+import Blog3 from "./assets/images/blog3.png";
+import Blog from "./assets/images/blog.png";
 
 export const projects = [
+  {
+    id: "BlogApp",
+    appIcon: BlogLogo,
+    appBg: "bg-[#ffd1dc]",
+    image: Blog,
+    title: "Personal Developer Blog",
+    description:
+      "A personal blog site with admin-managed posts, authentication, comments, and interactive features.",
+    link: "https://idiawrites.vercel.app/",
+    stack: [
+      {
+        name: "Next.js",
+        icon: NextjsIcon,
+        bg: "bg-[#1e1e1e]",
+      },
+      {
+        name: "TypeScript",
+        icon: TypeScriptIcon,
+        bg: "default",
+      },
+      {
+        name: "Tailwind CSS",
+        icon: TailwindIcon,
+        bg: "bg-[#06171e]",
+      },
+      {
+        name: "ShadCN/UI",
+        icon: ShadcnIcon,
+        bg: "bg-white",
+      },
+      {
+        name: "Prisma",
+        icon: PrismaIcon,
+        bg: "bg-white",
+      },
+      {
+        name: "NextAuth.js",
+        icon: NextAuthIcon,
+        bg: "bg-[#1A1A1A]",
+      },
+    ],
+    overview:
+      "This is a personal developer blog built with Next.js and TypeScript. It features an admin dashboard for creating and managing blog posts using a Markdown editor. Readers can sign in via Google or LinkedIn (NextAuth), like posts and comments, leave feedback, and subscribe to a newsletter. The app uses PostgreSQL with Prisma for database management, Tailwind CSS for styling, and ShadCN for accessible UI components. Only the admin has publishing access, while signed-in users can interact with content, manage their profiles, and enjoy a seamless reading experience across devices.",
+    app: "Web App",
+    radialGradientDark:
+      "radial-gradient(ellipse at top right, rgba(255, 192, 203, 0.3) 0%, rgba(139, 0, 139, 0.1) 20%, rgba(0, 0, 0, 1) 100%)",
+
+    radialGradientLight:
+      "radial-gradient(ellipse at top right, rgba(255, 182, 193, 0.4) 0%, rgba(255, 240, 245, 0.6) 50%, rgba(255, 255, 255, 1) 100%)",
+    bgLink: "bg-[#ff94b4]",
+    bgHover: "hover:bg-[#ff94c8]",
+    images: {
+      image1: Blog2,
+      image2: Blog1,
+      image3: Blog3,
+    },
+    imageGradient:
+      "radial-gradient(at 50% 30%, rgba(255, 182, 193, 0.6) 0%, rgba(255, 240, 245, 0.3) 60%, rgba(255, 228, 225, 0.2) 90%)",
+  },
   {
     id: "SmartMeal",
     appIcon: SmartMealLogo,

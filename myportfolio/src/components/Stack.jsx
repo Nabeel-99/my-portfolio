@@ -8,6 +8,7 @@ import NextIcon from "../assets/images/nextjs.png";
 import NodeIcon from "../assets/images/nodejs.png";
 import GithubIcon from "../assets/images/github.png";
 import PrismaIcon from "../assets/images/prisma.png";
+import ShadCNIcon from "../assets/images/shadcn.png";
 import FadeInEffect from "./FadeInEffect";
 import { motion } from "motion/react";
 
@@ -87,6 +88,14 @@ const Stack = () => {
             image={GithubIcon}
             bgColor={"bg-[#d7d7d7]"}
             borderColor={"dark:border-[#0d2d4a]"}
+            delay={1.4}
+          />
+          <IconCard
+            header={"ShadCN/UI"}
+            description={"UI Components"}
+            image={ShadCNIcon}
+            bgColor={"bg-[#d7d7d7]"}
+            borderColor={"dark:border-[#1a1a1a]"}
             delay={1.4}
           />
         </motion.div>

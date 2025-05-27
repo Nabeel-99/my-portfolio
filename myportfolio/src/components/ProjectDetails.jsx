@@ -101,7 +101,7 @@ const ProjectDetails = () => {
           </div>
         </FadeInEffect>
         <FadeInEffect delay={0.4}>
-          <div className="flex flex-col xl:flex-row w-full gap-6">
+          <div className="flex flex-col  xl:flex-row w-full gap-6">
             <OverviewCard details={details} />
             <StackCard details={details} />
           </div>
