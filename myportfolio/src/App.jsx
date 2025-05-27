@@ -19,8 +19,8 @@ import {
 import ProjectDetails from "./components/ProjectDetails";
 import { useEffect, useState } from "react";
 import ScrollToTop from "./components/ScrollToTop";
-import { initTheme } from "./theme";
-import ThemeButtons from "./components/ThemeButtons";
+// import { initTheme } from "./theme";
+// import ThemeButtons from "./components/ThemeButtons";
 
 function App() {
   const lenis = new Lenis();
@@ -42,9 +42,9 @@ function App() {
     }
   }, [location]);
 
-  useEffect(() => {
-    initTheme();
-  }, []);
+  // useEffect(() => {
+  //   initTheme();
+  // }, []);
 
   // bg-[#0A0A0AFF]
   return (
@@ -97,7 +97,7 @@ function App() {
             <Footer showComponent={showComponent} />
           </div>
         </div>
-        <ThemeButtons />
+        {/* <ThemeButtons /> */}
       </div>
     </div>
   );

@@ -8,7 +8,7 @@ const Socials = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8, delay: 0.2 }}
-      className="border relative rounded-[40px] border-[#dadada] flex flex-col items-center overflow-hidden gap-10 backdrop-blur-md dark:bg-[#121212] dark:border-[#1f1f1f] p-10 w-full md:w-80 xl:w-64  "
+      className="border relative rounded-[40px] border-[#dadada] flex flex-col items-center overflow-hidden gap-10 backdrop-blur-md dark:bg-[#121212] dark:border-[#1f1f1f] p-10 w-full md:w-80 xl:min-w-80  "
     >
       <motion.div
         initial={{ y: -30, opacity: 0 }}

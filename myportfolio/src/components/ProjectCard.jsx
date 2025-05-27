@@ -7,10 +7,10 @@ const ProjectCard = ({ i, range, targetScale, progress, project }) => {
   const scale = useTransform(progress, range, [1, targetScale]);
   return (
     <>
-      <div className="sticky top-20 lg:top-12 ">
+      <div className="sticky md:px-10 lg:px-8 xl:px-0 top-40 lg:top-12 ">
         <motion.div
           style={{ marginTop: `${i * 25}px`, scale }}
-          className=" cursor pointer relative    rounded-3xl w-full xl:h-[600px] xl:max-h-[600px] 2xl:h-[700px] 2xl:max-h-[700px] overflow-hidden group"
+          className=" cursor pointer relative lg:h-[600px]   rounded-3xl w-full  xl:max-h-[600px] 2xl:h-[700px] 2xl:max-h-[700px] overflow-hidden group"
         >
           <img
             src={project.image}
@@ -18,7 +18,7 @@ const ProjectCard = ({ i, range, targetScale, progress, project }) => {
             loading="lazy"
             width={1200}
             height={900}
-            className="xl:h-[600px] 2xl:h-[700px] w-full  shadow-xl drop-shadow-lg object-cover  rounded-3xl  transition-transform duration-700 group-hover:scale-125 "
+            className="lg:h-[600px] 2xl:h-[700px] w-full  shadow-xl drop-shadow-lg object-cover  rounded-3xl  transition-transform duration-700 group-hover:scale-125 "
           />
 
           <div className="absolute bottom-0 left-0 bg-gradient-to-t from-black from-40% to-transparent opacity-80 p-3 right-0">

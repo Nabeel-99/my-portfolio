@@ -14,6 +14,7 @@ const Projects = () => {
   });
   const progressHeight = useTransform(scrollYProgress, [0, 1], [1, 300]);
   const barOpacity = useTransform(scrollYProgress, [0.5, 1], [0.5, 1]);
+  const progressWidth = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
   const activeIndex = useTransform(
     scrollYProgress,
     [0, 1],
@@ -30,12 +31,37 @@ const Projects = () => {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, delay: 0.4 }}
       id="project"
-      className="flex flex-col  lg:flex-row 2xl:justify-between gap-10"
+      className="flex  flex-col lg:flex-row 2xl:justify-between gap-10"
     >
+      {/* small screen */}
+      <div className="sticky top-[100px]     lg:hidden flex  gap-2 items-center w-full">
+        <motion.span
+          style={{ opacity: barOpacity }}
+          className="border dark:border-[#262626] text-black bg-[#57d039] px-2 rounded-lg "
+        >
+          {currentIndex + 1}
+        </motion.span>
+        <motion.div
+          style={{ opacity: barOpacity }}
+          className=" border dark:border-[#262626] text-black  rounded-full w-full h-2 flex  justify-start"
+        >
+          <motion.div
+            style={{ width: progressWidth }}
+            transition={{ duration: 20 }}
+            className="h-1 rounded-full bg-[#57d039]"
+          ></motion.div>
+        </motion.div>
+        <motion.span
+          className="border dark:border-[#262626] text-black bg-[#57d039] px-2 rounded-lg "
+          style={{ opacity: barOpacity }}
+        >
+          {projects.length}
+        </motion.span>
+      </div>
       {/* project cards */}
       <div
         ref={container}
-        className="flex flex-col gap-[700px] h-full w-full  lg:w-[1000px] 2xl:w-full"
+        className="flex flex-col gap-[300px] lg:gap-[700px] h-full w-full  lg:w-[1000px] 2xl:w-full"
       >
         {projects.map((project, index) => {
           const targetScale = 1 - (3 - index) * 0.05;
