@@ -56,7 +56,7 @@ const ProfileCard = () => {
               scale: 1.1,
               rotate: 360,
               transition: { duration: 0.5 },
-              backgroundColor: "AppWorkspace",
+              backgroundColor: "white",
               color: "black",
             }}
             className="w-16 h-16 -translate-x-2 lg:translate-x-0 border border-[#1f1f1f] flex items-center justify-center font-satoshi-bold text-2xl rounded-full"
