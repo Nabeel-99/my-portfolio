@@ -4,7 +4,7 @@ import IconCard from "./IconCard";
 const StackCard = ({ details }) => {
   return (
     <div className="flex flex-col gap-6 h-full w-full xl:w-2/3 ">
-      <div className="lg:w-full  h-full border card-bg bg-[#f0f0f026] backdrop-blur-md border-[#dadada] border-[#2929295e] p-6 lg:p-8 rounded-2xl flex flex-col gap-4">
+      <div className="lg:w-full  h-full border card-bg bg-[#f0f0f026] backdrop-blur-md  border-[#2929295e] p-6 lg:p-8 rounded-2xl flex flex-col gap-4">
         <div className="pb-3 border-b border-b-[#3e3e3e]   text-2xl lg:text-5xl font-satoshi-bold">
           Stack Used
         </div>
