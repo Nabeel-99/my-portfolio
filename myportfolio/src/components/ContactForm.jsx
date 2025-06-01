@@ -126,8 +126,8 @@ const ContactForm = () => {
             type="submit"
             disabled={loading}
             className={`${
-              loading ? "bg-[#1f1f1f] " : "bg-[#f0f0f0] "
-            } flex items-center justify-center text-black bg-[#65e844] transition-all duration-300 hover:bg-[#1f1f1f] hover:bg-[#1f1f1f] hover:text-white  w-full border border-[#dadada] border-[#252525] py-4`}
+              loading ? "bg-[#1f1f1f] " : "bg-[#65e844] "
+            } flex items-center justify-center text-black bg-[#65e844] transition-all duration-300 hover:bg-[#1f1f1f]  hover:text-white  w-full border  border-[#252525] py-4`}
           >
             {loading ? (
               <AiOutlineLoading3Quarters className="spin text-2xl text-white " />
@@ -138,7 +138,7 @@ const ContactForm = () => {
         </div>
       </form>
       {success && (
-        <div className="absolute w-1/2 shadow-lg left-52 top-52 right-52 rounded-xl border text-lg  border-[#141414] flex flex-col gap-2 items-center justify-center bg-white bg-[#161616] p-4">
+        <div className="absolute w-1/2 shadow-lg left-52 top-52 right-52 rounded-xl border text-lg  border-[#141414] flex flex-col gap-2 items-center justify-center  bg-[#161616] p-4">
           <div>
             {" "}
             <IoIosCheckmarkCircle className="text-[3rem]" />
