@@ -37,13 +37,13 @@ const Projects = () => {
       <div className="sticky top-[100px]     lg:hidden flex  gap-2 items-center w-full">
         <motion.span
           style={{ opacity: barOpacity }}
-          className="border dark:border-[#262626] text-black bg-[#57d039] px-2 rounded-lg "
+          className="border border-[#262626] text-black bg-[#57d039] px-2 rounded-lg "
         >
           {currentIndex + 1}
         </motion.span>
         <motion.div
           style={{ opacity: barOpacity }}
-          className=" border dark:border-[#262626] text-black  rounded-full w-full h-2 flex  justify-start"
+          className=" border border-[#262626] text-black  rounded-full w-full h-2 flex  justify-start"
         >
           <motion.div
             style={{ width: progressWidth }}
@@ -52,7 +52,7 @@ const Projects = () => {
           ></motion.div>
         </motion.div>
         <motion.span
-          className="border dark:border-[#262626] text-black bg-[#57d039] px-2 rounded-lg "
+          className="border border-[#262626] text-black bg-[#57d039] px-2 rounded-lg "
           style={{ opacity: barOpacity }}
         >
           {projects.length}
@@ -82,13 +82,13 @@ const Projects = () => {
       <div className="lg:sticky top-[150px] hidden lg:flex flex-col gap-2 items-center h-[500px]">
         <motion.span
           style={{ opacity: barOpacity }}
-          className="border dark:border-[#262626] text-black bg-[#57d039] px-2 rounded-lg "
+          className="border border-[#262626] text-black bg-[#57d039] px-2 rounded-lg "
         >
           {currentIndex + 1}
         </motion.span>
         <motion.div
           style={{ opacity: barOpacity }}
-          className=" border dark:border-[#262626] text-black  rounded-full h-[302px] w-2 flex  justify-center"
+          className=" border border-[#262626] text-black  rounded-full h-[302px] w-2 flex  justify-center"
         >
           <motion.div
             style={{ height: progressHeight }}
@@ -97,7 +97,7 @@ const Projects = () => {
           ></motion.div>
         </motion.div>
         <motion.span
-          className="border dark:border-[#262626] text-black bg-[#57d039] px-2 rounded-lg "
+          className="border border-[#262626] text-black bg-[#57d039] px-2 rounded-lg "
           style={{ opacity: barOpacity }}
         >
           {projects.length}

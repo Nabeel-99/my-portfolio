@@ -50,14 +50,14 @@ a:hover {
   animation: spinMe 3s linear infinite;
 }
 .btn-social {
-  @apply border hover:text-white bg-[#f0f0f0]  dark:border-[#262626] dark:bg-[#191919]
+  @apply border hover:text-white border-[#262626] bg-[#191919]
     cursor-pointer  rounded-lg p-2;
 }
 .btn-download-cv {
-  @apply bg-[#f0f0f0] border w-full p-2 cursor-pointer  
+  @apply border w-full p-2 cursor-pointer  
   flex items-center transition-all duration-300 
   justify-center hover:text-black rounded-lg
-   dark:bg-[#1f1f1f] dark:border-[#262626] hover:bg-[#57d039] dark:hover:bg-[#57d039];
+   bg-[#1f1f1f] border-[#262626]  hover:bg-[#57d039];
 }
 @keyframes spinMe {
   from {
@@ -88,14 +88,15 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  /* color: #ffffffde; */
+  color: #ffffffde;
   justify-content: center;
+  background-color: #0a0a0aff;
   min-height: 120vh;
 }
-.dark body {
+/* .dark body {
   color: #ffffffde;
   background-color: #0a0a0aff;
-}
+} */
 
 h1 {
   font-size: 3.2em;
@@ -111,20 +112,20 @@ h1 {
   animation: animateBg 50s linear infinite;
   background: radial-gradient(
     circle at center,
-    rgba(255, 223, 186, 0.3) 0%,
-    rgba(255, 248, 240, 0.6) 0%,
-    rgba(255, 255, 255, 1) 100%
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(8, 8, 8, 0.6) 50%,
+    rgba(0, 0, 0, 1) 100%
   );
 }
 
-.dark .star-background {
+/* .dark .star-background {
   background: radial-gradient(
     circle at center,
     rgba(255, 255, 255, 0.05) 0%,
     rgba(8, 8, 8, 0.6) 50%,
     rgba(0, 0, 0, 1) 100%
   );
-}
+} */
 
 .gradient-bg {
   background: radial-gradient(
@@ -151,14 +152,14 @@ h1 {
   padding: 0.6rem 1rem;
   border-radius: 0.5rem;
   display: inline-block;
-  background-color: #f0f0f0;
+  background-color: #191a1b;
   transition: background-color 0.1s ease, padding 0.5s ease;
   will-change: background-image;
 }
 
-.dark .active-link {
+/* .dark .active-link {
   background-color: #191a1b;
-}
+} */
 
 .active-link::before,
 .active-link::after {
@@ -170,21 +171,21 @@ h1 {
   left: -0.2rem;
   right: -0.2rem;
   bottom: -0.2rem;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: 1px solid rgb(24, 24, 24);
 
   background-image: conic-gradient(
     from var(--angle),
-    #f5f5f5,
+    #404040,
     #57d039,
     40%,
-    #e0e0e0,
-    #fafafa
+    #3f3f3f,
+    #040407
   );
   animation: 6s spin linear infinite;
   transition: background-image 3s ease, opacity 0.2s ease;
 }
 
-.dark .active-link::before,
+/* .dark .active-link::before,
 .active-link::after {
   border: 1px solid rgb(24, 24, 24);
 
@@ -196,7 +197,7 @@ h1 {
     #3f3f3f,
     #040407
   );
-}
+} */
 
 .active-link::before {
   filter: blur(0.5rem);
