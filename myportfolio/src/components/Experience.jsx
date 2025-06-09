@@ -1,128 +1,59 @@
 import React from "react";
-import { MdDevices } from "react-icons/md";
 import FadeInEffect from "./FadeInEffect";
-import { motion } from "motion/react";
+import ExperienceCard from "./ExperienceCard";
 
 const Experience = () => {
+  const experiences = [
+    {
+      id: 1,
+      title: "Frontend Developer – Petezy App",
+      date: "September 2024 – Present",
+      description: [
+        "Contributing to the frontend of Petezy, a pet services platform for booking pet care, managing appointments, and accessing location-based features.",
+        "Built reusable UI components using React.js, TypeScript, and Tailwind CSS for seamless mobile and desktop experiences.",
+        "Collaborated in a hybrid development team to implement features across both web and mobile interfaces.",
+      ],
+      delay: 0.6,
+    },
+    {
+      id: 2,
+      title: "Software Developer Intern",
+      date: "June 2024 - September 2024",
+      description: [
+        "Built a full-featured task management app with real-time updates and scheduling features using React.js, Laravel, and MySQL.",
+        "Managed both admin and user portals with role-based logic and scheduling.",
+        "Collaborated in Agile teams, contributing to code reviews, sprint planning, and product testing cycles.",
+      ],
+      delay: 0.4,
+    },
+
+    {
+      id: 3,
+      title: "Freelance Developer & Personal Projects",
+      date: "October 2022 - Present",
+      description: [
+        "Designed and deployed a responsive website for a local family business using React.js and Tailwind CSS.",
+        "Built the frontend of a donation platform using React and Tailwind CSS, with features for campaign browsing and contribution.",
+        "Developed a full-featured blog app using Next.js with authentication, Markdown editor, and PostgreSQL integration via Prisma.",
+      ],
+      delay: 0.8,
+    },
+  ];
   return (
     <FadeInEffect delay={0.2}>
       <div className="flex flex-col gap-6 ">
         <p className="font-satoshi-bold text-4xl">Experience</p>
-        <motion.div
-          initial={{ y: 10, opacity: 0 }}
-          whileInView={{
-            y: 0,
-            opacity: 1,
-          }}
-          viewport={{
-            once: true,
-          }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="border rounded-3xl backdrop-blur-md  bg-[#121212] border-[#1f1f1f] p-10 xl:w-[900px]"
-        >
-          <div className="flex flex-col xl:flex-row items-start justify-start  gap-10">
-            <motion.div
-              initial={{ x: -2, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className=""
-            >
-              <MdDevices style={{ fontSize: "2rem" }} className="" />
-            </motion.div>
-
-            <motion.div
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.6, ease: [0.4, 1, 0.8, 1] }}
-              className="flex flex-col gap-4"
-            >
-              <div className="flex flex-col ">
-                <p className="font-satoshi-bold text-xl">
-                  Software Developer Intern
-                </p>
-                <p className="text-sm">June 2024 - September 2024</p>
-              </div>
-              <div className="flex flex-col ">
-                <ul className="list-disc">
-                  <li>
-                    Built a full-featured task management app with real-time
-                    updates and scheduling features using React.js, Laravel, and
-                    MySQL.
-                  </li>
-                  <li>
-                    Managed both admin and user portals with role-based logic
-                    and scheduling.
-                  </li>
-                  <li>
-                    Collaborated in Agile teams, contributing to code reviews,
-                    sprint planning, and product testing cycles.
-                  </li>
-                </ul>
-              </div>
-            </motion.div>
-          </div>
-        </motion.div>
-        <motion.div
-          initial={{ y: 10, opacity: 0 }}
-          whileInView={{
-            y: 0,
-            opacity: 1,
-          }}
-          viewport={{
-            once: true,
-          }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="border rounded-3xl backdrop-blur-md  bg-[#121212] border-[#1f1f1f] p-10 xl:w-[900px]"
-        >
-          <div className="flex flex-col xl:flex-row  items-start justify-start  gap-10">
-            <motion.div
-              initial={{ x: -2, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className=""
-            >
-              <MdDevices style={{ fontSize: "2rem" }} className="" />
-            </motion.div>
-
-            <motion.div
-              initial={{ y: 20, opacity: 0 }}
-              whileInView={{
-                y: 0,
-                opacity: 1,
-              }}
-              viewport={{
-                once: true,
-              }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex flex-col gap-4"
-            >
-              <div className="flex flex-col ">
-                <p className="font-satoshi-bold text-xl">
-                  Freelance Developer & Personal Projects
-                </p>
-                <p className="text-sm">October 2022 - Present</p>
-              </div>
-              <div className="flex flex-col ">
-                <ul className="list-disc">
-                  <li>
-                    Designed and deployed a responsive website for a local
-                    family business using React.js and Tailwind CSS.
-                  </li>
-                  <li>
-                    Built the frontend of a donation platform using React and
-                    Tailwind CSS, with features for campaign browsing and
-                    contribution.
-                  </li>
-                  <li>
-                    Developed a full-featured blog app using Next.js with
-                    authentication, Markdown editor, and PostgreSQL integration
-                    via Prisma.
-                  </li>
-                </ul>
-              </div>
-            </motion.div>
-          </div>
-        </motion.div>
+        {experiences.map((exp) => (
+          <FadeInEffect delay={exp.delay}>
+            <ExperienceCard
+              key={exp.id}
+              delay={exp.delay}
+              title={exp.title}
+              date={exp.date}
+              description={exp.description}
+            />
+          </FadeInEffect>
+        ))}
       </div>
     </FadeInEffect>
   );
