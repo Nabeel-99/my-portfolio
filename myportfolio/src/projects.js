@@ -1,6 +1,5 @@
 import SmartMeal from "./assets/images/smartmeal.png";
 import TaskPro from "./assets/images/taskmanager.png";
-import LandingPage from "./assets/images/chronicle.png";
 import SvelteIcon from "./assets/images/svelte.svg";
 import TailwindIcon from "./assets/images/tailwind.svg";
 import ReactIcon from "./assets/images/react.svg";
@@ -16,15 +15,15 @@ import PrismaIcon from "./assets/images/prisma.png";
 import NextAuthIcon from "./assets/images/nextauth.webp";
 import NextjsIcon from "./assets/images/nextjs.png";
 import SmartMealLogo from "./assets/images/smartmeallogo.png";
-import ChronicleLogo from "./assets/images/chroniclelogo.png";
 import TaskProLogo from "./assets/images/taskprologo.png";
 import SmartMeal1 from "./assets/images/smartmeal1.png";
 import SmartMeal2 from "./assets/images/smartmeal2.png";
 import SmartMeal3 from "./assets/images/smartmeal3.png";
-import LandingPage1 from "./assets/images/chronicle1.png";
-import LandingPage2 from "./assets/images/chronicle2.png";
-import LandingPage3 from "./assets/images/chronicle3.png";
-import LandingPage4 from "./assets/images/chronicle4.png";
+import CareerAssistantLogo from "./assets/images/careerassistantlogo.png";
+import CareerAssistant from "./assets/images/careerassistant.png";
+import CareerAssistant1 from "./assets/images/careerassistant1.png";
+import CareerAssistant2 from "./assets/images/careerassistant2.png";
+import CareerAssistant3 from "./assets/images/careerassistant3.png";
 import TaskPro1 from "./assets/images/taskpro1.png";
 import TaskPro2 from "./assets/images/taskpro2.png";
 import TaskPro3 from "./assets/images/taskpro3.png";
@@ -103,6 +102,53 @@ export const projects = [
     },
     imageGradient:
       "radial-gradient(at 50% 30%, rgba(255, 182, 193, 0.6) 0%, rgba(255, 240, 245, 0.3) 60%, rgba(255, 228, 225, 0.2) 90%)",
+  },
+  {
+    id: "CareerAssistant",
+    appIcon: CareerAssistantLogo,
+    appBg: "bg-[#0d828a]",
+    image: CareerAssistant,
+    title: "Career Assistant",
+    description: "Landing page for an AI-powered career assistant web app",
+    link: "https://career-assistant-beta.vercel.app/",
+    stack: [
+      {
+        name: "Next.js",
+        icon: NextjsIcon,
+        bg: "bg-[#1e1e1e]",
+      },
+      {
+        name: "TypeScript",
+        icon: TypeScriptIcon,
+        bg: "default",
+      },
+      {
+        name: "Tailwind CSS",
+        icon: TailwindIcon,
+        bg: "bg-[#06171e]",
+      },
+      {
+        name: "Framer Motion",
+        icon: FramerIcon,
+        bg: "bg-[#FFF312]",
+      },
+    ],
+    overview:
+      "Career Assistant is a modern, responsive landing page for an upcoming AI-powered platform that helps users prepare for their job search. The design showcases the product's vision to offer features like CV parsing, mock interview practice, and personalized feedback. While the full application is still under development, this landing page highlights the value proposition and provides a solid visual foundation for the product.",
+    app: "Landing Page",
+    radialGradientDark:
+      "radial-gradient(ellipse at top right, rgba(13, 130, 138, 0.15) 20%, rgba(8, 8, 8, 0.6) 60%, rgba(0, 0, 0, 1) 100%)",
+    radialGradientLight:
+      "radial-gradient(ellipse at top right, rgba(13, 130, 138, 0.3) 20%, rgba(228, 250, 244, 0.4) 50%, rgba(255, 255, 255, 1) 100%)",
+    bgLink: "bg-[#0d828a]", // green accent
+    bgHover: "hover:bg-[#0b5f66]", // deep green hover
+    images: {
+      image1: CareerAssistant1,
+      image2: CareerAssistant2,
+      image3: CareerAssistant3,
+    },
+    imageGradient:
+      "radial-gradient(at top right, rgba(13, 130, 138, 0.2) 20%, rgba(32, 25, 48, 0.5) 50%, rgba(0, 0, 0, 0.85) 100%)",
   },
   {
     id: "SmartMeal",
@@ -212,148 +258,5 @@ export const projects = [
     },
     imageGradient:
       "radial-gradient(at 100% 10%, rgba(13, 71, 161, 0.12) 20%, rgba(25, 50, 80, 0.6) 50%, rgba(41, 41, 41, 0.7) 80%, rgba(21, 21, 21, 0.9) 100%)",
-  },
-  {
-    id: "TaskPro",
-    appIcon: TaskProLogo,
-    appBg: "bg-[#740C61]",
-    image: TaskPro,
-    title: "TaskPro",
-    description: "Cross-platform task management app for web and mobile",
-    link: "",
-    stack: [
-      {
-        name: "Svelte",
-        icon: SvelteIcon,
-        bg: "bg-[#e8490a]",
-      },
-      {
-        name: "Tailwind CSS",
-        icon: TailwindIcon,
-        bg: "bg-[#06171e]",
-      },
-      {
-        name: "Firebase",
-        icon: FirebaseIcon,
-        bg: "bg-orange-700",
-      },
-      {
-        name: "Node JS",
-        icon: NodeIcon,
-        bg: "bg-white",
-      },
-      {
-        name: "Capacitor",
-        icon: CapacitorIcon,
-        bg: "bg-white",
-      },
-    ],
-    overview:
-      "TaskPro is a cross-platform task management app that helps users stay organized by allowing them to create, edit, and assign tasks. Users can upload images to tasks for better tracking and manage their work visually. Tasks can be marked as complete once finished, and users can set priorities to focus on what’s most important. The app also sends notifications to keep users updated on task status and changes. With a clear view of pending tasks, TaskPro ensures users stay on top of their to-do lists across all devices. Its seamless synchronization keeps tasks accessible and up to date, whether on the web or mobile.",
-    app: "Cross Platform App",
-    radialGradientDark:
-      "radial-gradient(ellipse at top right,  rgba(116,12, 97, 0.05) 20%, rgba(8, 8, 8, 0.6) 50%, rgba(0, 0, 0, 1) 100%)",
-    radialGradientLight:
-      "radial-gradient(ellipse at top right, rgba(236, 64, 192, 0.2) 20%, rgba(248, 209, 236, 0.6) 50%, rgba(255, 255, 255, 1) 100%)",
-    bgLink: "bg-[#740C61]",
-    bgHover: "hover:bg-[#5F094B]",
-    images: {
-      image1: TaskPro1,
-      image2: TaskPro2,
-      image3: TaskPro3,
-    },
-    imageGradient:
-      "radial-gradient(at top right, rgba(116, 12, 97, 0.1) 20%, rgba(32, 25, 48, 0.6) 50%, rgba(0, 0, 0, 0.9) 100%)",
-  },
-  {
-    id: "LandingPage",
-    appIcon: ChronicleLogo,
-    appBg: "bg-[#1C154F]",
-    image: LandingPage,
-    title: "Landing Page",
-    description:
-      "Responsive landing page with smooth transitions and animations",
-    link: "https://landing-page-framer.vercel.app",
-    stack: [
-      {
-        name: "React JS",
-        icon: ReactIcon,
-        bg: "bg-[#08090a]",
-      },
-      {
-        name: "TypeScript",
-        icon: TypeScriptIcon,
-        bg: "default",
-      },
-      {
-        name: "Tailwind CSS",
-        icon: TailwindIcon,
-        bg: "bg-[#06171e]",
-      },
-      {
-        name: "Framer Motion",
-        icon: FramerIcon,
-        bg: "bg-[#FFF312]",
-      },
-    ],
-    overview:
-      "This is a modern, responsive landing page designed to provide an engaging user experience with smooth transitions and animations. It showcases a brand, product, or service in a visually appealing way, with a clean and minimalist layout. The smooth animations and interactive elements create a dynamic experience for visitors, making a strong first impression. Fully responsive, it adapts seamlessly to any device, ensuring it looks great on both desktop and mobile. Perfect for businesses or portfolios looking to capture attention and offer an intuitive interface.",
-    app: "Website",
-    radialGradientDark:
-      "radial-gradient(ellipse at top right, rgba(28, 21, 79, 0.8) 0%, rgba(8, 8, 8, 0.6) 50%, rgba(0, 0, 0, 1) 100%)",
-    radialGradientLight:
-      "radial-gradient(ellipse at top right, rgba(121, 107, 234, 0.25) 0%, rgba(230, 230, 250, 0.6) 50%, rgba(255, 255, 255, 1) 100%)",
-    bgLink: "bg-[#1C154F]",
-    bgHover: "hover:bg-[#140F3E]",
-    images: {
-      image1: LandingPage1,
-      image2: LandingPage2,
-      image3: LandingPage3,
-      image4: LandingPage4,
-    },
-    imageGradient:
-      "radial-gradient(at 0% 30%, rgba(28, 21, 79, 0.8) 0%, rgba(0, 0, 8, 0) 90%, rgba(0, 0, 60, 0.4) 80%, rgba(211, 94, 163, 0.2) 100%)",
-  },
-  {
-    id: "FusionEnergy",
-    appIcon: FusionEnergyLogo,
-    appBg: "bg-[#D06D11]",
-    image: FusionEnergy,
-    title: "Fusion Energy Solutions",
-    description:
-      "Modern, responsive portfolio website for showcasing solar energy solutions and services",
-    link: "https://ufi-portfolio.vercel.app/",
-    stack: [
-      {
-        name: "React JS",
-        icon: ReactIcon,
-        bg: "bg-[#08090a]",
-      },
-      {
-        name: "Framer Motion",
-        icon: FramerIcon,
-        bg: "bg-[#FFF312]",
-      },
-      {
-        name: "Tailwind CSS",
-        icon: TailwindIcon,
-        bg: "bg-[#06171e]",
-      },
-    ],
-    overview:
-      "This is a modern, responsive landing page designed to provide an engaging user experience with smooth transitions and animations. It showcases the brand, services, and expertise of Fusion Energy Solutions in a visually appealing way, with a clean and minimalist layout. Smooth animations and interactive elements create a dynamic experience for visitors, making a strong first impression. Fully responsive, it adapts seamlessly to any device, ensuring it looks great on both desktop and mobile. Perfect for highlighting solar energy solutions and establishing a professional online presence.",
-    radialGradientDark:
-      "radial-gradient(ellipse at top right, rgba(208, 109, 17, 0.15) 20%, rgba(8, 8, 8, 0.6) 50%, rgba(0, 0, 0, 1) 100%)",
-    radialGradientLight:
-      "radial-gradient(ellipse at top right, rgba(255, 183, 77, 0.25) 20%, rgba(255, 239, 213, 0.6) 50%, rgba(255, 255, 255, 1) 100%)",
-    bgLink: "bg-[#D06D11]",
-    bgHover: "hover:bg-[#E0883C]",
-    images: {
-      image1: Fusion1,
-      image2: Fusion2,
-      image3: Fusion3,
-    },
-    imageGradient:
-      "radial-gradient(at 100% 10%, rgba(208, 109, 17, 0.12) 20%, rgba(80, 60, 20, 0.6) 50%, rgba(41, 41, 41, 0.7) 80%, rgba(21, 21, 21, 0.9) 100%)",
   },
 ];
