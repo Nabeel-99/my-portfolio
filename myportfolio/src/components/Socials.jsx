@@ -114,7 +114,7 @@ const Socials = () => {
         aria-label="download cv"
         className="btn-download-cv "
       >
-        Download CV
+        View Resume
       </motion.a>
     </motion.div>
   );
