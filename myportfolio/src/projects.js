@@ -5,6 +5,7 @@ import MongoIcon from "./assets/images/mongodb.png";
 import NodeIcon from "./assets/images/nodejs.png";
 import ExpressIcon from "./assets/images/express.png";
 import FramerIcon from "./assets/images/framer.png";
+import VapiIcon from "./assets/images/vapi.svg";
 import TypeScriptIcon from "./assets/images/ts.png";
 import ShadcnIcon from "./assets/images/shadcn.png";
 import PrismaIcon from "./assets/images/prisma.png";
@@ -16,9 +17,9 @@ import SmartMeal2 from "./assets/images/smartmeal2.png";
 import SmartMeal3 from "./assets/images/smartmeal3.png";
 import CareerAssistantLogo from "./assets/images/careerassistantlogo.png";
 import CareerAssistant from "./assets/images/careerassistant.png";
-import CareerAssistant1 from "./assets/images/careerassistant1.png";
-import CareerAssistant2 from "./assets/images/careerassistant2.png";
-import CareerAssistant3 from "./assets/images/careerassistant3.png";
+import CareerAssistant1 from "./assets/images/aicareer1.png";
+import CareerAssistant2 from "./assets/images/aicareer2.png";
+import CareerAssistant3 from "./assets/images/aicareer3.png";
 import LoveandLightLogo from "./assets/images/lovelightlogo.jpeg";
 import LoveandLight1 from "./assets/images/donate.png";
 import LoveandLight2 from "./assets/images/donate1.png";
@@ -95,8 +96,8 @@ export const projects = [
     appIcon: CareerAssistantLogo,
     appBg: "bg-[#0d828a]",
     image: CareerAssistant,
-    title: "Career Assistant",
-    description: "Landing page for an AI-powered career assistant web app",
+    title: "AI Career Assistant",
+    description: "AI-powered app for resumes and voice interview practice.",
     link: "https://career-assistant-beta.vercel.app/",
     stack: [
       {
@@ -115,14 +116,29 @@ export const projects = [
         bg: "bg-[#06171e]",
       },
       {
-        name: "Framer Motion",
-        icon: FramerIcon,
-        bg: "bg-[#FFF312]",
+        name: "Vapi AI",
+        icon: VapiIcon,
+        bg: "bg-[#0a0a0a]",
       },
+      {
+        name: "ShadCN/UI",
+        icon: ShadcnIcon,
+        bg: "bg-white",
+      },
+      {
+        name: "Prisma",
+        icon: PrismaIcon,
+        bg: "bg-white",
+      },
+      // {
+      //   name: "NextAuth.js",
+      //   icon: NextAuthIcon,
+      //   bg: "bg-[#1A1A1A]",
+      // },
     ],
     overview:
-      "Career Assistant is a modern, responsive landing page for an upcoming AI-powered platform that helps users prepare for their job search. The design showcases the product's vision to offer features like CV parsing, mock interview practice, and personalized feedback. While the full application is still under development, this landing page highlights the value proposition and provides a solid visual foundation for the product.",
-    app: "Landing Page",
+      "Career Assistant is a full-featured AI-powered web application that helps users improve their career readiness. It allows users to upload and parse their resumes, generate professional CV templates, and practice mock interviews with a real-time voice-based AI. After each session, users receive personalized feedback, performance scores, and practical tips. The app also tracks progress over time, helping users build confidence and sharpen their communication skills.",
+    app: "Web App",
     radialGradientDark:
       "radial-gradient(ellipse at top right, rgba(13, 130, 138, 0.15) 20%, rgba(8, 8, 8, 0.6) 60%, rgba(0, 0, 0, 1) 100%)",
     radialGradientLight:
@@ -228,6 +244,11 @@ export const projects = [
         name: "Tailwind CSS",
         icon: TailwindIcon,
         bg: "bg-[#06171e]",
+      },
+      {
+        name: "Framer Motion",
+        icon: FramerIcon,
+        bg: "bg-[#FFF312]",
       },
     ],
     overview:
