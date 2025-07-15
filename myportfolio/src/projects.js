@@ -40,7 +40,7 @@ export const projects = [
     title: "Personal Developer Blog",
     description:
       "A personal blog site with admin-managed posts, authentication, comments, and interactive features.",
-    link: "https://idiawrites.vercel.app/",
+    link: "https://www.idiawrites.com/",
     stack: [
       {
         name: "Next.js",
