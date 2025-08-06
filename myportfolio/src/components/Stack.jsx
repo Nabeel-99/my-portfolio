@@ -7,7 +7,7 @@ import MongoIcon from "../assets/images/mongodb.png";
 import NextIcon from "../assets/images/nextjs.png";
 import NodeIcon from "../assets/images/nodejs.png";
 import GithubIcon from "../assets/images/github.png";
-import PrismaIcon from "../assets/images/prisma.png";
+import MySQLIcon from "../assets/images/mysql.webp";
 import ShadCNIcon from "../assets/images/shadcn.png";
 import FadeInEffect from "./FadeInEffect";
 import { motion } from "motion/react";
@@ -75,9 +75,9 @@ const Stack = () => {
             delay={1.2}
           />
           <IconCard
-            header={"Prisma"}
+            header={"MySQL"}
             description={"Database"}
-            image={PrismaIcon}
+            image={MySQLIcon}
             bgColor={"bg-white"}
             borderColor={"border-[#0d2d4a]"}
             delay={1.2}
