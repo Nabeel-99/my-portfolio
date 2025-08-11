@@ -5,7 +5,7 @@ import FramerIcon from "../assets/images/framer.png";
 import TailwindIcon from "../assets/images/tailwind.svg";
 import MongoIcon from "../assets/images/mongodb.png";
 import NextIcon from "../assets/images/nextjs.png";
-import NodeIcon from "../assets/images/nodejs.png";
+import NodeExpressIcon from "../assets/images/nodeexpress.png";
 import GithubIcon from "../assets/images/github.png";
 import MySQLIcon from "../assets/images/mysql.webp";
 import ShadCNIcon from "../assets/images/shadcn.png";
@@ -59,9 +59,9 @@ const Stack = () => {
             delay={0.8}
           />
           <IconCard
-            header={"Node JS"}
+            header={"Node JS / Express Js"}
             description={"Backend Development"}
-            image={NodeIcon}
+            image={NodeExpressIcon}
             bgColor={"bg-white"}
             borderColor={"border-[#0d2d4a]"}
             delay={1}
