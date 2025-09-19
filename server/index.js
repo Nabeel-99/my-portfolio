@@ -75,7 +75,7 @@ app.post("/api/send-email", async (req, res) => {
     const mailOptionsClient = {
       from: process.env.GMAIL,
       to: email,
-      subject: "Your Website project inquiry",
+      subject: "Website project inquiry",
       html: htmlContentClient,
     };
     await transporter.sendMail(mailOptionsClient);
@@ -84,8 +84,9 @@ app.post("/api/send-email", async (req, res) => {
     const mailOptionsAdmin = {
       from: process.env.GMAIL,
       to: process.env.GMAIL,
-      subject: "New message from client",
+      subject: "Website project inquiry",
       html: htmlContentAdmin,
+      replyTo: email
   
     };
     await transporter.sendMail(mailOptionsAdmin);
