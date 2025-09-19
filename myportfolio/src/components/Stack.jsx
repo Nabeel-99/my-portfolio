@@ -1,7 +1,6 @@
 import React from "react";
 import IconCard from "./IconCard";
 import ReactIcon from "../assets/images/react.svg";
-import FramerIcon from "../assets/images/framer.png";
 import TailwindIcon from "../assets/images/tailwind.svg";
 import MongoIcon from "../assets/images/mongodb.png";
 import NextIcon from "../assets/images/nextjs.png";
@@ -11,6 +10,7 @@ import MySQLIcon from "../assets/images/mysql.webp";
 import ShadCNIcon from "../assets/images/shadcn.png";
 import FadeInEffect from "./FadeInEffect";
 import { motion } from "motion/react";
+import GsapIcon from "../assets/images/gsap.jpg.avif";
 
 const Stack = () => {
   return (
@@ -44,9 +44,9 @@ const Stack = () => {
             delay={0.4}
           />
           <IconCard
-            header={"Framer Motion"}
+            header={"GSAP"}
             description={"Smooth Animations"}
-            image={FramerIcon}
+            image={GsapIcon}
             borderColor={"border-[#f1ff2a]"}
             delay={0.6}
           />

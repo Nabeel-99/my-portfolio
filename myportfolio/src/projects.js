@@ -1,10 +1,10 @@
-import SmartMeal from "./assets/images/smartmeal.png";
+import SmartMeal from "./assets/images/smartmeal.jpeg";
 import TailwindIcon from "./assets/images/tailwind.svg";
 import ReactIcon from "./assets/images/react.svg";
 import MongoIcon from "./assets/images/mongodb.png";
 import NodeIcon from "./assets/images/nodejs.png";
 import ExpressIcon from "./assets/images/express.png";
-import FramerIcon from "./assets/images/framer.png";
+import GsapIcon from "./assets/images/gsap.jpg.avif";
 import VapiIcon from "./assets/images/vapi.svg";
 import TypeScriptIcon from "./assets/images/ts.png";
 import ShadcnIcon from "./assets/images/shadcn.png";
@@ -16,20 +16,20 @@ import SmartMeal1 from "./assets/images/smartmeal1.png";
 import SmartMeal2 from "./assets/images/smartmeal2.png";
 import SmartMeal3 from "./assets/images/smartmeal3.png";
 import CareerAssistantLogo from "./assets/images/careerassistantlogo.png";
-import CareerAssistant from "./assets/images/careerassistant.png";
+import CareerAssistant from "./assets/images/careerassistant.jpeg";
 import CareerAssistant1 from "./assets/images/aicareer1.png";
-import CareerAssistant2 from "./assets/images/aicareer2.png";
+import CareerAssistant2 from "./assets/images/aicareer2.jpeg";
 import CareerAssistant3 from "./assets/images/aicareer3.png";
-import LoveandLightLogo from "./assets/images/lovelightlogo.jpeg";
-import LoveandLight1 from "./assets/images/donate.png";
-import LoveandLight2 from "./assets/images/donate1.png";
-import LoveandLight3 from "./assets/images/donate2.png";
-import LoveandLight4 from "./assets/images/donate3.png";
 import BlogLogo from "./assets/images/blogLogo.png";
-import Blog1 from "./assets/images/blog1.png";
+import Blog1 from "./assets/images/blog1.jpeg";
 import Blog2 from "./assets/images/blog2.png";
-import Blog3 from "./assets/images/blog3.png";
-import Blog from "./assets/images/blog.png";
+import Blog3 from "./assets/images/blog3.jpeg";
+import Blog from "./assets/images/blog.jpeg";
+import AltanovaLogo from "./assets/images/altanovalogo.jpg";
+import Altanova from "./assets/images/altanova.jpeg";
+import Altanova1 from "./assets/images/altanova1.png";
+import Altanova2 from "./assets/images/altanova2.jpeg";
+import Altanova3 from "./assets/images/altanova3.jpeg";
 
 export const projects = [
   {
@@ -212,34 +212,23 @@ export const projects = [
       "radial-gradient(at 100% 10%, rgba(208, 129, 23, 0.2) 20%, rgba(80, 60, 20, 0.6) 50%, rgba(41, 41, 41, 0.7) 80%, rgba(21, 21, 21, 0.9) 100%)",
   },
   {
-    id: "LoveandLight",
-    appIcon: LoveandLightLogo,
-    appBg: "bg-[#0D47A1]",
-    image: LoveandLight1,
-    title: "LoveandLight Foundation",
-    description:
-      "A modern full-stack donation platform enabling users to donate for charity, track progress, and receive updates in real-time.",
-    link: "https://loveandlight-foundation.vercel.app/",
+    id: "Altanova",
+    appIcon: AltanovaLogo,
+    appBg: "bg-[#4E342E]",
+    image: Altanova,
+    title: "Altanova",
+    description: "Landing page for a construction and trading company.",
+    link: "https://atlanova-portfolio.vercel.app",
     stack: [
-      {
-        name: "Mongo DB",
-        icon: MongoIcon,
-        bg: "bg-[#11300a]",
-      },
-      {
-        name: "Express JS",
-        icon: ExpressIcon,
-        bg: "bg-[#5e5e5e]",
-      },
       {
         name: "React JS",
         icon: ReactIcon,
         bg: "bg-[#08090a]",
       },
       {
-        name: "Node JS",
-        icon: NodeIcon,
-        bg: "bg-white",
+        name: "TypeScript",
+        icon: TypeScriptIcon,
+        bg: "bg-[#1e3a5f]",
       },
       {
         name: "Tailwind CSS",
@@ -247,25 +236,26 @@ export const projects = [
         bg: "bg-[#06171e]",
       },
       {
-        name: "Framer Motion",
-        icon: FramerIcon,
-        bg: "bg-[#FFF312]",
+        name: "GSAP",
+        icon: GsapIcon,
+        bg: "bg-[#0d0d0d]",
       },
     ],
     overview:
-      "LoveandLight Foundation is a full-stack donation platform designed to connect donors with impactful causes. With a seamless and user-friendly interface, users can explore donation opportunities, track the progress of projects, and receive timely updates. Built with smooth animations and interactive elements, the platform ensures an engaging user experience. Fully responsive, it adapts seamlessly to different devices, offering a professional and intuitive way to support meaningful initiatives.",
+      "Altanova is a modern, visually engaging personal portfolio website designed to showcase professional projects, skills, and creative work in a clean, interactive format. Built with a focus on smooth user experience and aesthetic appeal, Altanova combines responsive design, subtle animations, and intuitive navigation to highlight the unique talents and achievements of its creator.",
+    app: "Landing Page",
     radialGradientDark:
-      "radial-gradient(ellipse at top right, rgba(13, 71, 161, 0.15) 20%, rgba(10, 25, 47, 0.6) 50%, rgba(0, 0, 0, 1) 100%)",
+      "radial-gradient(ellipse at top right, rgba(78, 52, 46, 0.15) 20%, rgba(44, 29, 22, 0.6) 50%, rgba(0, 0, 0, 1) 100%)",
     radialGradientLight:
-      "radial-gradient(ellipse at top right, rgba(187, 222, 251, 0.6) 20%, rgba(227, 242, 253, 0.8) 50%, rgba(255, 255, 255, 1) 100%)",
-    bgLink: "bg-[#1565C0]",
-    bgHover: "hover:bg-[#1E88E5]",
+      "radial-gradient(ellipse at top right, rgba(210, 180, 140, 0.6) 20%, rgba(245, 222, 179, 0.8) 50%, rgba(255, 255, 255, 1) 100%)",
+    bgLink: "bg-[#6D4C41]",
+    bgHover: "hover:bg-[#8D6E63]",
     images: {
-      image1: LoveandLight2,
-      image2: LoveandLight3,
-      image3: LoveandLight4,
+      image1: Altanova1,
+      image2: Altanova2,
+      image3: Altanova3,
     },
     imageGradient:
-      "radial-gradient(at 100% 10%, rgba(13, 71, 161, 0.12) 20%, rgba(25, 50, 80, 0.6) 50%, rgba(41, 41, 41, 0.7) 80%, rgba(21, 21, 21, 0.9) 100%)",
+      "radial-gradient(at 100% 10%, rgba(78, 52, 46, 0.12) 20%, rgba(60, 40, 30, 0.6) 50%, rgba(41, 41, 41, 0.7) 80%, rgba(21, 21, 21, 0.9) 100%)",
   },
 ];
