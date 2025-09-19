@@ -71,12 +71,18 @@ app.post("/api/send-email", async (req, res) => {
       .replace("{{budget}}", budget)
       .replace("{{APP_NAME}}", process.env.APP_NAME);
 
+    // Generate unique message ID for proper threading
+    const messageId = `<${Date.now()}-${Math.random()
+      .toString(36)
+      .substring(2, 11)}@${process.env.GMAIL.split("@")[1]}>`;
+
     // Send email to client
     const mailOptionsClient = {
       from: process.env.GMAIL,
       to: email,
       subject: "Website project inquiry",
       html: htmlContentClient,
+      messageId: messageId,
     };
     await transporter.sendMail(mailOptionsClient);
 
@@ -86,8 +92,12 @@ app.post("/api/send-email", async (req, res) => {
       to: process.env.GMAIL,
       subject: "Website project inquiry",
       html: htmlContentAdmin,
-      replyTo: email
-  
+      replyTo: email,
+      messageId: `<admin-${Date.now()}@${process.env.GMAIL.split("@")[1]}>`,
+      headers: {
+        "In-Reply-To": messageId,
+        References: messageId,
+      },
     };
     await transporter.sendMail(mailOptionsAdmin);
 
