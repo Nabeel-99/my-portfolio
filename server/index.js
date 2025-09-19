@@ -75,7 +75,7 @@ app.post("/api/send-email", async (req, res) => {
     const mailOptionsClient = {
       from: process.env.GMAIL,
       to: email,
-      subject: "NEW MESSAGE FROM CLIENT",
+      subject: "THANKS FOR REACHING OUT!",
       html: htmlContentClient,
     };
     await transporter.sendMail(mailOptionsClient);
