@@ -86,7 +86,7 @@ app.post("/api/send-email", async (req, res) => {
       to: process.env.GMAIL,
       subject: "New message from client",
       html: htmlContentAdmin,
-      replyTo: email,
+  
     };
     await transporter.sendMail(mailOptionsAdmin);
 
