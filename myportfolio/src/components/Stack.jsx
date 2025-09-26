@@ -29,7 +29,7 @@ const Stack = () => {
         >
           <IconCard
             header={"Next JS"}
-            description={"Frontend / Fullstack Development"}
+            description={"Fullstack Development"}
             image={NextIcon}
             bgColor={"bg-[#1e1e1e]"}
             borderColor={"border-[#1e1e1e]"}
