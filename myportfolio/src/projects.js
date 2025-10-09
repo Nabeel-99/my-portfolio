@@ -1,9 +1,8 @@
-import SmartMeal from "./assets/images/smartmeal.jpeg";
 import TailwindIcon from "./assets/images/tailwind.svg";
 import ReactIcon from "./assets/images/react.svg";
-import MongoIcon from "./assets/images/mongodb.png";
-import NodeIcon from "./assets/images/nodejs.png";
-import ExpressIcon from "./assets/images/express.png";
+// import MongoIcon from "./assets/images/mongodb.png";
+// import NodeIcon from "./assets/images/nodejs.png";
+// import ExpressIcon from "./assets/images/express.png";
 import GsapIcon from "./assets/images/gsap.jpg.avif";
 import VapiIcon from "./assets/images/vapi.svg";
 import TypeScriptIcon from "./assets/images/ts.png";
@@ -11,10 +10,6 @@ import ShadcnIcon from "./assets/images/shadcn.png";
 import PrismaIcon from "./assets/images/prisma.png";
 import NextAuthIcon from "./assets/images/nextauth.webp";
 import NextjsIcon from "./assets/images/nextjs.png";
-import SmartMealLogo from "./assets/images/smartmeallogo.png";
-import SmartMeal1 from "./assets/images/smartmeal1.png";
-import SmartMeal2 from "./assets/images/smartmeal2.png";
-import SmartMeal3 from "./assets/images/smartmeal3.png";
 import CareerAssistantLogo from "./assets/images/careerassistantlogo.png";
 import CareerAssistant from "./assets/images/careerassistant.jpeg";
 import CareerAssistant1 from "./assets/images/aicareer1.png";
@@ -30,6 +25,11 @@ import Altanova from "./assets/images/altanova.jpeg";
 import Altanova1 from "./assets/images/altanova1.png";
 import Altanova2 from "./assets/images/altanova2.jpeg";
 import Altanova3 from "./assets/images/altanova3.jpeg";
+import ArtLoom from "./assets/images/artloom.jpeg";
+import ArtLoomLogo from "./assets/images/vercel.svg";
+import ArtLoom1 from "./assets/images/artloom1.png";
+import ArtLoom2 from "./assets/images/artloom2.jpeg";
+import ArtLoom3 from "./assets/images/artloom3.jpeg";
 
 export const projects = [
   {
@@ -95,6 +95,53 @@ export const projects = [
       "radial-gradient(at top right, rgba(13, 130, 138, 0.2) 20%, rgba(32, 25, 48, 0.5) 50%, rgba(0, 0, 0, 0.85) 100%)",
   },
   {
+    id: "Artloom",
+    appIcon: ArtLoomLogo,
+    appBg: "bg-[#000000]",
+    image: ArtLoom,
+    title: "Artloom",
+    description: "E-commerce website for arts and crafts with modern design.",
+    link: "https://art-loom.vercel.app",
+    stack: [
+      {
+        name: "Next.js",
+        icon: NextjsIcon,
+        bg: "bg-[#1e1e1e]",
+      },
+      {
+        name: "TypeScript",
+        icon: TypeScriptIcon,
+        bg: "default",
+      },
+      {
+        name: "Tailwind CSS",
+        icon: TailwindIcon,
+        bg: "bg-[#06171e]",
+      },
+      {
+        name: "ShadCN/UI",
+        icon: ShadcnIcon,
+        bg: "bg-white",
+      },
+    ],
+    overview:
+      "Artloom is an e-commerce website built for arts and crafts enthusiasts. Created as a practice project to deepen understanding of modern web development, it features a clean, minimal design with a whitish aesthetic. Built with Next.js and TypeScript for robust performance and type safety, styled with Tailwind CSS for responsive design, and enhanced with ShadCN/UI components for a polished user interface. The platform provides a seamless shopping experience for art supplies and handmade crafts.",
+    app: "E-commerce Web App",
+    radialGradientDark:
+      "radial-gradient(ellipse at top right, rgba(245, 245, 245, 0.1) 20%, rgba(220, 220, 220, 0.05) 50%, rgba(0, 0, 0, 1) 100%)",
+    radialGradientLight:
+      "radial-gradient(ellipse at top right, rgba(250, 250, 250, 0.8) 20%, rgba(245, 245, 245, 0.9) 50%, rgba(255, 255, 255, 1) 100%)",
+    bgLink: "bg-[#000000]",
+    bgHover: "hover:bg-[#000000]/50",
+    images: {
+      image1: ArtLoom1,
+      image2: ArtLoom2,
+      image3: ArtLoom3,
+    },
+    imageGradient:
+      "radial-gradient(at 100% 10%, rgba(245, 245, 245, 0.3) 20%, rgba(230, 230, 230, 0.5) 50%, rgba(220, 220, 220, 0.7) 80%, rgba(210, 210, 210, 0.9) 100%)",
+  },
+  {
     id: "BlogApp",
     appIcon: BlogLogo,
     appBg: "bg-[#ffd1dc]",
@@ -154,63 +201,6 @@ export const projects = [
       "radial-gradient(at 50% 30%, rgba(255, 182, 193, 0.6) 0%, rgba(255, 240, 245, 0.3) 60%, rgba(255, 228, 225, 0.2) 90%)",
   },
 
-  {
-    id: "SmartMeal",
-    appIcon: SmartMealLogo,
-    appBg: "bg-[#D08117]",
-    image: SmartMeal,
-    title: "Smart Meal Connect",
-    description: "Website for solving food decision fatigue",
-    link: "https://smart-meal-frontend.onrender.com/",
-    stack: [
-      {
-        name: "Mongo DB",
-        icon: MongoIcon,
-        bg: "bg-[#11300a]",
-      },
-      {
-        name: "Express JS",
-        icon: ExpressIcon,
-        bg: "bg-[#5e5e5e]",
-      },
-      {
-        name: "React JS",
-        icon: ReactIcon,
-        bg: "bg-[#08090a]",
-      },
-      {
-        name: "Node JS",
-        icon: NodeIcon,
-        bg: "bg-white",
-      },
-      {
-        name: "Tailwind CSS",
-        icon: TailwindIcon,
-        bg: "bg-[#06171e]",
-      },
-      // {
-      //   name: "Framer Motion",
-      //   icon: FramerIcon,
-      //   bg: "bg-[#FFF312]",
-      // },
-    ],
-    overview:
-      " Smart Meal Connect helps users reduce food decision fatigue by allowing them to input ingredients they have on hand and get recipe suggestions based on those ingredients. It also takes into account factors like age, dietary preferences, and more. Users can post recipes to a feed, similar to a social media experience, allowing others to discover and share meal ideas.",
-    app: "Cross Platform App",
-    radialGradientDark:
-      "radial-gradient(ellipse at top right, rgba(208, 129, 23, 0.15) 20%, rgba(8, 8, 8, 0.6) 50%, rgba(0, 0, 0, 1) 100%)",
-    radialGradientLight:
-      "radial-gradient(ellipse at top right, rgba(255, 223, 170, 0.6) 20%, rgba(255, 239, 219, 0.7) 50%, rgba(255, 255, 255, 1) 100%)",
-    bgLink: "bg-[#D08117]",
-    bgHover: "hover:bg-[#A56F14]",
-    images: {
-      image1: SmartMeal1,
-      image2: SmartMeal2,
-      image3: SmartMeal3,
-    },
-    imageGradient:
-      "radial-gradient(at 100% 10%, rgba(208, 129, 23, 0.2) 20%, rgba(80, 60, 20, 0.6) 50%, rgba(41, 41, 41, 0.7) 80%, rgba(21, 21, 21, 0.9) 100%)",
-  },
   {
     id: "Altanova",
     appIcon: AltanovaLogo,
