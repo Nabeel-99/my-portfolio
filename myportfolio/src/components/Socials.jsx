@@ -48,7 +48,7 @@ const Socials = () => {
           <FaGithub className="text-3xl" />
         </motion.a>
         <motion.a
-          href="https://twitter.com/Nabeel_umarr"
+          href="https://x.com/ndev_99"
           target="_blank"
           aria-label="twitter"
           className="btn-social hover:bg-blue-700 "
