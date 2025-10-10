@@ -130,7 +130,6 @@ const ContactForm = () => {
             onChange={(e) => setMessage(e.target.value)}
             className="bg-[#1f1f1f] min-h-44 max-h-44 w-full border border-[#252525] px-4 py-2 rounded-lg"
             required
-            data-lenis-prevent
             onWheel={handleWheel}
           />
         </div>
