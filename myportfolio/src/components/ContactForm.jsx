@@ -10,7 +10,18 @@ const ContactForm = () => {
   const [budget, setBudget] = useState("");
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
+  const handleWheel = (e) => {
+    const target = e.currentTarget;
+    const isScrollable = target.scrollHeight > target.clientHeight;
+    const isAtTop = target.scrollTop === 0 && e.deltaY < 0;
+    const isAtBottom =
+      target.scrollTop + target.clientHeight >= target.scrollHeight &&
+      e.deltaY > 0;
 
+    if (isScrollable && !isAtTop && !isAtBottom) {
+      e.stopPropagation();
+    }
+  };
   const BASE_URL =
     window.location.hostname === "localhost"
       ? "http://localhost:8000"
@@ -120,6 +131,7 @@ const ContactForm = () => {
             className="bg-[#1f1f1f] min-h-44 max-h-44 w-full border border-[#252525] px-4 py-2 rounded-lg"
             required
             data-lenis-prevent
+            onWheel={handleWheel}
           />
         </div>
         <div className="w-full">
