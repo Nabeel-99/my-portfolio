@@ -125,7 +125,7 @@ export const projects = [
       },
     ],
     overview:
-      "Artloom is an e-commerce website built for arts and crafts enthusiasts. Created as a practice project to deepen understanding of modern web development, it features a clean, minimal design with a whitish aesthetic. Built with Next.js and TypeScript for robust performance and type safety, styled with Tailwind CSS for responsive design, and enhanced with ShadCN/UI components for a polished user interface. The platform provides a seamless shopping experience for art supplies and handmade crafts.",
+      "Artloom is an e-commerce website built for arts and crafts enthusiasts. It features a clean, minimal design with a whitish aesthetic. Built with Next.js and TypeScript for robust performance and type safety, styled with Tailwind CSS for responsive design, and enhanced with ShadCN/UI components for a polished user interface. The platform provides a seamless shopping experience for art supplies and handmade crafts.",
     app: "E-commerce Web App",
     radialGradientDark:
       "radial-gradient(ellipse at top right, rgba(245, 245, 245, 0.1) 20%, rgba(220, 220, 220, 0.05) 50%, rgba(0, 0, 0, 1) 100%)",
