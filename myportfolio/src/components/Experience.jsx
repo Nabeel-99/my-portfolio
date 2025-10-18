@@ -44,7 +44,7 @@ const Experience = () => {
       <div className="flex flex-col gap-6 ">
         <p className="font-satoshi-bold text-4xl">Experience</p>
         {experiences.map((exp) => (
-          <FadeInEffect delay={exp.delay}>
+          <FadeInEffect key={exp.id} delay={exp.delay}>
             <ExperienceCard
               key={exp.id}
               delay={exp.delay}

@@ -35,7 +35,7 @@ const ProfileCard = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8, delay: 0.2 }}
-      className="border relative overflow-hidden rounded-[40px] flex flex-col gap-4 bg-[#121212] border-[#1f1f1f] p-10 w-full xl:w-[700px] "
+      className="border relative overflow-hidden rounded-[40px] flex flex-col gap-4 bg-[#121212] border-[#1f1f1f] p-10 w-full xl:w-[700px]"
     >
       <div
         className="pointer-events-none absolute -inset-px opacity-0 transition duration-300"

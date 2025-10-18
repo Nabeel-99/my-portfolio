@@ -13,7 +13,7 @@ const ExperienceCard = ({ delay, title, date, description }) => {
         once: true,
       }}
       transition={{ duration: 0.8, delay: 0.4 }}
-      className="border rounded-3xl backdrop-blur-md  bg-[#121212] border-[#1f1f1f] p-10 xl:w-[900px]"
+      className="border rounded-3xl backdrop-blur-md  bg-[#121212] border-[#1f1f1f] p-10 xl:w-[900px] "
     >
       <div className="flex flex-col xl:flex-row items-start justify-start  gap-10">
         <motion.div

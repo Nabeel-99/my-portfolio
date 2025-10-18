@@ -41,7 +41,7 @@ function App() {
   }, [location]);
 
   return (
-    <div className="flex font-satoshi p-8 w-screen flex-col bg-[#0A0A0AFF] h-full items-center  2xl:container 2xl:mx-auto ">
+    <div className="flex font-satoshi  p-8 w-screen  flex-col bg-[#0A0A0AFF] h-full items-center  2xl:container 2xl:mx-auto ">
       <StarsBackground />
 
       <div className="flex z-20 flex-col xl:flex-row w-full">
@@ -51,7 +51,7 @@ function App() {
         <div
           className={`"flex z-20 ${
             showComponent ? "xl:pl-64" : "xl:pl-0 pt-0  w-full  "
-          }  pt-16 pb-10 items-center flex-col w-full h-full`}
+          }  pt-16 pb-10 items-center  flex-col w-full h-full`}
         >
           <Routes>
             <Route
