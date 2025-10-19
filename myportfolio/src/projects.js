@@ -4,7 +4,7 @@ import ReactIcon from "./assets/images/react.svg";
 // import NodeIcon from "./assets/images/nodejs.png";
 // import ExpressIcon from "./assets/images/express.png";
 import GsapIcon from "./assets/images/gsap.jpg.avif";
-import VapiIcon from "./assets/images/vapi.svg";
+// import VapiIcon from "./assets/images/vapi.svg";
 import TypeScriptIcon from "./assets/images/ts.png";
 import ShadcnIcon from "./assets/images/shadcn.png";
 import PrismaIcon from "./assets/images/prisma.png";
@@ -56,11 +56,11 @@ export const projects = [
         icon: TailwindIcon,
         bg: "bg-[#06171e]",
       },
-      {
-        name: "Vapi AI",
-        icon: VapiIcon,
-        bg: "bg-[#0a0a0a]",
-      },
+      // {
+      //   name: "Vapi AI",
+      //   icon: VapiIcon,
+      //   bg: "bg-[#0a0a0a]",
+      // },
       {
         name: "ShadCN/UI",
         icon: ShadcnIcon,
