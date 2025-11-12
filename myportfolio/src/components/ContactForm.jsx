@@ -113,8 +113,9 @@ const ContactForm = () => {
             required
           >
             <option value="">Select budget</option>
-            <option value="1000">Up to $1,000</option>
-            <option value="2000-5000">$2,000-$5,000</option>
+            <option value="200-500">$200 - $500</option>
+            <option value="500-1000">$500- $1,000</option>
+            <option value="2000-5000">$2,000 - $5,000</option>
             <option value="10000">$10,000+</option>
           </select>
         </div>
