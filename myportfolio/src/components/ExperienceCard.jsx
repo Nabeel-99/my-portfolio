@@ -13,15 +13,13 @@ const ExperienceCard = ({ delay, title, date, description }) => {
         once: true,
       }}
       transition={{ duration: 0.8, delay: 0.4 }}
-      className="border rounded-3xl backdrop-blur-md  bg-[#121212] border-[#1f1f1f] p-10 xl:w-[900px] "
-    >
+      className="border rounded-3xl backdrop-blur-md  bg-[#121212] border-[#1f1f1f] p-10 w-full ">
       <div className="flex flex-col xl:flex-row items-start justify-start  gap-10">
         <motion.div
           initial={{ x: -2, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className=""
-        >
+          className="">
           <MdDevices style={{ fontSize: "2rem" }} className="" />
         </motion.div>
 
@@ -30,8 +28,7 @@ const ExperienceCard = ({ delay, title, date, description }) => {
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: delay }}
-          className="flex flex-col gap-4"
-        >
+          className="flex flex-col gap-4">
           <div className="flex flex-col ">
             <p className="font-satoshi-bold text-xl">{title}</p>
             <p className="text-sm">{date}</p>

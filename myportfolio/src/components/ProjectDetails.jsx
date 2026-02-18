@@ -36,7 +36,7 @@ const ProjectDetails = () => {
   }, [id, details]);
 
   return (
-    <div className="flex flex-col  relative  items-center gap-10 lg:px-44   w-full">
+    <div className="flex flex-col  relative  items-center gap-10  mx-auto   w-full">
       <ScrollToTop />
 
       <motion.a
@@ -44,8 +44,7 @@ const ProjectDetails = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, ease: [0.4, 0, 0.8, 1] }}
         href="/"
-        className="absolute hidden lg: xl:flex top-0 left-40  text-[#a4a4a4] hover:text-white transition duration-200 px-6 py-3 rounded-xl font-satoshi-bold text-5xl"
-      >
+        className="absolute hidden lg: xl:flex top-0 left-0  text-[#a4a4a4] hover:text-white transition duration-200  rounded-xl font-satoshi-bold text-5xl">
         Return to Home
       </motion.a>
       <div className="flex flex-col gap-10 w-full xl:pt-32">
@@ -66,8 +65,7 @@ const ProjectDetails = () => {
               <Link
                 to={details?.link}
                 target="_blank"
-                className={` p-3 font-satoshi-bold font-semibold lg:p-4 text-2xl lg:text-3xl ${details.bgLink} ${details.bgHover}  transition  duration-300 px-10 text-center rounded-2xl`}
-              >
+                className={` p-3 font-satoshi-bold font-semibold lg:p-4 text-2xl lg:text-3xl ${details.bgLink} ${details.bgHover}  transition  duration-300 px-10 text-center rounded-2xl`}>
                 View Website
               </Link>
             )}
@@ -89,17 +87,19 @@ const ProjectDetails = () => {
             <StackCard details={details} />
           </div>
         </FadeInEffect>
-        <FadeInEffect delay={0.4}>
-          <div className="w-full relative backdrop-blur-lg  border gradient-bg border-[#2929295e] p-6 lg:p-8 rounded-2xl flex flex-col items-center justify-center overflow-hidden gap-4">
-            {" "}
-            <img
-              src={details?.images?.image3}
-              loading="lazy"
-              className="object-cover w-full h-full "
-              alt=""
-            />
-          </div>
-        </FadeInEffect>
+        {details?.images?.image3 && (
+          <FadeInEffect delay={0.4}>
+            <div className="w-full relative backdrop-blur-lg  border gradient-bg border-[#2929295e] p-6 lg:p-8 rounded-2xl flex flex-col items-center justify-center overflow-hidden gap-4">
+              {" "}
+              <img
+                src={details?.images?.image3}
+                loading="lazy"
+                className="object-cover w-full h-full "
+                alt=""
+              />
+            </div>
+          </FadeInEffect>
+        )}
       </div>
     </div>
   );

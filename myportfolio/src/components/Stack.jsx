@@ -25,8 +25,7 @@ const Stack = () => {
             opacity: 1,
           }}
           viewport={{ once: true }}
-          className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 items-center gap-10"
-        >
+          className="grid grid-cols-1 w-full   md:grid-cols-2 lg:grid-cols-3 items-center gap-10">
           <IconCard
             header={"Next JS"}
             description={"Fullstack Development"}

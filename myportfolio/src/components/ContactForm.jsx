@@ -63,8 +63,7 @@ const ContactForm = () => {
     <div className="relative">
       <form
         onSubmit={sendMessage}
-        className="border  rounded-3xl flex flex-col gap-6  bg-[#121212] border-[#1f1f1f] p-6 lg:p-10 xl:w-[900px]"
-      >
+        className="border  rounded-3xl flex flex-col gap-6  bg-[#121212] border-[#1f1f1f] p-6 lg:p-10 w-full">
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-10 ">
           <div className="flex flex-col gap-2 w-full">
             <label id="name" className="font-satoshi-bold">
@@ -110,8 +109,7 @@ const ContactForm = () => {
             value={budget}
             onChange={(e) => setBudget(e.target.value)}
             className=" appearance-none bg-[#1f1f1f] border border-[#252525] px-4 py-2 rounded-lg"
-            required
-          >
+            required>
             <option value="">Select budget</option>
             <option value="200-500">$200 - $500</option>
             <option value="500-1000">$500- $1,000</option>
@@ -140,8 +138,7 @@ const ContactForm = () => {
             disabled={loading}
             className={`${
               loading ? "bg-[#1f1f1f] " : "bg-[#65e844] "
-            } flex items-center justify-center text-black bg-[#65e844] transition-all duration-300 hover:bg-[#1f1f1f]  hover:text-white  w-full border  border-[#252525] py-4`}
-          >
+            } flex items-center justify-center text-black bg-[#65e844] transition-all duration-300 hover:bg-[#1f1f1f]  hover:text-white  w-full border  border-[#252525] py-4`}>
             {loading ? (
               <AiOutlineLoading3Quarters className="spin text-2xl text-white " />
             ) : (

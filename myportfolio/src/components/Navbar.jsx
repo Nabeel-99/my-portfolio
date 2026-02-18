@@ -22,8 +22,7 @@ const Navbar = () => {
     <div
       className={`xl:hidden fixed top-0  w-full flex justify-between items-center backdrop-blur-md pb-2  pt-5 z-50 right-0 ${
         burgerMenu ? "bg-[#0d0d0d]" : ""
-      }`}
-    >
+      }`}>
       <div className="flex flex-col ml-6 text-sm ">
         <Link to={"/"} className="font-satoshi-bold">
           {" "}
@@ -48,8 +47,7 @@ const Navbar = () => {
       <button
         aria-label="menu"
         onClick={openMenu}
-        className="border px-2 py-2 mr-4  border-[#202020] rounded-xl bg-[#121212]"
-      >
+        className="border px-2 py-2 mr-4  border-[#202020] rounded-xl bg-[#121212]">
         {burgerMenu ? (
           <HiXMark style={{ fontSize: "1.5rem" }} className="" />
         ) : (
