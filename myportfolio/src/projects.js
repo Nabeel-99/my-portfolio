@@ -37,13 +37,11 @@ import QalbLogo from "./assets/images/qalblogo.png";
 import Qalb from "./assets/images/qalb.webp";
 import Qalb1 from "./assets/images/qalb1.png";
 import Qalb2 from "./assets/images/qalb2.png";
-import Qalb3 from "./assets/images/qalb3.png";
 
-import FinanceLogo from "./assets/images/financeLogo.png";
+import FinanceLogo from "./assets/images/financelogo.png";
 import Finance from "./assets/images/finance.webp";
 import Finance1 from "./assets/images/finance1.png";
 import Finance2 from "./assets/images/finance2.png";
-// import Finance3 from "./assets/images/finance3.jpeg";
 
 import EastlightLogo from "./assets/images/eastlightlogo.png";
 import Eastlight from "./assets/images/eastlight.webp";

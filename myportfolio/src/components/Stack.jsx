@@ -66,6 +66,14 @@ const Stack = () => {
             delay={1}
           />
           <IconCard
+            header={"React Native"}
+            description={"Mobile Development"}
+            image={ReactIcon}
+            bgColor={"bg-[#08090a]"}
+            borderColor={"border-[#0d2d4a]"}
+            delay={0.4}
+          />
+          <IconCard
             header={"Mongo DB"}
             description={"Database"}
             image={MongoIcon}
