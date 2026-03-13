@@ -52,7 +52,7 @@ const Dock = () => {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, delay: 0.8, ease: "easeOut" }}
       className="fixed bottom-6 inset-x-0 flex justify-center z-50 hidden md:flex pointer-events-none">
-      <div className="pointer-events-auto flex items-center gap-0.5 px-2.5 py-2 rounded-2xl border border-white/[0.08] bg-[#0f0f0f]/85 backdrop-blur-2xl shadow-[0_8px_32px_rgba(0,0,0,0.6)]">
+      <div className="pointer-events-auto flex items-center gap-0.5 px-2.5 py-2 rounded-2xl glass-card dock dark:border dark:border-white/[0.08] dark:bg-[#0f0f0f]/85 backdrop-blur-2xl shadow-[0_8px_32px_rgba(0,0,0,0.6)]">
         {NAV_ITEMS.map((item) => {
           const Icon = item.icon;
           const isActive = activeSection === item.section;
@@ -62,19 +62,25 @@ const Dock = () => {
               key={item.section}
               onClick={() => handleClick(item.section)}
               whileTap={{ scale: 0.93 }}
-              className={`relative flex flex-col items-center justify-center gap-1.5 px-5 py-2 rounded-xl transition-colors duration-200 ${
-                isActive ? "bg-white/10" : "hover:bg-white/5"
+              className={`relative flex flex-col items-center justify-center gap-1.5 px-5 py-2 rounded-xl transition-all duration-200 ${
+                isActive
+                  ? "glass-card dark:bg-white/10 dark:rounded-[2.5rem]"
+                  : "hover:bg-white/60 hover:rounded-[2.5rem] dark:hover:bg-white/5"
               }`}>
               <Icon
                 size={19}
-                strokeWidth={1.8}
+                strokeWidth={isActive ? 0 : 1.8}
                 className={`transition-colors duration-200 ${
-                  isActive ? "text-[#57d039]" : "text-[#4a4a4a]"
+                  isActive
+                    ? "text-[#3a9e20] fill-[#3a9e20] dark:text-[#57d039] dark:fill-none dark:[stroke-width:1.8px]"
+                    : "text-[#888] dark:text-[#4a4a4a] fill-none"
                 }`}
               />
               <span
                 className={`text-[11px] font-medium tracking-wide transition-colors duration-200 ${
-                  isActive ? "text-white" : "text-[#4a4a4a]"
+                  isActive
+                    ? "text-[#1a1a1a] dark:text-white"
+                    : "text-[#888] dark:text-[#4a4a4a]"
                 }`}>
                 {item.label}
               </span>

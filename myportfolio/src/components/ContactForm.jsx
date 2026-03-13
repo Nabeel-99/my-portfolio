@@ -63,7 +63,7 @@ const ContactForm = () => {
     <div className="relative">
       <form
         onSubmit={sendMessage}
-        className="border  rounded-3xl flex flex-col gap-6  bg-[#121212] border-[#1f1f1f] p-6 lg:p-10 w-full">
+        className="border  glass-card glass-flat  rounded-3xl flex flex-col gap-6  dark:bg-[#121212] dark:border-[#3c3c3c]/60 p-6 lg:p-10 w-full">
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-10 ">
           <div className="flex flex-col gap-2 w-full">
             <label id="name" className="font-satoshi-bold">
@@ -75,7 +75,7 @@ const ContactForm = () => {
               placeholder="Enter your name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="bg-[#1f1f1f] w-full border border-[#252525] px-4 py-2 rounded-lg"
+              className="contact-input dark:bg-[#1f1f1f] w-full dark:border dark:border-[#252525] px-4 py-2 rounded-lg"
               required
             />
           </div>
@@ -89,7 +89,7 @@ const ContactForm = () => {
               placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="bg-[#1f1f1f]  border border-[#252525] px-4 py-2 rounded-lg"
+              className="contact-input dark:bg-[#1f1f1f]  dark:border dark:border-[#252525] px-4 py-2 rounded-lg"
               required
             />
           </div>
@@ -108,7 +108,7 @@ const ContactForm = () => {
             id="budget"
             value={budget}
             onChange={(e) => setBudget(e.target.value)}
-            className=" appearance-none bg-[#1f1f1f] border border-[#252525] px-4 py-2 rounded-lg"
+            className="contact-input appearance-none dark:bg-[#1f1f1f] dark:border dark:border-[#252525] px-4 py-2 rounded-lg"
             required>
             <option value="">Select budget</option>
             <option value="200-500">$200 - $500</option>
@@ -127,7 +127,7 @@ const ContactForm = () => {
             placeholder="Enter your message here..."
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            className="bg-[#1f1f1f] min-h-44 max-h-44 w-full border border-[#252525] px-4 py-2 rounded-lg"
+            className="contact-input dark:bg-[#1f1f1f] min-h-44 max-h-44 w-full dark:border dark:border-[#252525] px-4 py-2 rounded-lg"
             required
             onWheel={handleWheel}
           />
@@ -138,7 +138,7 @@ const ContactForm = () => {
             disabled={loading}
             className={`${
               loading ? "bg-[#1f1f1f] " : "bg-[#65e844] "
-            } flex items-center justify-center text-black bg-[#65e844] transition-all duration-300 hover:bg-[#1f1f1f]  hover:text-white  w-full border  border-[#252525] py-4`}>
+            } glass-card send-btn  flex items-center justify-center text-black dark:bg-[#65e844] transition-all duration-300 dark:hover:bg-[#1f1f1f]  dark:hover:text-white  w-full border  border-[#252525] py-4`}>
             {loading ? (
               <AiOutlineLoading3Quarters className="spin text-2xl text-white " />
             ) : (

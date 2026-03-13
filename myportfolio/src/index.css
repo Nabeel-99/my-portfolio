@@ -4,7 +4,8 @@
 
 @font-face {
   font-family: "Satoshi-Regular";
-  src: url("./assets/fonts/Satoshi-Regular.woff2") format("woff2"),
+  src:
+    url("./assets/fonts/Satoshi-Regular.woff2") format("woff2"),
     url("./assets/fonts/Satoshi-Regular.woff") format("woff"),
     url("./assets/fonts/Satoshi-Regular.ttf") format("truetype");
   font-weight: 400;
@@ -14,7 +15,8 @@
 
 @font-face {
   font-family: "Satoshi-Bold";
-  src: url("./assets/fonts/Satoshi-Bold.woff2") format("woff2"),
+  src:
+    url("./assets/fonts/Satoshi-Bold.woff2") format("woff2"),
     url("./assets/fonts/Satoshi-Bold.woff") format("woff"),
     url("./assets/fonts/Satoshi-Bold.ttf") format("truetype");
   font-weight: 700;
@@ -26,65 +28,56 @@
   font-family: sans-serif, system-ui, Avenir, Helvetica, Arial, serif;
   line-height: 1.5;
   font-weight: 400;
-
-  /* color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87); */
-  /* background-color: #242424; */
-  /* background-color: #0a0a0aff; */
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-/* html {
-  scroll-behavior: smooth;
-} */
+
+/* ── Base ───────────────────────────────────────────── */
 a {
   font-weight: 500;
   text-decoration: inherit;
 }
-a:hover {
+
+html:not(.dark) .contact-input {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.6);
+  color: #1a1a1a;
 }
 
-.spin {
-  animation: spinMe 3s linear infinite;
-}
-.btn-social {
-  @apply border hover:text-white border-[#262626] bg-[#191919]
-    cursor-pointer  rounded-lg p-2;
-}
-.btn-download-cv {
-  @apply border w-full p-2 cursor-pointer  
-  flex items-center transition-all duration-300 
-  justify-center hover:text-black rounded-lg
-   bg-[#1f1f1f] border-[#262626]  hover:bg-[#57d039];
-}
-@keyframes spinMe {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+html:not(.dark) #budget {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") !important;
+  background-position: right 1rem center;
+  background-repeat: no-repeat;
+  background-size: 1rem;
 }
 
-.mask-marquee {
-  -webkit-mask-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 1) 20%,
-    rgba(0, 0, 0, 1) 80%,
-    rgba(0, 0, 0, 0)
-  );
-  mask-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 1) 20%,
-    rgba(0, 0, 0, 1) 80%,
-    rgba(0, 0, 0, 0)
-  );
+html:not(.dark) .contact-input::placeholder {
+  color: #888;
+}
+html:not(.dark) .send-btn:hover {
+  background-color: #57d039;
+}
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #57d039;
 }
 
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+/* ── Body & Background ──────────────────────────────── */
 body {
   margin: 0;
   display: flex;
@@ -93,22 +86,73 @@ body {
   background-color: #0a0a0aff;
   min-height: 120vh;
 }
-/* .dark body {
-  color: #ffffffde;
-  background-color: #0a0a0aff;
-} */
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+html:not(.dark) body {
+  color: #1a1a1a;
+  background-color: #f0f0f0;
 }
+
+html:not(.dark) .glass-card {
+  background: rgba(253, 253, 253, 0.25);
+  backdrop-filter: blur(2px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 2.5rem;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0.1) 40%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+html:not(.dark) .glass-card.dock {
+  background: rgba(255, 255, 255, 0.763);
+}
+
+html:not(.dark) .glass-card.themebtns {
+  background: rgba(255, 255, 255, 0.763);
+}
+html:not(.dark) form.glass-card {
+  overflow: hidden;
+}
+
+html:not(.dark) .glass-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2.5rem;
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  box-shadow:
+    inset -10px -8px 0px -11px rgba(255, 255, 255, 1),
+    inset 0px -9px 0px -8px rgba(255, 255, 255, 1);
+  opacity: 0.6;
+  z-index: -1;
+  filter: blur(1px) drop-shadow(10px 4px 6px black) brightness(115%);
+  pointer-events: none;
+}
+html:not(.dark) .glass-card.glass-flat {
+  box-shadow: none;
+  background-image: none;
+}
+html:not(.dark) .project-card:hover {
+  border-color: #57d039;
+}
+/* ── Star Background ────────────────────────────────── */
 .star-background {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  /* background: #0a0a0aff; */
   animation: animateBg 50s linear infinite;
   background: radial-gradient(
     circle at center,
@@ -118,14 +162,14 @@ h1 {
   );
 }
 
-/* .dark .star-background {
-  background: radial-gradient(
-    circle at center,
-    rgba(255, 255, 255, 0.05) 0%,
-    rgba(8, 8, 8, 0.6) 50%,
-    rgba(0, 0, 0, 1) 100%
-  );
-} */
+html:not(.dark) .star-background {
+  background: none;
+}
+
+/* ── Utility Classes ────────────────────────────────── */
+.spin {
+  animation: spinMe 3s linear infinite;
+}
 
 .gradient-bg {
   background: radial-gradient(
@@ -138,9 +182,50 @@ h1 {
   );
 }
 
-.card-bg {
-  background-color: rgba(255, 255, 255, 0.02);
+/* ── Buttons ────────────────────────────────────────── */
+.btn-social {
+  @apply border border-[#262626] bg-[#191919]
+    cursor-pointer rounded-lg p-2 hover:text-white;
 }
+
+.btn-download-cv {
+  @apply border w-full p-2 cursor-pointer
+    flex items-center transition-all duration-300
+    justify-center hover:text-black rounded-[2.5rem]
+    bg-[#1f1f1f] border-[#262626] hover:bg-[#57d039];
+}
+
+html:not(.dark) .btn-social {
+  border-color: #e0e0e0;
+  background-color: rgba(255, 255, 255, 0.6);
+  color: #1a1a1a;
+}
+
+html:not(.dark) .btn-social:hover {
+  color: white;
+}
+
+html:not(.dark) a[aria-label="github"]:hover {
+  background-color: #a855f7;
+  border-color: #a855f7;
+}
+
+html:not(.dark) a[aria-label="twitter"]:hover {
+  background-color: #3b82f6;
+  border-color: #3b82f6;
+}
+
+html:not(.dark) a[aria-label="linkedin"]:hover {
+  background-color: #f97316;
+  border-color: #f97316;
+}
+
+html:not(.dark) .btn-download-cv:hover {
+  background-color: #57d039;
+  border-color: #57d039;
+  color: #000;
+}
+/* ── Navbar Active Link ─────────────────────────────── */
 @property --angle {
   syntax: "<angle>";
   initial-value: 0deg;
@@ -153,13 +238,15 @@ h1 {
   border-radius: 0.5rem;
   display: inline-block;
   background-color: #191a1b;
-  transition: background-color 0.1s ease, padding 0.5s ease;
+  transition:
+    background-color 0.1s ease,
+    padding 0.5s ease;
   will-change: background-image;
 }
 
-/* .dark .active-link {
-  background-color: #191a1b;
-} */
+html:not(.dark) .active-link {
+  background-color: #e8e8e8;
+}
 
 .active-link::before,
 .active-link::after {
@@ -172,7 +259,6 @@ h1 {
   right: -0.2rem;
   bottom: -0.2rem;
   border: 1px solid rgb(24, 24, 24);
-
   background-image: conic-gradient(
     from var(--angle),
     #404040,
@@ -182,22 +268,22 @@ h1 {
     #040407
   );
   animation: 6s spin linear infinite;
-  transition: background-image 3s ease, opacity 0.2s ease;
+  transition:
+    background-image 3s ease,
+    opacity 0.2s ease;
 }
 
-/* .dark .active-link::before,
-.active-link::after {
-  border: 1px solid rgb(24, 24, 24);
-
+html:not(.dark) .active-link::before,
+html:not(.dark) .active-link::after {
   background-image: conic-gradient(
     from var(--angle),
-    #404040,
+    #c0c0c0,
     #57d039,
     40%,
-    #3f3f3f,
-    #040407
+    #d0d0d0,
+    #f0f0f0
   );
-} */
+}
 
 .active-link::before {
   filter: blur(0.5rem);
@@ -211,103 +297,34 @@ h1 {
   border-radius: 0.5rem;
   display: inline-block;
   background-color: #191a1b;
-  transition: background-color 0.1s ease, padding 0.5s ease;
+  transition:
+    background-color 0.1s ease,
+    padding 0.5s ease;
 }
 
-@keyframes spin {
-  from {
-    --angle: 0deg;
-  }
-  to {
-    --angle: 360deg;
-  }
+html:not(.dark) .link-hover:hover {
+  background-color: #e8e8e8;
 }
 
-@keyframes animateBg {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-}
-
-/* .moving-border-btn {
-  position: relative;
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: bold;
-  color: white;
-  background-color: transparent;
-  border: 2px solid transparent;
-  border-radius: 50px;
-  overflow: hidden;
-  cursor: pointer;
-  transition: color 0.4s ease;
-}
-
-.moving-border-btn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(45deg, #020211, #061b30, #064dd1);
-  background-size: 400% 400%;
-  border-radius: 50px;
-  animation: gradientMove 4s linear infinite;
-  z-index: -1;
-} */
-
-@keyframes gradientMove {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 100% 50%;
-  }
-}
-
+/* ── Stars ──────────────────────────────────────────── */
 .static-star {
   position: absolute;
   width: 2px;
   height: 2px;
   background: #5a5959;
   border-radius: 50%;
-  animation: twinkle 3s infinite ease-in-out, fadeInOut 5s infinite ease-in-out;
+  animation:
+    twinkle 3s infinite ease-in-out,
+    fadeInOut 5s infinite ease-in-out;
 }
 
-@keyframes twinkle {
-  0%,
-  100% {
-    opacity: 0.8;
-  }
-  50% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInOut {
-  0% {
-    opacity: 0;
-  }
-  20% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+html:not(.dark) .static-star {
+  background: #c8c8c8;
 }
 
 .static-star:nth-child(odd) {
   animation-delay: 0.2s;
 }
-
 .static-star:nth-child(even) {
   animation-delay: 0.5s;
 }
@@ -340,47 +357,139 @@ h1 {
   animation-delay: 2s;
   animation-duration: 2s;
 }
-
 .star:nth-child(2) {
   top: 0%;
   left: 20%;
   animation-delay: 3s;
   animation-duration: 3s;
 }
-
 .star:nth-child(3) {
   top: 80%;
   left: 50%;
   animation-delay: 4s;
   animation-duration: 2.5s;
 }
-
 .star:nth-child(4) {
   top: 0%;
   left: 30%;
   animation-delay: 5s;
   animation-duration: 3s;
 }
-
 .star:nth-child(5) {
   top: 0%;
   left: 60%;
   animation-delay: 6s;
   animation-duration: 2.8s;
 }
-
 .star:nth-child(6) {
   top: 0%;
   left: 80%;
   animation-delay: 7s;
   animation-duration: 3.2s;
 }
-
 .star:nth-child(7) {
   top: 30%;
   left: 90%;
   animation-delay: 8s;
   animation-duration: 3.5s;
+}
+
+/* ── Mask ───────────────────────────────────────────── */
+.mask-marquee {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+}
+@media (min-width: 1024px) {
+  .mask-marquee-projects-right {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 1) 85%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    mask-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 1) 85%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+
+  .mask-marquee-projects-left {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 1) 15%
+    );
+    mask-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 1) 15%
+    );
+  }
+}
+/* ── Keyframes ──────────────────────────────────────── */
+@keyframes spinMe {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+
+@keyframes animateBg {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 @keyframes animate {
@@ -397,72 +506,12 @@ h1 {
     opacity: 0;
   }
 }
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  /* padding: 0.6em 1.2em; */
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #57d039;
-}
 
-/* button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-} */
-.animated-border-button {
-  position: relative;
-  padding: 10px 20px;
-  background-color: #064dd1; /* animated-border-button background color */
-  color: white;
-  font-size: 16px;
-  border: 2px solid transparent; /* Transparent border to make space for the moving border effect */
-  border-radius: 5px;
-  overflow: hidden;
-  transition: background-color 0.3s ease; /* Smooth transition for background color */
-}
-
-.animated-border-button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 5px;
-  background: linear-gradient(90deg, #ff0066, #ff9900, #33cc33, #0066ff);
-  background-size: 400% 400%;
-  animation: moveBorder 3s linear infinite;
-  z-index: -1;
-}
-
-.animated-border-button:hover {
-  background-color: #003366;
-}
-
-@keyframes moveBorder {
+@keyframes gradientMove {
   0% {
-    background-position: 100% 0;
+    background-position: 0% 50%;
   }
   100% {
-    background-position: 0 100%;
+    background-position: 100% 50%;
   }
 }
-/* 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: white;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-} */
