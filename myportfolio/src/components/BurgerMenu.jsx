@@ -21,7 +21,7 @@ const BurgerMenu = ({ closeMenu }) => {
   };
 
   return (
-    <div className="flex fixed top-16 h-screen z-50 pt-4 px-6 w-full flex-col bg-[#0d0d0d]">
+    <div className="flex fixed top-16 h-screen z-50 pt-4 px-6 w-full flex-col bg-white dark:bg-[#0d0d0d]">
       <ul className="text-lg">
         {["home", "project", "stack", "experience", "contact"].map(
           (section, index) => (
@@ -34,13 +34,12 @@ const BurgerMenu = ({ closeMenu }) => {
                 ease: "easeOut",
                 delay: index * 0.2,
               }}
-              className="pb-8"
-            >
+              className="pb-8">
               <span onClick={() => handleClick(section)}>
                 {section.charAt(0).toUpperCase() + section.slice(1)}
               </span>
             </motion.li>
-          )
+          ),
         )}
       </ul>
     </div>
