@@ -7,7 +7,7 @@ const ContactForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [budget, setBudget] = useState("");
+  // const [budget, setBudget] = useState("");
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const handleWheel = (e) => {
@@ -30,7 +30,7 @@ const ContactForm = () => {
   const sendMessage = async (e) => {
     e.preventDefault();
     setLoading(true);
-    if (!name || !email || !message || !budget) {
+    if (!name || !email || !message) {
       // alert("Please fill in all fields");
       setLoading(false);
       return;
@@ -40,13 +40,13 @@ const ContactForm = () => {
         name,
         email,
         message,
-        budget,
+        // budget,
       });
 
       if (response.status === 200) {
         setSuccess(true);
         setName("");
-        setBudget("");
+        // setBudget("");
         setMessage("");
         setEmail("");
         setTimeout(() => {
@@ -94,7 +94,7 @@ const ContactForm = () => {
             />
           </div>
         </div>
-        <div className="flex flex-col gap-2">
+        {/* <div className="flex flex-col gap-2">
           <label htmlFor="budget" className="font-satoshi-bold">
             What's your budget?
           </label>
@@ -116,7 +116,7 @@ const ContactForm = () => {
             <option value="2000-5000">$2,000 - $5,000</option>
             <option value="10000">$10,000+</option>
           </select>
-        </div>
+        </div> */}
         <div className="flex flex-col gap-2 w-full">
           <label id="message" className="font-satoshi-bold">
             How can I help you?
