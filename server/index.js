@@ -34,7 +34,7 @@ app.use(
 
 app.post("/api/send-email", async (req, res) => {
   try {
-    const { name, email, message, budget } = req.body;
+    const { name, email, message } = req.body;
 
     // Client email (confirmation)
     let htmlContentClient;
@@ -68,7 +68,6 @@ app.post("/api/send-email", async (req, res) => {
       .replace("{{name}}", name)
       .replace("{{email}}", email)
       .replace("{{message}}", message)
-      .replace("{{budget}}", budget)
       .replace("{{APP_NAME}}", process.env.APP_NAME);
 
     // Generate unique message ID for proper threading
