@@ -19,19 +19,20 @@ import Navbar from "./components/Navbar";
 import ProjectDetails from "./components/ProjectDetails";
 import ScrollToTop from "./components/ScrollToTop";
 import Dock from "./components/DockMenu";
-import ThemeButtons from "./components/ThemeButtons"; // ← add
-import { initTheme } from "./theme"; // ← add
-
-// Call ONCE before React renders (in main.jsx ideally, but here also works)
-initTheme();
 
 function App() {
-  const lenis = new Lenis();
-  function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-  }
-  requestAnimationFrame(raf);
+  useEffect(() => {
+    const lenis = new Lenis();
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    const id = requestAnimationFrame(raf);
+    return () => {
+      cancelAnimationFrame(id);
+      lenis.destroy();
+    };
+  }, []);
 
   const [showComponent, setShowComponent] = useState(true);
   const location = useLocation();
@@ -44,7 +45,7 @@ function App() {
   return (
     <div className="flex font-satoshi p-8 w-screen flex-col h-full items-center 2xl:container 2xl:mx-auto">
       <StarsBackground />
-      <ThemeButtons /> {/* ← add */}
+
       <Navbar showComponent={showComponent} />
       <ScrollToTop />
       <Dock />

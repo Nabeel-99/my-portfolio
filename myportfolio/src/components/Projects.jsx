@@ -7,28 +7,28 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
   CarouselPrevious,
+  CarouselNext,
 } from "./ui/carousel";
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ project, featured = false }) => {
   const navigate = useNavigate();
 
   return (
     <div
       onClick={() => navigate(`/project-details/${project.id}`)}
-      className="group cursor-pointer relative rounded-[2.5rem] overflow-hidden border
-        border-[#dadada] glass-card glass-flat project-card 
+      className={`group cursor-pointer relative rounded-[2.5rem] overflow-hidden border
+        border-[#dadada] glass-card glass-flat project-card
         dark:border-[#3c3c3c]/60 dark:bg-[#111111] dark:hover:border-[#57d039]
-        transition-all duration-500 h-full">
-      {project.wip && (
+        transition-all duration-500 h-full flex flex-col`}>
+      {/* {project.wip && (
         <div className="absolute top-4 left-4 z-20 flex items-center gap-1.5 bg-[#57d039]/10 border border-[#57d039]/30 text-[#57d039] text-[10px] font-semibold uppercase tracking-widest px-2.5 py-1 rounded-full">
           <span className="w-1.5 h-1.5 rounded-full bg-[#57d039] animate-pulse" />
           In Progress
         </div>
-      )}
+      )} */}
 
-      <div className="relative overflow-hidden h-52 sm:h-64">
+      <div className={`relative overflow-hidden ${featured ? "h-72" : "h-52"}`}>
         <img
           src={project.image}
           alt={project.title}
@@ -37,11 +37,7 @@ const ProjectCard = ({ project }) => {
         <div className="absolute inset-0 bg-gradient-to-t from-white/50 dark:from-[#111111] via-transparent to-transparent" />
       </div>
 
-      <div className="p-5 flex flex-col gap-3">
-        {/* <span className="text-[10px] uppercase tracking-widest text-[#555] dark:text-[#555] font-semibold">
-          {project.app}
-        </span> */}
-
+      <div className="p-5 flex flex-col gap-3 flex-1">
         <div className="flex items-start justify-between gap-2">
           <h3 className="text-[#0a0a0a] dark:text-white font-satoshi-bold text-lg leading-tight group-hover:text-[#3a9e20] dark:group-hover:text-[#57d039] transition-colors duration-200">
             {project.title}
@@ -58,7 +54,7 @@ const ProjectCard = ({ project }) => {
           {project.description}
         </p>
 
-        <div className="flex items-center gap-2 flex-wrap pt-1">
+        <div className="flex items-center gap-2 flex-wrap pt-1 mt-auto">
           {project.stack.map((tech, i) => (
             <div
               key={i}
@@ -76,9 +72,79 @@ const ProjectCard = ({ project }) => {
   );
 };
 
-const Projects = () => {
+// ── Mobile carousel ──────────────────────────────────
+const MobileProjects = () => {
   const [isLast, setIsLast] = useState(false);
 
+  return (
+    <Carousel
+      opts={{ align: "start", loop: false }}
+      className="w-full"
+      setApi={(api) => {
+        if (!api) return;
+        setIsLast(!api.canScrollNext());
+        api.on("select", () => setIsLast(!api.canScrollNext()));
+      }}>
+      <div
+        className={
+          isLast ? "mask-marquee-projects-left" : "mask-marquee-projects-right"
+        }>
+        <CarouselContent className="-ml-4">
+          {projects.map((project, index) => (
+            <CarouselItem
+              key={project.id}
+              className="pl-4 basis-full sm:basis-1/2">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.08 }}
+                className="h-full">
+                <ProjectCard project={project} />
+              </motion.div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+      </div>
+
+      <div className="flex items-center gap-3 mt-6">
+        <CarouselPrevious className="static translate-y-0 glass-card dark:border-[#2a2a2a] dark:bg-[#111] dark:hover:bg-[#1a1a1a] dark:text-white hover:border-[#57d039] hover:text-[#57d039] transition-all duration-200 rounded-[2.5rem] w-10 h-10" />
+        <CarouselNext className="static translate-y-0 glass-card dark:border-[#2a2a2a] dark:bg-[#111] dark:hover:bg-[#1a1a1a] dark:text-white hover:border-[#57d039] hover:text-[#57d039] transition-all duration-200 rounded-[2.5rem] w-10 h-10" />
+      </div>
+    </Carousel>
+  );
+};
+
+// ── Desktop grid ─────────────────────────────────────
+const DesktopProjects = () => {
+  return (
+    <div className="flex flex-col gap-4">
+      {/* Featured card — full width */}
+      {/* <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}>
+        <ProjectCard project={featured} featured />
+      </motion.div> */}
+
+      {/* Rest — 3 columns */}
+      <div className="grid grid-cols-3 gap-4">
+        {projects.map((project, index) => (
+          <motion.div
+            key={project.id}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: (index + 1) * 0.07 }}
+            className="h-full">
+            <ProjectCard project={project} />
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+// ── Main section ─────────────────────────────────────
+const Projects = () => {
   return (
     <motion.section
       id="project"
@@ -100,46 +166,13 @@ const Projects = () => {
         </div>
       </div>
 
-      <Carousel
-        opts={{ align: "start", loop: false }}
-        className="w-full"
-        setApi={(api) => {
-          if (!api) return;
-          setIsLast(!api.canScrollNext());
-          api.on("select", () => {
-            setIsLast(!api.canScrollNext());
-          });
-        }}>
-        {/* mask only on this div, not the buttons */}
-        <div
-          className={
-            isLast
-              ? "mask-marquee-projects-left"
-              : "mask-marquee-projects-right"
-          }>
-          <CarouselContent className="-ml-4">
-            {projects.map((project, index) => (
-              <CarouselItem
-                key={project.id}
-                className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="h-full">
-                  <ProjectCard project={project} />
-                </motion.div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-        </div>
-
-        {/* buttons outside the mask */}
-        <div className="flex items-center gap-3 mt-6">
-          <CarouselPrevious className="static translate-y-0 glass-card dark:border-[#2a2a2a] dark:bg-[#111] dark:hover:bg-[#1a1a1a] dark:text-white hover:border-[#57d039] hover:text-[#57d039] transition-all duration-200 rounded-[2.5rem] w-10 h-10" />
-          <CarouselNext className="static translate-y-0 glass-card dark:border-[#2a2a2a] dark:bg-[#111] dark:hover:bg-[#1a1a1a] dark:text-white hover:border-[#57d039] hover:text-[#57d039] transition-all duration-200 rounded-[2.5rem] w-10 h-10" />
-        </div>
-      </Carousel>
+      {/* Mobile: carousel / Desktop: grid */}
+      <div className="lg:hidden">
+        <MobileProjects />
+      </div>
+      <div className="hidden lg:block">
+        <DesktopProjects />
+      </div>
     </motion.section>
   );
 };

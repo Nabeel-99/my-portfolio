@@ -94,8 +94,8 @@ html:not(.dark) body {
 
 html:not(.dark) .glass-card {
   background: rgba(253, 253, 253, 0.25);
-  backdrop-filter: blur(2px) saturate(180%);
-  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  backdrop-filter: blur(8px) saturate(150%);
+  -webkit-backdrop-filter: blur(8px) saturate(150%);
   border: 1px solid rgba(255, 255, 255, 0.9);
   border-radius: 2.5rem;
   box-shadow:
@@ -152,6 +152,7 @@ html:not(.dark) .project-card:hover {
   top: 0;
   left: 0;
   width: 100%;
+  will-change: transform;
   height: 100%;
   animation: animateBg 50s linear infinite;
   background: radial-gradient(
@@ -164,6 +165,7 @@ html:not(.dark) .project-card:hover {
 
 html:not(.dark) .star-background {
   background: none;
+  animation: none;
 }
 
 /* ── Utility Classes ────────────────────────────────── */

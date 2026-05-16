@@ -49,7 +49,51 @@ import Eastlight1 from "./assets/images/eastlight1.webp";
 import Eastlight2 from "./assets/images/eastlight2.webp";
 import Eastlight3 from "./assets/images/eastlight3.webp";
 
+import FusionEnergyLogo from "./assets/images/fusionenergylogo.jpeg";
+import FusionEnergy from "./assets/images/fusionenergy.webp";
+import FusionEnergy1 from "./assets/images/fusionenergy1.webp";
+import FusionEnergy2 from "./assets/images/fusionenergy2.webp";
+import FusionEnergy3 from "./assets/images/fusionenergy3.webp";
+
+import AshkarSynergyLogo from "./assets/images/ashkarsynergylogo.png";
+import AshkarSynergy from "./assets/images/ashkarsynergy.webp";
+import AshkarSynergy1 from "./assets/images/ashkarsynergy1.webp";
+import AshkarSynergy2 from "./assets/images/ashkarsynergy2.webp";
+import AshkarSynergy3 from "./assets/images/ashkarsynergy3.webp";
+
 export const projects = [
+  {
+    id: "FusionEnergySolutions",
+    appIcon: FusionEnergyLogo,
+    appBg: "bg-[#f97316]",
+    image: FusionEnergy,
+    title: "Fusion Energy Solutions",
+    description:
+      "Client website for a Nigerian solar energy startup with a premium Apple-inspired design and immersive animations.",
+    link: "https://www.fusionenergysolution.org/",
+    stack: [
+      { name: "React JS", icon: ReactIcon, bg: "bg-[#08090a]" },
+      { name: "TypeScript", icon: TypeScriptIcon, bg: "bg-[#1e3a5f]" },
+      { name: "Tailwind CSS", icon: TailwindIcon, bg: "bg-[#06171e]" },
+    ],
+    overview:
+      "Fusion Energy Solutions is a client project built for a Nigerian solar energy startup based in Abuja. The website features a premium redesign with an Apple/Linear-inspired aesthetic — clean typography, smooth Framer Motion animations, a real project photo gallery, and an infinite partner logo strip. Built with React and Tailwind CSS, the site effectively communicates the company's solar installation services and brand credibility.",
+    app: "Client Project",
+    radialGradientDark:
+      "radial-gradient(ellipse at top right, rgba(249, 115, 22, 0.15) 20%, rgba(120, 53, 10, 0.3) 50%, rgba(0, 0, 0, 1) 100%)",
+    radialGradientLight:
+      "radial-gradient(ellipse at top right, rgba(254, 215, 170, 0.5) 20%, rgba(255, 237, 213, 0.6) 50%, rgba(255, 255, 255, 1) 100%)",
+    bgLink: "bg-[#f97316]",
+    bgHover: "hover:bg-[#ea6c0a]",
+    images: {
+      image1: FusionEnergy2,
+      image2: FusionEnergy1,
+      image3: FusionEnergy3,
+    },
+    imageGradient:
+      "radial-gradient(at top right, rgba(249, 115, 22, 0.25) 0%, rgba(120, 53, 10, 0.5) 50%, rgba(0, 0, 0, 0.9) 100%)",
+  },
+
   {
     id: "CareerAssistant",
     appIcon: CareerAssistantLogo,
@@ -83,37 +127,7 @@ export const projects = [
     imageGradient:
       "radial-gradient(at top right, rgba(13, 130, 138, 0.2) 20%, rgba(32, 25, 48, 0.5) 50%, rgba(0, 0, 0, 0.85) 100%)",
   },
-  {
-    id: "Artloom",
-    appIcon: ArtLoomLogo,
-    appBg: "bg-[#000000]",
-    image: ArtLoom,
-    title: "Artloom",
-    description: "E-commerce website for arts and crafts with modern design.",
-    link: "https://art-loom.vercel.app",
-    stack: [
-      { name: "Next.js", icon: NextjsIcon, bg: "bg-[#1e1e1e]" },
-      { name: "TypeScript", icon: TypeScriptIcon, bg: "default" },
-      { name: "Tailwind CSS", icon: TailwindIcon, bg: "bg-[#06171e]" },
-      { name: "ShadCN/UI", icon: ShadcnIcon, bg: "bg-white" },
-    ],
-    overview:
-      "Artloom is an e-commerce website built for arts and crafts enthusiasts. It features a clean, minimal design with a whitish aesthetic. Built with Next.js and TypeScript for robust performance and type safety, styled with Tailwind CSS for responsive design, and enhanced with ShadCN/UI components for a polished user interface. The platform provides a seamless shopping experience for art supplies and handmade crafts.",
-    app: "E-commerce Web App",
-    radialGradientDark:
-      "radial-gradient(ellipse at top right, rgba(245, 245, 245, 0.1) 20%, rgba(220, 220, 220, 0.05) 50%, rgba(0, 0, 0, 1) 100%)",
-    radialGradientLight:
-      "radial-gradient(ellipse at top right, rgba(250, 250, 250, 0.8) 20%, rgba(245, 245, 245, 0.9) 50%, rgba(255, 255, 255, 1) 100%)",
-    bgLink: "bg-[#000000]",
-    bgHover: "hover:bg-[#000000]/50",
-    images: {
-      image1: ArtLoom1,
-      image2: ArtLoom2,
-      image3: ArtLoom3,
-    },
-    imageGradient:
-      "radial-gradient(at 100% 10%, rgba(245, 245, 245, 0.3) 20%, rgba(230, 230, 230, 0.5) 50%, rgba(220, 220, 220, 0.7) 80%, rgba(210, 210, 210, 0.9) 100%)",
-  },
+
   {
     id: "EastlightEnergy",
     appIcon: EastlightLogo,
@@ -145,6 +159,38 @@ export const projects = [
     imageGradient:
       "radial-gradient(at top right, rgba(13, 130, 138, 0.25) 0%, rgba(5, 60, 65, 0.5) 50%, rgba(0, 0, 0, 0.9) 100%)",
   },
+  {
+    id: "AshkarSynergy",
+    appIcon: AshkarSynergyLogo,
+    appBg: "bg-[#1e3a2f]",
+    image: AshkarSynergy,
+    title: "Ashkar Synergy",
+    description:
+      "Corporate website for a Nigerian multi-sector business spanning construction, agro-allied, property development, and import/export.",
+    link: "https://www.ashkarsynergy.com/",
+    stack: [
+      { name: "React JS", icon: ReactIcon, bg: "bg-[#08090a]" },
+      { name: "Tailwind CSS", icon: TailwindIcon, bg: "bg-[#06171e]" },
+      { name: "GSAP", icon: GsapIcon, bg: "bg-[#0d0d0d]" },
+    ],
+    overview:
+      "Ashkar Synergy Limited is a corporate website built for a Nigerian multi-sector company operating in construction, agro-allied services, property development, import & export, and general supplies. The site delivers a polished, professional presence with fluid GSAP-powered animations and a component-driven React architecture. Tailwind CSS ensures a responsive, utility-first layout that communicates the company's breadth of services and Nigerian market expertise.",
+    app: "Client Project",
+    radialGradientDark:
+      "radial-gradient(ellipse at top right, rgba(30, 58, 47, 0.2) 20%, rgba(15, 30, 22, 0.5) 50%, rgba(0, 0, 0, 1) 100%)",
+    radialGradientLight:
+      "radial-gradient(ellipse at top right, rgba(134, 239, 172, 0.25) 0%, rgba(220, 252, 231, 0.4) 50%, rgba(255, 255, 255, 1) 100%)",
+    bgLink: "bg-[#166534]",
+    bgHover: "hover:bg-[#15803d]",
+    images: {
+      image1: AshkarSynergy3,
+      image2: AshkarSynergy1,
+      image3: AshkarSynergy2,
+    },
+    imageGradient:
+      "radial-gradient(at top right, rgba(30, 58, 47, 0.3) 0%, rgba(15, 30, 22, 0.6) 50%, rgba(0, 0, 0, 0.9) 100%)",
+  },
+
   {
     id: "Altanova",
     appIcon: AltanovaLogo,
@@ -236,6 +282,37 @@ export const projects = [
     },
     imageGradient:
       "radial-gradient(at top right, rgba(109, 40, 217, 0.3) 0%, rgba(30, 27, 75, 0.6) 50%, rgba(0, 0, 0, 0.9) 100%)",
+  },
+  {
+    id: "Artloom",
+    appIcon: ArtLoomLogo,
+    appBg: "bg-[#000000]",
+    image: ArtLoom,
+    title: "Artloom",
+    description: "E-commerce website for arts and crafts with modern design.",
+    link: "https://art-loom.vercel.app",
+    stack: [
+      { name: "Next.js", icon: NextjsIcon, bg: "bg-[#1e1e1e]" },
+      { name: "TypeScript", icon: TypeScriptIcon, bg: "default" },
+      { name: "Tailwind CSS", icon: TailwindIcon, bg: "bg-[#06171e]" },
+      { name: "ShadCN/UI", icon: ShadcnIcon, bg: "bg-white" },
+    ],
+    overview:
+      "Artloom is an e-commerce website built for arts and crafts enthusiasts. It features a clean, minimal design with a whitish aesthetic. Built with Next.js and TypeScript for robust performance and type safety, styled with Tailwind CSS for responsive design, and enhanced with ShadCN/UI components for a polished user interface. The platform provides a seamless shopping experience for art supplies and handmade crafts.",
+    app: "E-commerce Web App",
+    radialGradientDark:
+      "radial-gradient(ellipse at top right, rgba(245, 245, 245, 0.1) 20%, rgba(220, 220, 220, 0.05) 50%, rgba(0, 0, 0, 1) 100%)",
+    radialGradientLight:
+      "radial-gradient(ellipse at top right, rgba(250, 250, 250, 0.8) 20%, rgba(245, 245, 245, 0.9) 50%, rgba(255, 255, 255, 1) 100%)",
+    bgLink: "bg-[#000000]",
+    bgHover: "hover:bg-[#000000]/50",
+    images: {
+      image1: ArtLoom1,
+      image2: ArtLoom2,
+      image3: ArtLoom3,
+    },
+    imageGradient:
+      "radial-gradient(at 100% 10%, rgba(245, 245, 245, 0.3) 20%, rgba(230, 230, 230, 0.5) 50%, rgba(220, 220, 220, 0.7) 80%, rgba(210, 210, 210, 0.9) 100%)",
   },
   {
     id: "BlogApp",
